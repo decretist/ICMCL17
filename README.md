@@ -5,3 +5,14 @@ Proposal for 17th International Congress of Medieval Canon Law
 
 The default branch is `main`!
 
+`python3.11 -m venv pie`
+`cd pie`
+`source ./bin/activate`
+`pip install --upgrade pip`
+`pip install numpy`
+`pip install nlp-pie`
+
+---
++ installed Visual Studio Code 1.84.2
++ upgraded Python to 3.11.6
+
