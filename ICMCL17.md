@@ -188,6 +188,28 @@ release -- the current release is Python 3.12 -- so setting up the
 lemmatization environment was not a trivial
 task.
 
+<!-- interpolation -->
+
+I want to make it clear that PIE is not just a program that you run
+-- you do not just type a command or click a button and get lemmatized
+text out. PIE and PIE extended are libraries, packages, toolkits,
+that provide an extremely versatile set of software building blocks
+that can be called upon to perform a wide range of natural language
+processing functions, like part-of-speech tagging or lemmatization,
+from within a Python program. They are based on large language
+models (LLMs) trained using machine learning techniques on annotated
+corpora of texts in the target language. In this case, we are using
+a model trained on the LASLA corpus of 1.7 million tokens or words
+of classical Latin text, each annotated with lemma, part of speech,
+and other morphological and syntactic information.
+
+[If the term large language model or the acronym LLM sound familiar,
+they should. LLMs are the basis for the growing family of generative
+AI tools, ChatGPT and friends, that have been the subject of so
+much attention for the last two years.]
+
+<!-- end interpolation -->
+
 Once the PIE lemmatization environment had been set up, I wrote a
 Python program that used PIE to create separate lists of every lemma
 found in the first- and second-recension *dicta*, and then compare
@@ -271,11 +293,6 @@ And as a proof of concept, I think this effort was a success. It
 is certainly closer to an interesting result than I have gotten in
 the 12 years or so I have been thinking about and intermittently
 working on this problem.
-
-[Need to make it clear that PIE isn't just a program you run. It
-provides a set of library routines that you use to write Python
-programs that generate and then process the results you are looking
-for.]
 
 Using the PIE lemmatizer in conjunction with the LASLA Latin large
 language model (LLM) to systematically lemmatize every word in the
