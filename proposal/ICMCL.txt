@@ -1,0 +1,22 @@
+An individual paper proposal should comprise: paper title and language of presentation; a brief abstract (100-150 words); the speaker’s details (name; academic status; institutional affiliation; email address).
+
+paper title and language of presentation
+
+
+(The preamble and title only work if I can get ahold of and read Kuttner's "Vocabulary of Gratian's Decretum") The title of Kuttner's 194? article "The Vocabulary of Gratian's Decretum" promised more than it could deliver, at least in part because a systematic treatment/survey of the text's vocabulary would not have been practicable before digital computers were available. 
+
+Now practical because of advances in computing technology/computational techniques including/especially/notably to ability to lemmatize the Decretum using large language models trained on large corpora of Medieval Latin texts.
+
+---
+Although considerable work on the stemmatology of Gratian's Decretum remains to be done, its textual history is now understood well enough to enable researchers to comparatively read earlier first-recension and later second-recension and vulgate versions of the text to identify evolutionary change in the doctrine taught by the Decretum. It is possible for individual researchers to identify particular developments in the teaching of the Decretum by close reading well-chosen selections from the text (e.g., Pennington, "The Law’s Violence against Medieval and Early Modern Jews"). However a project to systematically search for such topical developments is best conducted using a computational approach, taking advantage of recent advances in the application of large language models to natural language processing tasks. Using the PIE lemmatizer in conjunction with the LASLA Latin models, it is possible to lemmatize stemmatologically earlier and later samples from the text of corresponding sections of the Decretum and to compare the results, isolating lemmas that appear only in the earlier or later samples.
+---
+The Vocabulary of Gratian's Decretum: Change Over Time
+English
+---
+The textual history of Gratian's Decretum is now understood well enough to enable researchers to comparatively read first-recension, second-recension, and vulgate versions of the text to identify evolutionary changes in its doctrine. Specific developments can be identified by close reading well-chosen selections from the text (e.g., Pennington, "The Law’s Violence against Medieval and Early Modern Jews"). However a systematic search for such doctrinal developments is best conducted with computational assistance, taking advantage of recent advances in the application of large language models to natural language processing tasks. Using the PIE lemmatizer in conjunction with the LASLA Latin models, it is possible to lemmatize samples reflecting different compositional stages of corresponding sections of the Decretum and to compare the results, isolating lemmas unique to particular stages in the development of the text. Distinctive vocabularies of different compositional stages surfaced by this method then provide a roadmap for close reading in context.
+--
+Paul Evans, PhD
+Professor of Practice
+Academic Director, MS-ITL
+University of San Diego
+pevans@sandiego.edu
