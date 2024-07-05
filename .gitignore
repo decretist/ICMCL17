@@ -1,4 +1,5 @@
 *.docx
+*.pptx
 .DS_Store
 pie/
 
