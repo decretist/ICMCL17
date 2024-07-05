@@ -353,6 +353,38 @@ limited value in the results of machine reading by itself. The
 real value of the results of machine reading lies in the patterns
 that trained researchers *see* in them.
 
+### Conclusion (major)
+
+Is it enough? No.
+
+I have tried to emphasize that the project I have been presenting
+here today is very much a work in progress and that the results,
+although interesting, are limited to the dicta, and therefore should
+not be taken as anything more than a proof of concept.
+
+Casual searching through the MGH e-text of the Friedberg edition
+that was created for the *Wortkonkordanz zum Decretum Gratiani*
+edited by Reuter and Silagi indicates that there are occurrences of
+forms of the words I have been focusing on -- *calumnia*, *calumnior*,
+and *calumniator* -- in the rubrics and canons.
+
+A really thorough approach to the problem of systematically identifying
+new topics added to the *Decretum* between the first and second
+recensions is going to require a data set that includes the rubrics
+and canons as well as the *dicta* and case statements. (And might
+as well include the inscriptions while we are at it.) Ideally, such
+a data set would be in the form of a new e-text in TEI-P5 XML format
+incorporating texts from both the old Friedberg edition and the new
+Winroth edition-in-progress of the first recension. And this is
+where the scale of the undertaking starts to get really challenging.
+Even without the overhead of structuring the data set as a TEI-P5
+document, I spent something like 12 person-weeks on corpus preparation
+for the *dicta* and the case statements as part of my dissertation
+project. Since the word count of the canons is roughly five times
+that of the *dicta*, one person-year is not an unreasonable initial
+estimate for corpus preparation for a comparable data set for the
+canons.
+
 [^1]: 
 [ICMCL XVII – Congress Programme](https://sites.google.com/view/icmcl2024/academic-programme/congress-programme)  
 Tuesday (9 July): Cathedral Conference Suite  
