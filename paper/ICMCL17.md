@@ -116,8 +116,8 @@ unique declined forms. A normal Latin verb has 120 conjugated forms,
 although not all of them are unique, and that does not include the
 participial forms. I did not count the number of unique forms that
 a first conjugation deponent verb like *calumnior*, *calumniari*,
-*calumniatus* has, but <!-- it's a  lot --> the number is large.
-So if we want to use distinctive vocabulary as a basis for determining
+*calumniatus* has, but <!-- it's a lot --> the number is large. So
+if we want to use distinctive vocabulary as a basis for determining
 whether or not an idea or topic is present in a Latin language text,
 we need to lemmatize every word form we encounter -- that is, reduce
 it to its dictionary headword.
@@ -133,6 +133,16 @@ many thousands (over four thousand just for the first-recension
 with no readily detectable pattern.[^6] For my purposes at least,
 lemmatization was not ready for prime time, and that remained the
 case for many years, from around 2014 through around 2020.
+
+That changed in early 2021, when Mike Kestemont made me aware of
+the PIE lemmatizer. Kestemont is a researcher at the Universiy of
+Antwerp specializing in medieval Latin and Middle Dutch literature.
+He is also a leading figure in the field of computational text
+analysis whose advice on such matter I very much make it my business
+to seek and follow. The early results of my experiments with using
+PIE to lemmatize the *dicta* data set were reasonably promising,
+so it was with some reluctance that I set aside the work in order
+to complete my dissertation.
 
 * * *
 
@@ -196,14 +206,16 @@ the presence or absence of a single lemma. Instead, human (as opposed
 to machine) readers look for the presence of families of related
 lemmas to signal the presence of an idea or topic in a selection
 of text. In reviewing the list of 725 unique lemmas one such family
-of lemmas stands out: *calumpia*, *calumniator*, *calumpniatus*.[^9]
+of lemmas in particular stood out to me: *calumpia*, *calumniator*,
+*calumpniatus*.[^9]
 
-We know that during this period the concept of calumny took on a
-significance and a formal legal meaning that was derived from but
-was considerably more technically precise than its previous general
-use in Christian discourse. For example, litigants in canonical
-courts were required to swear oaths of non-calumniation at the onset
-of legal proceedings.
+We know that between 1140 and 1234, what we think of as the classical
+period in the history of medieval canon law, the concept of calumny
+took on a significance and a formal legal meaning that was derived
+from but was considerably more technically precise than its previous
+general use in Christian discourse. For example, during this period,
+oaths of non-calumniation at the onset of legal proceedings came
+to be required of all litigants in canonical courts.
 
 We should expect to see at least three Latin lemmas associated with
 the concept of calumny:
@@ -236,7 +248,7 @@ and calumniate you".[^10] The important point is that in the *dictum*
 Gratian quotes the word *calumpniantibus* in the same general sense
 in which it had been used throughout the first millennium of Christian
 discourse, not in the formal canon law sense it and related terms
-took on during the classical period.
+took on during the later classical period.
 
 Words derived from the extended family of lemmas concerned with the
 concept of calumny appear in two second-recension *dicta*, in C.2 q.3
