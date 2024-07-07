@@ -139,32 +139,6 @@ case for many years, from around 2014 through around 2020.
 
 * * *
 
-<!-- ICMCL 2016
-
-I generated the text samples for the first-recension *dicta* by
-extracting from the MGH e-text of the Friedberg edition all of the
-*dicta* listed by Winroth in the appendix of *The Making of Gratian's
-Decretum*, and by applying the transformation to the *dicta* that
-differed between the first and second recensions. [@winroth_making_2000,
-197-227] I generated the text samples for the second-recension
-*dicta* by starting with all the *dicta* in parts 1 and 2 of the
-Friedberg edition, and then subtracting from them every word that
-appears in the first-recension *dicta*. -->
-
-<!-- Dissertation
-
-Many of the examples in this chapter will distinguish between
-first- and second-recension *dicta*, so this is an appropriate point
-at which to introduce an explicit definition for the way in which
-those terms will be used in the following discussion. Because almost
-every word in the first-recension *dicta* corresponds to a word in
-the second-recension *dicta*, we could consider the first-recension
-*dicta* to be a subset of the second-recension *dicta*, and conversely,
-we could consider the second-recension *dicta* to be a superset of
-the first-recension *dicta*. While true enough from a commonsensical
-point of view, this is not a useful definition for the kinds of
-questions we would like to answer. -->
-
 <!-- Dissertation -->
 
 For the purpose of the following discussion, the second-recension
@@ -180,21 +154,11 @@ subtracted.
 
 <!-- Dissertation -->
 
-Take D.54 d.p.c.23 as an example. The complete text of the *dictum*
-as it appears in the Friedberg edition (edF 1.214) is:
-
-> *Ecce, quomodo serui ad clericatum ualeant assumi, uel quomodo
-non admittantur. Liberti quoque non sunt promouendi ad clerum, nisi
-ab obsequiis sui patroni fuerint absoluti. Unde in Concilio
-Eliberitano:*
-
-Winroth's appendix indicates that only the first sentence of the
-*dictum* appears in the first recension. Therefore, "*Ecce, quomodo
-serui ad clericatum ualeant assumi, uel quomodo non admittantur.*"
-is assigned to the first recension text sample, and "*Liberti quoque
-non sunt promouendi ad clerum, nisi ab obsequiis sui patroni fuerint
-absoluti. Unde in Concilio Eliberitano:*" is assigned to the second
-recension text sample.
+Take D.54 d.p.c.23 as an example. [Slide] Winroth's appendix indicates
+that only the first sentence of the *dictum* appears in the first
+recension. Therefore, the first sentence of the *dictum* is assigned
+to the first recension text sample, and the remainder is assigned
+to the second recension text sample.
 
 * * *
 
