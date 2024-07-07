@@ -40,7 +40,7 @@ either in the first or second recension or in *de Penitentia*. Results
 from stylometric analysis for authorship of the *dicta*, on the other
 hand, were not consistent with either the one-author theory championed
 by Pennington or the two-author theory championed by Winroth.
-Instead, the results suggested, but did not clearly demonstrate,
+Instead, the results suggested, but did not conclusively prove,
 that both the first and the second recension *dicta* were the work
 of multiple authors.
 
@@ -50,7 +50,7 @@ enhance the effectiveness of close reading medieval texts, Gratian's
 Digital Humanities world uses the term "distant reading" to describe
 this kind of computational assistance, emphasizing both its connection
 to and its contrast with traditional close reading. However each
-project is different in the questions it seeks to answer, and
+project that uses a distant or machine reading approach is different in the questions it seeks to answer, and
 therefore in the tools and techniques it uses to explore them. The
 dissertation project was concerned with the question of the authorship
 of the case statements and the first- and second recension *dicta*,
@@ -77,7 +77,7 @@ set).
 
 * * *
 
-It is worth noting that this is my third attempt to make progress on
+It is worth noting that this is *not* my first attempt to make progress on
 the problem of computationally identifying topics added to the *dicta*
 between the first and second recensions.
 
@@ -99,22 +99,43 @@ difficulty in determining the number of topics to look for (a
 necessary precondition for unsupervised topic modeling); and second,
 the fact that there was no obvious way to subtract topics.
 
-Once it became clear that unsupervised topic modeling using MALLET
-was not going to be an effective way to identify topics added to
-Gratian's *Decretum* between the first and second recensions, the
-most promising alternative approach to the problem appeared to be
-using lemmatization to identify distinctive *vocabulary* (as a
+So once it became clear that unsupervised topic modeling using
+MALLET was not going to be an effective way to identify topics added
+to Gratian's *Decretum* between the first and second recensions,
+the most promising alternative approach to the problem appeared to
+be using lemmatization to identify distinctive *vocabulary* (as a
 signpost pointing to new ideas) added between the first and second
-recensions. However my initial experiments with the Classical
-Language Toolkit (CLTK), built on top of the Python Natural Language
-Toolkit (NLTK) and the best lemmatization tool available at the
-time, strongly suggested that, at least for my purposes, lemmatization
-was not ready for prime time. The first- and second-recension *dicta*
--- 56,713 and 14,255 words respectively -- might reasonably be
-expected to include a few hundred unique lemmas, but CLTK reported
+recensions.
+
+<!-- lemmatization -->
+
+Because when working in a highly inflected language like Latin,
+using words as the signposts pointing to corresponding ideas is not
+precise enough. To anticipate an example that we will look more
+closely at later in the presentation, the noun *calumnia* has 6
+unique declined forms. A normal Latin verb has 120 conjugated forms,
+although not all of them are unique, and that does not include the
+participial forms. I did not count the number of unique forms that
+a first conjugation deponent verb like *calumnior*, *calumniari*,
+*calumniatus* has, but <!-- it's a  lot --> the number is large.
+So if we want to use distinctive vocabulary as a basis for determining
+whether or not an idea or topic is present in a Latin language text,
+we need to lemmatize every word form we encounter -- that is, reduce
+it to its dictionary headword.
+
+<!-- lemmatization -->
+
+However the results of my initial experiments with the
+Classical Language Toolkit (CLTK), built on top of the Python Natural
+Language Toolkit (NLTK) and the best lemmatization tool available
+at the time, were not encouraging. The first- and second-recension
+*dicta* -- 56,713 and 14,255 words respectively -- might reasonably
+be expected to include a few hundred unique lemmas, but CLTK reported
 many thousands (over four thousand just for the first-recension
 *dicta*), the overwhelming majority of which were false positives
-with no readily detectable pattern.[^6]
+with no readily detectable pattern.[^6] For my purposes at least,
+lemmatization was not ready for prime time, and that remained the
+case for many years, from around 2014 through around 2020.
 
 * * *
 
@@ -181,7 +202,7 @@ recension text sample.
 
 I would like to acknowledge Jake Bayon, an undergraduate Computer
 Science student at the University of San Diego, who set up the PIE
-lemmatization environment as independent study project during the
+lemmatization environment as independent study project with me during the
 Spring 2024 semester, and who learned something about Gratian in
 the process. PIE can only be installed with the 2019 Python 3.8
 release -- the current release is Python 3.12 -- so setting up the
@@ -192,7 +213,7 @@ task.
 
 I want to make it clear that PIE is not just a program that you run
 -- you do not just type a command or click a button and get lemmatized
-text out. PIE and PIE extended are libraries, packages, toolkits,
+text as output. PIE and PIE extended are libraries, packages, toolkits,
 that provide an extremely versatile set of software building blocks
 that can be called upon to perform a wide range of natural language
 processing functions, like part-of-speech tagging or lemmatization,
@@ -239,8 +260,8 @@ the concept of calumny:
 + the deponent verb *calumnior*, *calumniari*, *calumniatus* including
 participial forms like *calumnians* and *calumniatus*,
 
-+ the feminine noun *calumnia* corresponding to the abstract idea
-of calumny,
++ the feminine noun *calumnia* corresponding to the idea
+of calumny in the abstract,
 
 + and the masculine noun *calumniator*.
 
