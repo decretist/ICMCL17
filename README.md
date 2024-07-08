@@ -1,7 +1,10 @@
 # ICMCL17
-Proposal for 17th International Congress of Medieval Canon Law
+
+17th International Congress of Medieval Canon Law (ICMCL XVII)
 
 ![Gratian and his students](images/St-Omer.jpg)
+
+[ICMCL XVII](https://sites.google.com/view/icmcl2024/home)
 
 [Call for Papers -- Seventeenth International Congress of Medieval Canon Law (ICMCL) Canterbury, UK, 7-13 July 2024](https://www.themedievalacademyblog.org/call-for-papers-seventeenth-international-congress-of-medieval-canon-law-icmcl-canterbury-uk-7-13-july-2024/)
 
@@ -24,14 +27,13 @@ surfaced by this method then provide a roadmap for close reading
 in context.
 
 ---
+
 The default branch is `main`!
 
-`python3.7 -m venv pie`  
-`cd pie`  
-`source ./bin/activate`  
+`python3.8 -m venv venv`  
+`source ./venv/bin/activate`  
 `pip install --upgrade pip`  
-`pip install nlp-pie`  
-`pip install pie-extended`  
+`pip install nlp-pie pie-extended`  
 `pie-extended download lasla`  
 `pie-extended install-addons lasla`  
 `pie-extended tag lasla your_file.txt`  
