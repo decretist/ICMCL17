@@ -75,8 +75,6 @@ to enhance our close reading of the Decretum -- but each individual
 project attempts to answer different questions using different tools
 and techniques (although sometimes the same data set).
 
-* * *
-
 It is worth noting that this is *not* my first attempt to make
 progress on the problem of computationally identifying topics added
 to the *dicta* between the first and second recensions.
@@ -368,6 +366,30 @@ project. Since the word count of the canons is roughly five times
 that of the *dicta*, one person-year is not an unreasonable initial
 estimate for corpus preparation for a comparable data set for the
 canons.
+
+<!-- When speaking before an international audience, I try to avoid
+using American idioms, but I think one is appropriate here. When I
+worked in the computer industry in Silicon Valley, I had a coworker,
+who, when asked by a manager to do some impossible thing or another,
+used to say: "If you want to pull a rabbit out of a hat, you have
+to have put a rabbit into the hat first." -->
+
+The work I have presented today is based on a highly customized
+version of a 20th century e-text of a 19th century print edition
+of the *Decretum*. The MGH e-text of the Friedberg edition <!--
+that was created for the *Wortkonkordanz zum Decretum Gratiani*
+edited by Reuter and Silagi --> is the indispensable free resource
+without which none of my work, and I suspect the work of many others,
+is possible. But like so many free things in life, someone paid a
+great deal of money to make it free (in this case, presumably the
+taxpayers of the Federal Republic of Germany in the 1980s and 1990s).
+But the MGH e-text is a resource that because of its archaic format
+is approaching the end of it useful life. If we want to continue
+to advance in our understanding of Gratian's *Decretum* with the
+help of electronic resources, we need to invest time, effort, and
+grant funding into a 21st century electronic text, or better still
+an electronic edition, of Gratian's *Decretum* that meets 21st
+century research needs.
 
 [^1]: 
 [ICMCL XVII – Congress Programme](https://sites.google.com/view/icmcl2024/academic-programme/congress-programme)  
