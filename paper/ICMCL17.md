@@ -142,15 +142,13 @@ PIE to lemmatize the *dicta* data set were reasonably promising,
 so it was with some reluctance that I set aside the work in order
 to complete my dissertation.
 
-<!-- 8 minutes to here -->
-
 I want to make it clear that PIE is not just a program that you run
 -- you do not just type a command or click a button and get lemmatized
 text as output. PIE and PIE extended are libraries, packages, toolkits,
 that provide an extremely versatile set of software building blocks
 that can be called upon to perform a wide range of natural language
 processing functions, like part-of-speech tagging or lemmatization,
-from within a Python program. They are based on large language
+from within a Python program.[^jake] They are based on large language
 models (LLMs) trained using machine learning techniques on annotated
 corpora of texts in the target language. In this case, we are using
 a model trained on the LASLA corpus of 1.7 million tokens or words
@@ -225,6 +223,10 @@ lemmatized by PIE as the verb *calumpnio*. As a result, the lemma
 *calumpnio* does not appear on the list of lemmas unique to the
 second-recension *dicta*.
 
+[Table Slide]
+
+<!--
+
 Notably, the context for the only appearance of the concept of
 calumny in the first-recension *dicta*, at C.24 q.3 d.p.c.9, is a
 scriptural reference: "Ait enim Christus in euangelio: 'Orate pro
@@ -242,9 +244,9 @@ discourse, not in the formal canon law sense it and related terms
 took on during the later classical period.
 
 Words derived from the extended family of lemmas concerned with the
-concept of calumny appear in two second-recension *dicta*, in C.2 q.3
-d.p.c.8 (edF 1.453-454) <!-- C.2 q.3 c.8 is a first-recension canon
-from the Libro Capitulorum --> and C.23 q.4 d.p.c.23 §3 (edF 1.908).
+concept of calumny appear in two second-recension *dicta*, in C.2
+q.3 d.p.c.8 (edF 1.453-454) (C.2 q.3 c.8 is a first-recension canon
+from the Libro Capitulorum) and C.23 q.4 d.p.c.23 §3 (edF 1.908).
 
 The word *calumpniantur*, lemmatized by PIE as a form of the verb
 *calumpnio*, appears in the second-recension *dictum* C.23 q.4
@@ -252,10 +254,19 @@ d.p.c.23 §3 (edF 1.908). As was the case with the use of *calumpniantibus*
 in the first-recension *dictum* C.24 q.3 d.p.c.9, the word
 *calumpniantur* is used here in the context of a quotation (in this
 case from Augustine's *Perseverence*, commenting on Matthew 11:21-24
-or Luke 10:12-15 or both), and in a general rather than legal
-sense.[^11]
+or Luke 10:12-15 or both), and in a general rather than legal sense:
 
-### Conclusion (minor) <!-- 7 minutes -->
+> Item Augustinus: "De Tyriis uero et Sydoniis quid aliud possumus
+> dicere, quam non datum esse eis ut crederent, quos credituros
+> fuisse ipsa ueritas docet, si talia qualia apud non credentes
+> facta sunt, uirtutum signa uidissent? Quare autem hoc negatum eis
+> fuerit, dicant, si possunt, qui calumpniantur, et ostendant, cur
+> apud eos Dominus mirabilia, quibus profutura non erant, fecerit,
+> et apud eos, quibus erant profutura, non fecerit."
+
+  -->
+
+### Conclusion (minor)
 
 The long-term goal of this  project has has been to find a way to
 use computationally-enabled distant reading -- "reading machines"
@@ -437,14 +448,6 @@ discarded.
 language model for *calumpnia*.
 
 [^10]: Douai-Rheims translations.
-
-[^11]: Item Augustinus: "De Tyriis uero et Sydoniis quid aliud
-possumus dicere, quam non datum esse eis ut crederent, quos credituros
-fuisse ipsa ueritas docet, si talia qualia apud non credentes facta
-sunt, uirtutum signa uidissent? Quare autem hoc negatum eis fuerit,
-dicant, si possunt, qui calumpniantur, et ostendant, cur apud eos
-Dominus mirabilia, quibus profutura non erant, fecerit, et apud
-eos, quibus erant profutura, non fecerit."
 
 [^jake]: I would like to acknowledge Jake Bayon, an undergraduate
 Computer Science student at the University of San Diego, who set
