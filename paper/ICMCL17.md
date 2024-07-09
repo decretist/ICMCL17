@@ -155,18 +155,45 @@ a model trained on the LASLA corpus of 1.7 million tokens or words
 of classical Latin text, each annotated with lemma, part of speech,
 and other morphological and syntactic information.
 
-[If the term large language model or the acronym LLM sound familiar,
+If the term large language model or the acronym LLM sound familiar,
 they should. LLMs are the basis for the growing family of generative
 AI tools, ChatGPT and friends, that have been the subject of so
-much attention for the last two years.]
+much attention for the last two years.
 
 Once the PIE lemmatization environment had been set up, I wrote a
 Python program that used PIE to create separate lists of every lemma
 found in the first- and second-recension *dicta*, and then compare
 the two lists to identify lemmas that appear only in the second-recension
 *dicta*. The program output a list of 725 unique lemmas present
-only in second-recension *dicta*, as defined previously, and absent
-from the first-recension *dicta*.[^8]
+only in second-recension *dicta* and absent from the first-recension
+*dicta*.[^8]
+
+[Slide]
+
+To define terms clearly, for the purpose of these experiments I am
+defining "first-recension *dicta*" as the text of the *dicta* as
+they are listed in the appendix of Winroth's *The Making of Gratian's
+Decretum*, and I am defining "second-recension *dicta*" as the
+words in the text of the *dicta* as they appear in the Friedberg
+edition when the words in the *dicta* listed by Winroth in the
+appendix have been taken away. D.54 d.p.c.23 is a good example.
+Winroth's appendix indicates that only the first sentence of the
+*dictum* appears in the first recension. Therefore, the first
+sentence of the *dictum* is assigned to the first recension text
+sample, and the remainder is assigned to the second recension text
+sample.
+
+<!--
+
+I generated the sample text for the first-recension *dicta* by
+extracting from the MGH e-text of the Friedberg edition all of the
+*dicta* listed by Winroth in the appendix of *The Making of Gratian's
+Decretum*, and by applying the changes to the *dicta* that differed
+between the first and second recensions. [@winroth_making_2000,
+197-227] I generated the sample text for the second-recension *dicta*
+by starting with all the *dicta* in parts 1 and 2 of the Friedberg
+edition, and then taking away every word that appeared in the
+first-recension *dicta*.
 
 * * *
 
@@ -181,13 +208,7 @@ the second recension is the remainder of the *dicta* of the Friedberg
 text after the text of the *dicta* of the first recension has been
 subtracted.
 
-Take D.54 d.p.c.23 as an example. [Slide] Winroth's appendix indicates
-that only the first sentence of the *dictum* appears in the first
-recension. Therefore, the first sentence of the *dictum* is assigned
-to the first recension text sample, and the remainder is assigned
-to the second recension text sample.
-
-* * *
+  -->
 
 An understanding of whether an idea or topic is present in or absent
 from a selection of text can almost never be arrived at based on
@@ -242,6 +263,8 @@ Gratian quotes the word *calumpniantibus* in the same general sense
 in which it had been used throughout the first millennium of Christian
 discourse, not in the formal canon law sense it and related terms
 took on during the later classical period.
+
+[^10]: Douai-Rheims translations.
 
 Words derived from the extended family of lemmas concerned with the
 concept of calumny appear in two second-recension *dicta*, in C.2
@@ -345,7 +368,7 @@ Is it enough? No.
 
 I have tried to emphasize that the project I have been presenting
 here today is very much a work in progress and that the results,
-although interesting, are limited to the dicta, and therefore should
+although interesting, are limited to the *dicta*, and therefore should
 not be taken as anything more than a proof of concept.
 
 Casual searching through the MGH e-text of the Friedberg edition
@@ -446,8 +469,6 @@ discarded.
 
 [^9]: *calumpia* is almost certainly a typo in the LASLA Latin
 language model for *calumpnia*.
-
-[^10]: Douai-Rheims translations.
 
 [^jake]: I would like to acknowledge Jake Bayon, an undergraduate
 Computer Science student at the University of San Diego, who set
