@@ -59,7 +59,7 @@ in *de Penitentia*. It employed stylometric authorship analysis
 that used a statistical technique -- principal component analysis
 of the frequencies of commonly occuring function words -- to arrive
 at its results. In contrast, this project is concerned with changes
-in the teaching -- the doctrine -- of the Decretum between the first
+in the teaching -- the doctrine -- of the *Decretum* between the first
 and second recensions as indicated by the use of distinctive
 vocabulary in the first- and second recension *dicta*. It employs
 lemmatization -- a linguistic technique -- using the PIE lemmatizer
@@ -71,7 +71,7 @@ first- and second-recension *dicta* that I very carefully and
 laboriously prepared.[^3] The work I am going to discuss today
 depends on that same data set. To recapitulate: the overarching
 goal is the same -- to use computational distant reading techniques
-to enhance our close reading of the Decretum -- but each individual
+to enhance our close reading of the *Decretum* -- but each individual
 project attempts to answer different questions using different tools
 and techniques (although sometimes the same data set).
 
@@ -136,41 +136,13 @@ That changed in early 2021, when Mike Kestemont made me aware of
 the PIE lemmatizer. Kestemont is a researcher at the Universiy of
 Antwerp specializing in medieval Latin and Middle Dutch literature.
 He is also a leading figure in the field of computational text
-analysis whose advice on such matter I very much make it my business
+analysis whose advice on such matters I very much make it my business
 to seek and follow. The early results of my experiments with using
 PIE to lemmatize the *dicta* data set were reasonably promising,
 so it was with some reluctance that I set aside the work in order
 to complete my dissertation.
 
-* * *
-
-For the purpose of the following discussion, the second-recension
-*dicta* are defined as the ordered set of every word from the *dicta*
-in the text of Friedberg's 1879 edition of Gratian's *Decretum* for
-which there is not a one-to-one correspondence to a word in the
-first-recension *dicta* as defined by Anders Winroth's appendix
-"The Contents of the First Recension of Gratian's *Decretum*."[^7]
-Hence, for the purposes of this study, the text of the *dicta* of
-the second recension is the remainder of the *dicta* of the Friedberg
-text after the text of the *dicta* of the first recension has been
-subtracted.
-
-Take D.54 d.p.c.23 as an example. [Slide] Winroth's appendix indicates
-that only the first sentence of the *dictum* appears in the first
-recension. Therefore, the first sentence of the *dictum* is assigned
-to the first recension text sample, and the remainder is assigned
-to the second recension text sample.
-
-* * *
-
-I would like to acknowledge Jake Bayon, an undergraduate Computer
-Science student at the University of San Diego, who set up the PIE
-lemmatization environment as independent study project with me during the
-Spring 2024 semester, and who learned something about Gratian in
-the process. PIE can only be installed with the 2019 Python 3.8
-release -- the current release is Python 3.12 -- so setting up the
-lemmatization environment was not a trivial
-task.
+<!-- 8 minutes to here -->
 
 I want to make it clear that PIE is not just a program that you run
 -- you do not just type a command or click a button and get lemmatized
@@ -197,6 +169,27 @@ the two lists to identify lemmas that appear only in the second-recension
 *dicta*. The program output a list of 725 unique lemmas present
 only in second-recension *dicta*, as defined previously, and absent
 from the first-recension *dicta*.[^8]
+
+* * *
+
+For the purpose of the following discussion, the second-recension
+*dicta* are defined as the ordered set of every word from the *dicta*
+in the text of Friedberg's 1879 edition of Gratian's *Decretum* for
+which there is not a one-to-one correspondence to a word in the
+first-recension *dicta* as defined by Anders Winroth's appendix
+"The Contents of the First Recension of Gratian's *Decretum*."[^7]
+Hence, for the purposes of this study, the text of the *dicta* of
+the second recension is the remainder of the *dicta* of the Friedberg
+text after the text of the *dicta* of the first recension has been
+subtracted.
+
+Take D.54 d.p.c.23 as an example. [Slide] Winroth's appendix indicates
+that only the first sentence of the *dictum* appears in the first
+recension. Therefore, the first sentence of the *dictum* is assigned
+to the first recension text sample, and the remainder is assigned
+to the second recension text sample.
+
+* * *
 
 An understanding of whether an idea or topic is present in or absent
 from a selection of text can almost never be arrived at based on
@@ -262,7 +255,7 @@ case from Augustine's *Perseverence*, commenting on Matthew 11:21-24
 or Luke 10:12-15 or both), and in a general rather than legal
 sense.[^11]
 
-### Conclusion (minor)
+### Conclusion (minor) <!-- 7 minutes -->
 
 The long-term goal of this  project has has been to find a way to
 use computationally-enabled distant reading -- "reading machines"
@@ -452,4 +445,12 @@ sunt, uirtutum signa uidissent? Quare autem hoc negatum eis fuerit,
 dicant, si possunt, qui calumpniantur, et ostendant, cur apud eos
 Dominus mirabilia, quibus profutura non erant, fecerit, et apud
 eos, quibus erant profutura, non fecerit."
+
+[^jake]: I would like to acknowledge Jake Bayon, an undergraduate
+Computer Science student at the University of San Diego, who set
+up the PIE lemmatization environment as independent study project
+with me during the Spring 2024 semester, and who learned something
+about Gratian in the process. PIE can only be installed with the
+2019 Python 3.8 release -- the current release is Python 3.12 --
+so setting up the lemmatization environment was not a trivial task.
 
