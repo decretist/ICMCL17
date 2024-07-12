@@ -69,7 +69,7 @@ in common, for now, is the same data set. The dissertation project
 relied on a data set of the texts of the case statements and the
 first- and second-recension *dicta* that I very carefully and
 laboriously prepared.[^3] The work I am going to discuss today
-depends on that same data set. To recapitulate: the overarching
+depends on that same data set. To summarize: the overarching
 goal is the same -- to use computational distant reading techniques
 to enhance our close reading of the *Decretum* -- but each individual
 project attempts to answer different questions using different tools
@@ -92,7 +92,7 @@ in the second recension. The idea was to topic model all the *dicta*
 in the vulgate *Decretum* and then topic model just the *dicta* in
 the first recension, and then see what topics were left when the
 first recension topics were subtracted from the vulgate topics.
-Simple in concept, but prohibitively difficult in practice, for two
+This was simple in concept, but prohibitively difficult in practice, for two
 reasons. First, the difficulty in determining the number of topics
 to look for (a necessary precondition for unsupervised topic
 modeling); and second, the fact that there was no obvious way to
@@ -108,9 +108,9 @@ recensions.
 
 Because when working in a highly inflected language like Latin,
 using words as the signposts pointing to corresponding ideas is not
-precise enough. To anticipate an example that we will look more
-closely at later in the presentation, the noun *calumnia* has 6
-unique declined forms. A normal Latin verb has 120 conjugated forms,
+precise enough. To anticipate an example that we will look at more
+closely later in the presentation, the noun *calumnia* has 6
+unique declined forms. A regular Latin verb has 120 conjugated forms,
 although not all of them are unique, and that does not include the
 participial forms. I did not count the number of unique forms that
 a first conjugation deponent verb like *calumnior*, *calumniari*,
@@ -127,17 +127,16 @@ time, were not encouraging. The first- and second-recension *dicta*
 -- 56,713 and 14,255 words respectively -- might reasonably be
 expected to include a few hundred unique lemmas, but CLTK reported
 many thousands (over four thousand just for the first-recension
-*dicta*), the overwhelming majority of which were false positives
-with no readily detectable pattern.[^6] For my purposes at least,
+*dicta*), the overwhelming majority of which were false positives.[^6]
+For my purposes at least,
 lemmatization was not ready for prime time, and that remained the
 case for many years, from around 2014 through around 2020.
 
 That changed in early 2021, when Mike Kestemont made me aware of
 the PIE lemmatizer. Kestemont is a researcher at the Universiy of
-Antwerp specializing in medieval Latin and Middle Dutch literature.
-He is also a leading figure in the field of computational text
-analysis whose advice on such matters I very much make it my business
-to seek and follow. The early results of my experiments with using
+Antwerp specializing in medieval Latin and Middle Dutch literature
+and also a leading figure in the field of computational text
+analysis. The early results of my experiments with using
 PIE to lemmatize the *dicta* data set were reasonably promising,
 so it was with some reluctance that I set aside the work in order
 to complete my dissertation.
@@ -148,10 +147,10 @@ text as output. PIE and PIE extended are libraries, packages, toolkits,
 that provide an extremely versatile set of software building blocks
 that can be called upon to perform a wide range of natural language
 processing functions, like part-of-speech tagging or lemmatization,
-from within a Python program.[^jake] They are based on large language
+from within a Python program.[^7] They are based on large language
 models (LLMs) trained using machine learning techniques on annotated
 corpora of texts in the target language. In this case, we are using
-a model trained on the LASLA corpus of 1.7 million tokens or words
+a model trained on the LASLA corpus of 1.7 million words or "tokens"
 of classical Latin text, each annotated with lemma, part of speech,
 and other morphological and syntactic information.
 
@@ -208,6 +207,24 @@ the second recension is the remainder of the *dicta* of the Friedberg
 text after the text of the *dicta* of the first recension has been
 subtracted.
 
+[^7]: The definition is implemented by passing
+sequentially through the *dicta* and applying three rules. First,
+if a *dictum* is listed in Winroth's appendix as being in the first
+recension of the *Decretum*, and as not having been added to or
+changed in the second recension, the text for that *dictum* is
+assigned to the first recension sample. This rule is applied on a
+per-*dictum* basis. Second, if a *dictum* is in the text of the
+Friedberg edition and is not listed in Winroth's appendix as being
+in the first recension, in either unmodified or modified form, the
+text for that *dictum* is assigned to the second recension sample.
+This rule is applied on a per-*dictum* basis. Third, if a *dictum*
+is listed Winroth's appendix as being in the first recension, but
+as having been added to or changed in the second recension, those
+words indicated by the appendix are assigned to the first recension
+sample, while those words in the text of Friedberg not corresponding
+to the words indicated by the appendix are assigned to the second
+recension sample. This rule is applied on a word-by-word basis.
+
   -->
 
 An understanding of whether an idea or topic is present in or absent
@@ -222,7 +239,7 @@ of lemmas in particular stood out to me: *calumpia*, *calumniator*,
 We know that between 1140 and 1234, what we think of as the classical
 period in the history of medieval canon law, the concept of calumny
 took on a significance and a formal legal meaning that was derived
-from but was considerably more technically precise than its previous
+from but was considerably more precise technically than its previous
 general use in Christian discourse. For example, during this period,
 oaths of non-calumniation at the onset of legal proceedings came
 to be required of all litigants in canonical courts.
@@ -305,8 +322,8 @@ working on this problem.
 
 Using the PIE lemmatizer in conjunction with the LASLA Latin large
 language model (LLM) to systematically lemmatize every word in the
-*dicta* and then listing all of the lemmas that do appear in the
-second recension *dicta* but do not appear in the first recension
+*dicta* and then listing all of the lemmas that *do* appear in the
+second recension *dicta* but do *not* appear in the first recension
 *dicta* allowed me to identify a family of lemmas (*calumnia*,
 *calumniator*, and *calumniatus*) that point towards the canonically
 significant concept of calumny. 
@@ -326,8 +343,8 @@ a (slightly) misquoted scriptural platitude in the first-recension
 second-recension *dictum* C.23 q.4 d.p.c.23 §3 is in a similar
 spirit, although in the latter case the scriptural allusions are
 mediated through a patristic source, Augustine's *de Dono
-perseverantiae*, a treatise on predestination. As noted previously,
-both of these *dicta* use the words associated with the concept of
+perseverantiae*, a treatise on predestination.
+Both of these *dicta* use the words associated with the concept of
 calumny in the same general, non-technical, sense they had in the
 first millennium of Christian discourse.
 
@@ -340,7 +357,7 @@ rather than from scriptural or patristic sources. And most
 interesting of all is the fact that the *dictum* contains two
 first-person sayings by Gratian 2, the author of the second-recension
 *dicta* (or at least of this *dictum*), in effect glossing the terms
-calumniator and calumnia. This shows an increased, but still limited,
+*calumniator* and *calumnia*. This shows an increased, but still limited,
 level of legal sophistication in the sense that the discussion draws
 on resources from Justinianic Roman law, but that Gratian's own
 intervention is relatively modest.
@@ -354,7 +371,7 @@ topic, calumny. On close reading, the sites in the text of the
 change over time in the vocabulary of Gratian's *dicta* and to that
 extent in the teaching of the *Decretum* on this topic. Calumny was
 the most obvious topic (at least to me), and I was surprised that
-there were no other immediately obvious conceptually related families
+there were no other such immediately obvious conceptually related families
 of lemmas in the results, but I encourage those of you who are
 interested to take a look at the list this week and let me know if
 you see something I did not. As I previously indicated, there is
@@ -446,35 +463,17 @@ realistically require some level of grant funding.
 and second-recension *dicta*), every lemma either appears in both,
 or is unique to one or the other.
 
-[^7]: <!-- Dissertation --> The definition is implemented by passing
-sequentially through the *dicta* and applying three rules. First,
-if a *dictum* is listed in Winroth's appendix as being in the first
-recension of the *Decretum*, and as not having been added to or
-changed in the second recension, the text for that *dictum* is
-assigned to the first recension sample. This rule is applied on a
-per-*dictum* basis. Second, if a *dictum* is in the text of the
-Friedberg edition and is not listed in Winroth's appendix as being
-in the first recension, in either unmodified or modified form, the
-text for that *dictum* is assigned to the second recension sample.
-This rule is applied on a per-*dictum* basis. Third, if a *dictum*
-is listed Winroth's appendix as being in the first recension, but
-as having been added to or changed in the second recension, those
-words indicated by the appendix are assigned to the first recension
-sample, while those words in the text of Friedberg not corresponding
-to the words indicated by the appendix are assigned to the second
-recension sample. This rule is applied on a word-by-word basis.
-
-[^8]: The 728 lines of program output included 3 numbers, which I
-discarded.
-
-[^9]: *calumpia* is almost certainly a typo in the LASLA Latin
-language model for *calumpnia*.
-
-[^jake]: I would like to acknowledge Jake Bayon, an undergraduate
+[^7]: I would like to acknowledge Jake Bayon, an undergraduate
 Computer Science student at the University of San Diego, who set
 up the PIE lemmatization environment as independent study project
 with me during the Spring 2024 semester, and who learned something
 about Gratian in the process. PIE can only be installed with the
 2019 Python 3.8 release -- the current release is Python 3.12 --
 so setting up the lemmatization environment was not a trivial task.
+
+[^8]: The 728 lines of program output included 3 numbers, which I
+discarded.
+
+[^9]: *calumpia* is almost certainly a typo in the LASLA Latin
+language model for *calumpnia*.
 
