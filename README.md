@@ -2,7 +2,7 @@
 
 17th International Congress of Medieval Canon Law (ICMCL XVII)
 
-![Gratian and his students](images/St-Omer.jpg)
+![Gratian and his students](img/St-Omer.jpg)
 
 [ICMCL XVII](https://sites.google.com/view/icmcl2024/home)
 

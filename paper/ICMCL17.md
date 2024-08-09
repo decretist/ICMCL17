@@ -2,8 +2,8 @@
 title: |
   The Vocabulary of Gratian's *Decretum*: Change Over Time[^1]
 author: Paul Evans
-bibliography: ICMCL17.bib
-csl: chicago-fullnote-bibliography.csl
+bibliography: ../bib/ICMCL17.bib
+csl: ../csl/chicago-fullnote-bibliography.csl
 reference-section-title: Bibliography
 suppress-bibliography: false
 abstract: |
