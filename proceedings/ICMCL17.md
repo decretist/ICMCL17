@@ -1,6 +1,6 @@
 ---
 title: |
-  The Vocabulary of Gratian's *Decretum*: Change Over Time[^1]
+  The Vocabulary of Gratian's *Decretum*: Change Over Time
 author: Paul Evans
 bibliography: ../bib/ICMCL17.bib
 csl: ../csl/chicago-fullnote-bibliography.csl
@@ -435,18 +435,19 @@ grant funding into a 21st century electronic text, or better still
 an electronic edition, of Gratian's *Decretum* that meets 21st
 century research needs.
 
-[^1]: 
-[ICMCL XVII – Congress Programme](https://sites.google.com/view/icmcl2024/academic-programme/congress-programme)  
-Tuesday (9 July): Cathedral Conference Suite  
-15.30-17.00: Sessions VI  
-Session 18: Texts and Manuscripts in the Age of Gratian and Beyond  
-Room: Clagett Auditorium Balcony.  
-Moderator: Anders Winroth, University of Oslo, Norway.  
-Speaker 18b: Paul Evans, University of San Diego, USA.  
-'The Vocabulary of Gratian's Decretum: Change Over Time'  
-The maximum duration of each presentation (not inclusive of questions) is:  
-Speakers in sessions lasting 90 minutes and comprising three presentations:  
+<!--
+[ICMCL XVII – Congress Programme](https://sites.google.com/view/icmcl2024/academic-programme/congress-programme)
+Tuesday (9 July): Cathedral Conference Suite
+15.30-17.00: Sessions VI
+Session 18: Texts and Manuscripts in the Age of Gratian and Beyond
+Room: Clagett Auditorium Balcony.
+Moderator: Anders Winroth, University of Oslo, Norway.
+Speaker 18b: Paul Evans, University of San Diego, USA.
+'The Vocabulary of Gratian's Decretum: Change Over Time'
+The maximum duration of each presentation (not inclusive of questions) is:
+Speakers in sessions lasting 90 minutes and comprising three presentations:
 20 minutes.
+-->
 
 [^3]: This research could usefully be expanded to include the rubrics
 and canons, and I have the workflow in place to do so. But the
