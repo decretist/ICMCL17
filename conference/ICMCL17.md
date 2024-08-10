@@ -57,7 +57,7 @@ concerned with the question of the authorship of the case statements
 and the first- and second recension *dicta*, including the *dicta*
 in *de Penitentia*. It employed stylometric authorship analysis
 that used a statistical technique -- principal component analysis
-of the frequencies of commonly occuring function words -- to arrive
+of the frequencies of commonly occurring function words -- to arrive
 at its results. In contrast, this project is concerned with changes
 in the teaching -- the doctrine -- of the *Decretum* between the first
 and second recensions as indicated by the use of distinctive
@@ -133,7 +133,7 @@ lemmatization was not ready for prime time, and that remained the
 case for many years, from around 2014 through around 2020.
 
 That changed in early 2021, when Mike Kestemont made me aware of
-the PIE lemmatizer. Kestemont is a researcher at the Universiy of
+the PIE lemmatizer. Kestemont is a researcher at the University of
 Antwerp specializing in medieval Latin and Middle Dutch literature
 and also a leading figure in the field of computational text
 analysis. The early results of my experiments with using
@@ -293,7 +293,7 @@ The word *calumpniantur*, lemmatized by PIE as a form of the verb
 d.p.c.23 §3 (edF 1.908). As was the case with the use of *calumpniantibus*
 in the first-recension *dictum* C.24 q.3 d.p.c.9, the word
 *calumpniantur* is used here in the context of a quotation (in this
-case from Augustine's *Perseverence*, commenting on Matthew 11:21-24
+case from Augustine's *Perseverance*, commenting on Matthew 11:21-24
 or Luke 10:12-15 or both), and in a general rather than legal sense:
 
 > Item Augustinus: "De Tyriis uero et Sydoniis quid aliud possumus
@@ -440,7 +440,7 @@ century research needs.
 Tuesday (9 July): Cathedral Conference Suite  
 15.30-17.00: Sessions VI  
 Session 18: Texts and Manuscripts in the Age of Gratian and Beyond  
-Room: Claggett Auditorium Balcony.  
+Room: Clagett Auditorium Balcony.  
 Moderator: Anders Winroth, University of Oslo, Norway.  
 Speaker 18b: Paul Evans, University of San Diego, USA.  
 'The Vocabulary of Gratian's Decretum: Change Over Time'  
