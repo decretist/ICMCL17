@@ -28,30 +28,30 @@ abstract: |
 The project that forms the basis of the current study
 used techniques from computational linguistics
 to analyze the authorship of the case statements and *dicta* in
-Gratian's *Decretum*. My conclusion was that the case statements
+Gratian's *Decretum*. Its conclusion was that the case statements
 were written by a single author who was not the author of the *dicta*
 either in the first or second recensions or in *de Penitentia*. Results
 from stylometric analysis for authorship of the *dicta*, however,
 were not consistent with either the one-author theory championed
-by Ken Pennington or the two-author theory championed by Anders Winroth.
+by Kenneth Pennington or the two-author theory championed by Anders Winroth.
 Instead, the results suggested, but did not conclusively prove,
 that both the first and the second recension *dicta* were the work
 of multiple authors.
 
 All of this work is part of an overarching project to
 enhance the effectiveness of close reading medieval texts, Gratian's
-*Decretum* in particular, by using computational assistance. The
+*Decretum* in particular, using computational assistance. The
 Digital Humanities world uses the term "distant reading" to describe
 this kind of computational assistance, emphasizing both its connection
 to and its contrast with traditional close reading.
 However, each project that uses a distant or machine reading approach
-aims to answer different questions, and therfore the studies use
+aims to answer different questions, and therefore the studies use
 different tools and techniques.
 As noted, the project that forms the basis for this paper was
 concerned with the question of the authorship of the case statements
 and the first- and second recension *dicta*, including the *dicta*
 in *de Penitentia*. It employed stylometric authorship analysis
-that used a statistical technique -- principal component analysis
+using a statistical technique -- principal component analysis
 of the frequencies of commonly occurring function words -- to obtain
 its results. In contrast, this project concerns changes
 in the teaching -- the doctrine -- of the *Decretum* between the first
@@ -73,10 +73,10 @@ It is worth noting that this is *not* my first attempt to make
 progress on the problem of computationally identifying topics added
 to the *dicta* between the first and second recensions.
 At the stage in my PhD program when I was starting to think about
-to my dissertation proposal (around 2012),
+my dissertation proposal (around 2012),
 there was tremendous enthusiasm in the Digital Humanities world for
 a technique called unsupervised topic modeling and in particular
-for a topic-modeling tool called MALLET.[^3] Inspired by Ken
+for a topic-modeling tool called MALLET.[^3] Inspired by
 Pennington's observation that most passages in the *Decretum* dealing
 with the legal status of Jews, particularly those dealing with
 forced conversion, were introduced only in the second recension,[^4]
@@ -91,7 +91,7 @@ to look for (a necessary precondition for unsupervised topic
 modeling) and second, the fact that there was no obvious way to
 subtract topics.
 
-So once it became clear that unsupervised topic modeling using
+Once it became clear that unsupervised topic modeling using
 MALLET was not going to be an effective way to identify topics added
 to Gratian's *Decretum* between the first and second recensions,
 the most promising alternative approach to the problem appeared to
@@ -105,7 +105,7 @@ sufficiently precise. As an example that we will look at more
 closely later in the presentation, the noun *calumnia* has 6
 unique declined forms. A regular Latin verb has 120 conjugated forms,
 although not all of them are unique, and that does not include the
-participial forms. I did not count the number of unique forms that
+participial forms. I have not counted the number of unique forms that
 a first conjugation deponent verb like *calumnior*, *calumniari*,
 *calumniatus* has, but the number is large. So
 if we want to use distinctive vocabulary as a basis for determining
@@ -137,7 +137,7 @@ that can be called upon to perform a wide range of natural language
 processing functions, like part-of-speech tagging or lemmatization,
 from within a Python program.[^7] They are based on large language
 models (LLMs) trained using machine learning techniques on annotated
-corpora of texts in the target language. In this case, we are using
+corpora of texts in the target language. In this case, I am using
 a model trained on the LASLA corpus of 1.7 million words or "tokens"
 of classical Latin, each annotated with lemma, part of speech,
 and other morphological and syntactic information.
@@ -230,7 +230,7 @@ of text. In reviewing the list of 725 unique lemmas, one such family
 of lemmas in particular stands out: *calumpia*, *calumniator*,
 *calumpniatus*.[^9]
 This family will be the exemplar of what the new computational
-techniques reveal abiout the evolution of the text and ideas of the
+techniques reveal about the evolution of the text and ideas of the
 *Decretum*.
 
 We know that between 1140 and 1234, what we think of as the classical
@@ -259,9 +259,6 @@ lemmatized by PIE as the verb *calumpnio*. As a result, the lemma
 second-recension *dicta*.
 
 [Table Slide]
-
-<!-- checked down to here -->
-<!-- edited  down to here -->
 
 <!--
 
@@ -366,7 +363,7 @@ first millennium of Christian discourse.
 
 That is not the case in the second recension *dictum* C.23 q.3 d.p.c.8. Here
 we see a series of quotations from book 48 of the *Digest*, containing
-7 words, 5 of them unique, mapping to all 4 of the expected lemmas
+7 words, 5 of them unique, corresponding to all 4 of the expected lemmas
 related to the concept of calumny. It is of obvious interest that
 the quotations in this *dictum* are from Justinianic Roman law
 rather than from scriptural or patristic sources. And most
@@ -402,19 +399,25 @@ change over time in the vocabulary of Gratian's *dicta* and to that
 extent in the teaching of the *Decretum* on this topic. Calumny was
 the most obvious topic (at least to me), and I was surprised that
 there were no other such immediately obvious conceptually related families
-of lemmas in the results, but I encourage those of you who are
-interested to take a look at the list this week and let me know if
-you see something I did not. As I previously indicated, there is
+of lemmas in the results. As I previously indicated, there is
 limited value in the results of machine reading by itself. The
 real value of the results of machine reading lies in the patterns
-that trained researchers *see* in them.
+that trained researchers see in them.
+
+<!--
+  ... but I encourage those of you who are interested to take a
+  look at the list this week and let me know if you see something
+  I did not.
+
+  Footnote with link to complete list on GitHub
+  -->
 
 ### Conclusion (major)
 
 Is it enough? No.
 
-I have tried to emphasize that the project I have been presenting
-here today is very much a work in progress and that the results,
+I have tried to emphasize that the project I have discussed in this paper
+is very much a work in progress and that the results,
 although interesting, are limited to the *dicta*, and therefore should
 not be taken as anything more than a proof of concept.
 
@@ -427,8 +430,8 @@ and *calumniator* -- in the rubrics and canons.
 A really thorough approach to the problem of systematically identifying
 new topics added to the *Decretum* between the first and second
 recensions is going to require a data set that includes the rubrics
-and canons as well as the *dicta* and case statements. (And might
-as well include the inscriptions while we are at it.) Ideally, such
+and canons with inscriptions as well as the *dicta* and case statements.
+Ideally, such
 a data set would be in the form of a new e-text in TEI-P5 XML format
 incorporating texts from both the old Friedberg edition and the new
 Winroth edition-in-progress of the first recension. And this is
@@ -441,15 +444,15 @@ that of the *dicta*, one person-year is not an unreasonable initial
 estimate for corpus preparation for a comparable data set for the
 canons.
 
-The work I have presented today is based on a highly customized
+The work I have discussed in this paper is based on a highly customized
 version of a 20th century e-text of a 19th century print edition
 of the *Decretum*. The MGH e-text of the Friedberg edition
 that was created for the *Wortkonkordanz zum Decretum Gratiani*
 edited by Reuter and Silagi is the indispensable free resource
 without which none of my work, and I suspect the work of many others,
 would be possible. But like so many free things in life, someone paid a
-great deal of money to make it free (in this case, presumably the
-taxpayers of the Federal Republic of Germany in the 1980s and 1990s).
+great deal of money to make it free (in this case, the
+taxpayers of the State of Bavaria and the Federal Republic of Germany in the 1980s and 1990s).
 But the MGH e-text is a resource that because of its archaic format
 is approaching the end of it useful life. If we want to continue
 to advance in our understanding of Gratian's *Decretum* with the
