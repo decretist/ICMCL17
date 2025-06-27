@@ -49,14 +49,47 @@ Pennington's observation that most passages in the *Decretum* dealing
 with the legal status of Jews, particularly those dealing with forced
 conversion, were introduced only in the second recension,[^4] I hoped to
 use MALLET to identify other new topics added in the second recension.
-The idea was to topic model all the *dicta* in the vulgate *Decretum*
-and then to topic model the *dicta* in the first recension, which would
-show which topics were left when the first recension topics were
-subtracted from the vulgate topics. This was simple in concept, but
-prohibitively difficult in practice, for two reasons. First, the
-difficulty in determining the number of topics to look for (a necessary
-precondition for unsupervised topic modeling) and second, the fact that
-there was no obvious way to subtract topics.
+The approach was to topic model all *dicta* in the *Decretum* and then
+to topic model the first recension *dicta*, which would show which
+topics were left when the first recension topics were subtracted from
+all topics. This was simple in concept, but prohibitively difficult in
+practice, for two reasons. First, the difficulty in determining the
+number of topics to look for (a necessary precondition for unsupervised
+topic modeling) and second, the fact that there was no obvious way to
+subtract topics.
+
+<!--
+  Stan Chodorow:
+  "This explanation belongs earlier. You have been referring to the
+  first and second recensions from the beginning. It is late to
+  explain what you mean. The end of the sentence is awkward."
+  -->
+
+For the purpose of the discussion that follows, I am defining
+"first-recension *dicta*" as the text of the *dicta* as they are listed
+in the appendix of Winroth's *The Making of Gratian's Decretum*, and I
+am defining "second-recension *dicta*" as the words in the text of the
+*dicta* as they appear in the Friedberg edition when the words in the
+*dicta* listed by Winroth in the appendix have been taken away. D.54
+d.p.c.23 is a good example, Winroth's appendix indicates that only the
+first sentence of the *dictum* appears in the first recension.
+Therefore, the first sentence of the *dictum* is assigned to the first
+recension text sample:
+
+> **Ecce, quomodo serui ad clericatum ualeant assumi, uel quomodo non
+> admittantur.** Liberti quoque non sunt promouendi ad clerum, nisi ab
+> obsequiis sui patroni fuerint absoluti. Unde in Concilio Eliberitano:
+
+The remainder of the dictum is assigned to the second recension text
+sample:
+
+> Ecce, quomodo serui ad clericatum ualeant assumi, uel quomodo non
+> admittantur. **Liberti quoque non sunt promouendi ad clerum, nisi ab
+> obsequiis sui patroni fuerint absoluti. Unde in Concilio
+> Eliberitano:**
+
+By this definition, the first- and second-recension *dicta* contain
+56,713 and 14,255 words respectively.
 
 Once it became clear that unsupervised topic modeling using MALLET was
 not going to be an effective way to identify topics added to Gratian's
@@ -81,13 +114,12 @@ reduce it to its dictionary headword.
 The results of my initial experiments with the Classical Language
 Toolkit (CLTK), built on top of the Python Natural Language Toolkit
 (NLTK) and the best lemmatization tool available at the time, were not
-encouraging.[^5] The first- and second-recension *dicta* -- 56,713 and
-14,255 words respectively -- might reasonably be expected to include a
-few hundred unique lemmas, but CLTK reported many thousands (over four
-thousand just for the first-recension *dicta*), the overwhelming
-majority of which were false positives.[^6] Lemmatization was not ready
-for my purposes, and that remained the case for many years, from around
-2014 through around 2020.
+encouraging.[^5] The first- and second-recension *dicta* might
+reasonably be expected to include a few hundred unique lemmas, but CLTK
+reported many thousands (over four thousand just for the first-recension
+*dicta*), the overwhelming majority of which were false positives.[^6]
+Lemmatization was not ready for my purposes, and that remained the case
+for many years, from around 2014 through around 2020.
 
 In early 2021, Mike Kestemont made me aware of the PIE lemmatizer.
 Kestemont is a researcher at the University of Antwerp specializing in
@@ -117,27 +149,6 @@ the first- and second-recension *dicta*, and then to compare the two
 lists to identify lemmas that appear only in the second-recension
 *dicta*. The program produced a list of 725 unique lemmas present only
 in second-recension *dicta*.[^8]
-
-\[Slide\]
-
-<!--
-  Stan Chodorow:
-  "This explanation belongs earlier. You have been referring to the
-  first and second recensions from the beginning. It is late to
-  explain what you mean. The end of the sentence is awkward."
-  -->
-
-To define terms clearly, for the purpose of these experiments I am
-defining "first-recension *dicta*" as the text of the *dicta* as they
-are listed in the appendix of Winroth's *The Making of Gratian's
-Decretum*, and I am defining "second-recension *dicta*" as the words in
-the text of the *dicta* as they appear in the Friedberg edition when the
-words in the *dicta* listed by Winroth in the appendix have been taken
-away. D.54 d.p.c.23 is a good example. Winroth's appendix indicates that
-only the first sentence of the *dictum* appears in the first recension.
-Therefore, the first sentence of the *dictum* is assigned to the first
-recension text sample, and the remainder is assigned to the second
-recension text sample.
 
 <!--
 &#10;I generated the sample text for the first-recension *dicta* by
@@ -296,11 +307,16 @@ second recension *dicta*.
 
 The concept of calumny makes its initial appearance in the form of a
 slightly misquoted scriptural reference in the first-recension *dictum*
-C.24 q.3 d.p.c.9. <!--
+C.24 q.3 d.p.c.9.
+
+<!--
   Stan Chodorow:
   "Specify it. What platitude?
-  --> The treatment of the concept in the second-recension *dictum* C.23
-q.4 d.p.c.23 §3 is in a similar spirit, although in that recension the
+  rejoin paragraphs
+  -->
+
+The treatment of the concept in the second-recension *dictum* C.23 q.4
+d.p.c.23 §3 is in a similar spirit, although in that recension the
 scriptural allusions are mediated through a patristic source,
 Augustine's *de Dono perseverantiae*, a treatise on predestination. Both
 of these *dicta* use the words associated with the concept of calumny in
@@ -331,8 +347,6 @@ from Justinianic Roman law, but that Gratian's own intervention is
 relatively modest.
   -->
 
-<!-- No changes past this point -->
-
 To summarize: the technique of searching among lemmas that are unique to
 the second recension using distant or machine reading was successful at
 least as a proof of concept insofar as it did surface one family of
@@ -343,17 +357,11 @@ time in the vocabulary of Gratian's *dicta* and to that extent in the
 teaching of the *Decretum* on this topic. Calumny was the most obvious
 topic (at least to me), and I was surprised that there were no other
 such immediately obvious conceptually related families of lemmas in the
-results. As I previously indicated, there is limited value in the
-results of machine reading by itself. The real value of the results of
-machine reading lies in the patterns that trained researchers see in
-them.
-
-<!--
-  ... but I encourage those of you who are interested to take a
-  look at the list this week and let me know if you see something
-  I did not.
-&#10;  Footnote with link to complete list on GitHub
-  -->
+results, although I strongly encourage interested readers to examine the
+complete list of unique lemmas for themselves.[^10] As I previously
+indicated, there is limited value in the results of machine reading by
+itself. The real value of the results of machine reading lies in the
+patterns that trained researchers see in them.
 
 ### Conclusion (major)
 
@@ -500,3 +508,7 @@ Law* 31, no. 1 (2014): 111–24.
 
 [^9]: *calumpia* is almost certainly a typo in the LASLA Latin language
     model for *calumpnia*.
+
+[^10]: The complete list of 725 lemmas unique to the second recension
+    *dicta* is available from my GitHub repository for ICMCL17 at
+    <https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt>.
