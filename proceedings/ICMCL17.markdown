@@ -1,72 +1,62 @@
-The work I will be presenting today was originally intended to be part
-of my dissertation. In the interest of completing the dissertation
-before the end of the year, I decided in March of 2021 that I had gotten
-as far as I was going to get, and that the chapter in which this work
-was to be discussed would have to be left out. "Hitherto shalt thou
-come, but no further" (Job 38:11).
+The project that forms the basis of the current study used techniques
+from computational linguistics to analyze the authorship of the case
+statements and *dicta* in Gratian's *Decretum*. My conclusion was that
+the case statements were written by a single author who was not the
+author of the *dicta* either in the first or second recensions or in *de
+Penitentia*. Results from stylometric analysis for authorship of the
+*dicta*, however, were not consistent with either the one-author theory
+championed by Ken Pennington or the two-author theory championed by
+Anders Winroth. Instead, the results suggested, but did not conclusively
+prove, that both the first and the second recension *dicta* were the
+work of multiple authors.
 
-The larger project used techniques from computational linguistics to
-analyze the authorship of the case statements and *dicta* in Gratian's
-*Decretum*. My conclusion was that the case statements were written by a
-single author who was not the author of the *dicta* either in the first
-or second recension or in *de Penitentia*. Results from stylometric
-analysis for authorship of the *dicta*, on the other hand, were not
-consistent with either the one-author theory championed by Ken
-Pennington or the two-author theory championed by Anders Winroth.
-Instead, the results suggested, but did not conclusively prove, that
-both the first and the second recension *dicta* were the work of
-multiple authors.
-
-All of my work is in some sense part of an overarching project to
-enhance the effectiveness of close reading medieval texts, Gratian's
-*Decretum* in particular, by using computational assistance. The Digital
-Humanities world uses the term "distant reading" to describe this kind
-of computational assistance, emphasizing both its connection to and its
-contrast with traditional close reading. However each project that uses
-a distant or machine reading approach is different in the questions it
-seeks to answer, and therefore in the tools and techniques it uses to
-explore them. The dissertation project was concerned with the question
-of the authorship of the case statements and the first- and second
-recension *dicta*, including the *dicta* in *de Penitentia*. It employed
-stylometric authorship analysis that used a statistical technique --
-principal component analysis of the frequencies of commonly occurring
-function words -- to arrive at its results. In contrast, this project is
-concerned with changes in the teaching -- the doctrine -- of the
-*Decretum* between the first and second recensions as indicated by the
-use of distinctive vocabulary in the first- and second recension
-*dicta*. It employs lemmatization -- a linguistic technique -- using the
-PIE lemmatizer and a large language model (LLM) based on the LASLA
-corpus.[^1] What the two projects have in common, for now, is the same
-data set. The dissertation project relied on a data set of the texts of
-the case statements and the first- and second-recension *dicta* that I
-very carefully and laboriously prepared.[^2] The work I am going to
-discuss today depends on that same data set. To summarize: the
-overarching goal is the same -- to use computational distant reading
-techniques to enhance our close reading of the *Decretum* -- but each
-individual project attempts to answer different questions using
-different tools and techniques (although sometimes the same data set).
+All of this work is part of an overarching project to enhance the
+effectiveness of close reading medieval texts, Gratian's *Decretum* in
+particular, by using computational assistance. The Digital Humanities
+world uses the term "distant reading" to describe this kind of
+computational assistance, emphasizing both its connection to and its
+contrast with traditional close reading. However, each project that uses
+a distant or machine reading approach aims to answer different
+questions, and therfore the studies use different tools and techniques.
+As noted, the project that forms the basis for this paper was concerned
+with the question of the authorship of the case statements and the
+first- and second recension *dicta*, including the *dicta* in *de
+Penitentia*. It employed stylometric authorship analysis that used a
+statistical technique -- principal component analysis of the frequencies
+of commonly occurring function words -- to obtain its results. In
+contrast, this project concerns changes in the teaching -- the doctrine
+-- of the *Decretum* between the first and second recensions as
+indicated by the use of distinctive vocabulary in the *dicta* of the two
+recensions. It employs lemmatization -- a linguistic technique that uses
+the PIE lemmatizer and a large language model (LLM) based on the LASLA
+corpus.[^1] What the two projects have in common is the data set. The
+original project relied on a data set of the texts of the case
+statements and the first- and second-recension *dicta* that I very
+carefully and laboriously prepared.[^2] To summarize: the overarching
+goal is the same -- to use computational distant reading techniques to
+enhance our close reading of the *Decretum* -- but each individual
+project attempts to answer different questions using different tools and
+techniques on the data set.
 
 It is worth noting that this is *not* my first attempt to make
 progress on the problem of computationally identifying topics added to
-the *dicta* between the first and second recensions.
-
-At the stage in my PhD program when I was starting to think ahead to my
-dissertation proposal (this would have been around 2012), there was
-tremendous enthusiasm in the Digital Humanities world for a technique
-called unsupervised topic modeling and in particular for a
-topic-modeling tool called MALLET.[^3] Inspired by Ken Pennington's
-observation that most passages in the *Decretum* dealing with the legal
-status of Jews, particularly those dealing with forced conversion, were
-introduced only in the second recension,[^4] I hoped to use MALLET to
-systematically identify new topics added in the second recension. The
-idea was to topic model all the *dicta* in the vulgate *Decretum* and
-then topic model just the *dicta* in the first recension, and then see
-what topics were left when the first recension topics were subtracted
-from the vulgate topics. This was simple in concept, but prohibitively
-difficult in practice, for two reasons. First, the difficulty in
-determining the number of topics to look for (a necessary precondition
-for unsupervised topic modeling); and second, the fact that there was no
-obvious way to subtract topics.
+the *dicta* between the first and second recensions. At the stage in my
+PhD program when I was starting to think about to my dissertation
+proposal (around 2012), there was tremendous enthusiasm in the Digital
+Humanities world for a technique called unsupervised topic modeling and
+in particular for a topic-modeling tool called MALLET.[^3] Inspired by
+Ken Pennington's observation that most passages in the *Decretum*
+dealing with the legal status of Jews, particularly those dealing with
+forced conversion, were introduced only in the second recension,[^4] I
+hoped to use MALLET to identify other new topics added in the second
+recension. The idea was to topic model all the *dicta* in the vulgate
+*Decretum* and then to topic model the *dicta* in the first recension,
+which would show which topics were left when the first recension topics
+were subtracted from the vulgate topics. This was simple in concept, but
+prohibitively difficult in practice, for two reasons. First, the
+difficulty in determining the number of topics to look for (a necessary
+precondition for unsupervised topic modeling) and second, the fact that
+there was no obvious way to subtract topics.
 
 So once it became clear that unsupervised topic modeling using MALLET
 was not going to be an effective way to identify topics added to
@@ -75,29 +65,33 @@ promising alternative approach to the problem appeared to be using
 lemmatization to identify distinctive *vocabulary* (as a signpost
 pointing to new ideas) added between the first and second recensions.
 
-Because when working in a highly inflected language like Latin, using
-words as the signposts pointing to corresponding ideas is not precise
-enough. To anticipate an example that we will look at more closely later
-in the presentation, the noun *calumnia* has 6 unique declined forms. A
-regular Latin verb has 120 conjugated forms, although not all of them
-are unique, and that does not include the participial forms. I did not
-count the number of unique forms that a first conjugation deponent verb
-like *calumnior*, *calumniari*, *calumniatus* has, but
-<!-- it's a lot --> the number is large. So if we want to use
-distinctive vocabulary as a basis for determining whether or not an idea
-or topic is present in a Latin language text, we need to lemmatize every
-word form we encounter -- that is, reduce it to its dictionary headword.
+Because, when working in a highly inflected language like Latin, using
+words as the signposts pointing to corresponding ideas is not
+sufficiently precise. As an example that we will look at more closely
+later in the presentation, the noun *calumnia* has 6 unique declined
+forms. A regular Latin verb has 120 conjugated forms, although not all
+of them are unique, and that does not include the participial forms. I
+did not count the number of unique forms that a first conjugation
+deponent verb like *calumnior*, *calumniari*, *calumniatus* has, but the
+number is large. So if we want to use distinctive vocabulary as a basis
+for determining whether or not an idea or topic is present in a Latin
+text, we need to lemmatize every word form we encounter -- that is,
+reduce it to its dictionary headword.
 
-However the results of my initial experiments with the Classical
-Language Toolkit (CLTK), built on top of the Python Natural Language
-Toolkit (NLTK) and the best lemmatization tool available at the time,
-were not encouraging. The first- and second-recension *dicta* -- 56,713
-and 14,255 words respectively -- might reasonably be expected to include
-a few hundred unique lemmas, but CLTK reported many thousands (over four
+<!-- checked down to here -->
+
+<!-- edited  down to here -->
+
+The results of my initial experiments with the Classical Language
+Toolkit (CLTK), built on top of the Python Natural Language Toolkit
+(NLTK) and the best lemmatization tool available at the time, were not
+encouraging.[^5] The first- and second-recension *dicta* -- 56,713 and
+14,255 words respectively -- might reasonably be expected to include a
+few hundred unique lemmas, but CLTK reported many thousands (over four
 thousand just for the first-recension *dicta*), the overwhelming
-majority of which were false positives.[^5] For my purposes at least,
-lemmatization was not ready for prime time, and that remained the case
-for many years, from around 2014 through around 2020.
+majority of which were false positives.[^6] Lemmatization was not ready
+for my purposes, and that remained the case for many years, from around
+2014 through around 2020.
 
 That changed in early 2021, when Mike Kestemont made me aware of the PIE
 lemmatizer. Kestemont is a researcher at the University of Antwerp
@@ -113,7 +107,7 @@ as output. PIE and PIE extended are libraries, packages, toolkits, that
 provide an extremely versatile set of software building blocks that can
 be called upon to perform a wide range of natural language processing
 functions, like part-of-speech tagging or lemmatization, from within a
-Python program.[^6] They are based on large language models (LLMs)
+Python program.[^7] They are based on large language models (LLMs)
 trained using machine learning techniques on annotated corpora of texts
 in the target language. In this case, we are using a model trained on
 the LASLA corpus of 1.7 million words or "tokens" of classical Latin
@@ -131,7 +125,7 @@ the first- and second-recension *dicta*, and then compare the two lists
 to identify lemmas that appear only in the second-recension *dicta*. The
 program output a list of 725 unique lemmas present only in
 second-recension *dicta* and absent from the first-recension
-*dicta*.[^7]
+*dicta*.[^8]
 
 \[Slide\]
 
@@ -194,7 +188,7 @@ machine) readers look for the presence of families of related lemmas to
 signal the presence of an idea or topic in a selection of text. In
 reviewing the list of 725 unique lemmas one such family of lemmas in
 particular stood out to me: *calumpia*, *calumniator*,
-*calumpniatus*.[^8]
+*calumpniatus*.[^9]
 
 We know that between 1140 and 1234, what we think of as the classical
 period in the history of medieval canon law, the concept of calumny took
@@ -447,9 +441,9 @@ Law* 31, no. 1 (2014): 111–24.
     1493–503.
 
 [^2]: This research could usefully be expanded to include the rubrics
-    and canons, and I have the workflow in place to do so. But the
-    workload required to expand the corpus to include the canons would
-    realistically require some level of grant funding.
+    and canons, and I have made preparations to do so. The work required
+    to expand the corpus to include the canons themselves would
+    realistically require grant funding.
 
 [^3]: MAchine Learning for LanguagE Toolkit  
     Andrew Kachites McCallum, “MALLET: A Machine Learning for Language
@@ -460,12 +454,19 @@ Law* 31, no. 1 (2014): 111–24.
     23–44; and Kenneth Pennington, “Gratian and the Jews,” *Bulletin of
     Medieval Canon Law* 31, no. 1 (2014): 111–24.
 
-[^5]: This may be the place to get explicit about what I mean by
+[^5]: Python is a widely-used general-purpose programming language.
+    According to one frequently-cited industry metric, the [TIOBE
+    Index](https://www.tiobe.com/tiobe-index/), Python is the most
+    popular programming language worldwide as of June 2025. Python
+    provides powerful features for performing operations on textual
+    data.
+
+[^6]: This may be the place to get explicit about what I mean by
     *unique* lemmas. When comparing any two text samples (here, the
     first- and second-recension *dicta*), every lemma either appears in
     both, or is unique to one or the other.
 
-[^6]: I would like to acknowledge Jake Bayon, an undergraduate Computer
+[^7]: I would like to acknowledge Jake Bayon, an undergraduate Computer
     Science student at the University of San Diego, who set up the PIE
     lemmatization environment as independent study project with me
     during the Spring 2024 semester, and who learned something about
@@ -473,8 +474,8 @@ Law* 31, no. 1 (2014): 111–24.
     Python 3.8 release -- the current release is Python 3.12 -- so
     setting up the lemmatization environment was not a trivial task.
 
-[^7]: The 728 lines of program output included 3 numbers, which I
+[^8]: The 728 lines of program output included 3 numbers, which I
     discarded.
 
-[^8]: *calumpia* is almost certainly a typo in the LASLA Latin language
+[^9]: *calumpia* is almost certainly a typo in the LASLA Latin language
     model for *calumpnia*.
