@@ -22,21 +22,21 @@ the project that forms the basis for this paper was concerned with the
 question of the authorship of the case statements and the first- and
 second recension *dicta*, including the *dicta* in *de Penitentia*. It
 employed stylometric authorship analysis using a statistical technique
--- principal component analysis of the frequencies of commonly occurring
-function words -- to obtain its results. In contrast, this project
-concerns changes in the teaching -- the doctrine -- of the *Decretum*
-between the first and second recensions as indicated by the use of
-distinctive vocabulary in the *dicta* of the two recensions. It employs
-lemmatization -- a linguistic technique that uses the PIE lemmatizer and
-a large language model (LLM) based on the LASLA corpus.[^2] What the two
-projects have in common is the data set. The original project relied on
-a data set of the texts of the case statements and the first- and
-second-recension *dicta* that I very carefully and laboriously
-prepared.[^3] To summarize: the overarching goal is the same -- to use
-computational distant reading techniques to enhance our close reading of
-the *Decretum* -- but each individual project attempts to answer
-different questions using different tools and techniques on the data
-set.
+--- principal component analysis of the frequencies of commonly
+occurring function words --- to obtain its results. In contrast, this
+project concerns changes in the teaching --- the doctrine --- of the
+*Decretum* between the first and second recensions as indicated by the
+use of distinctive vocabulary in the *dicta* of the two recensions. It
+employs lemmatization --- a linguistic technique that uses the PIE
+lemmatizer and a large language model (LLM) based on the LASLA
+corpus.[^2] What the two projects have in common is the data set. The
+original project relied on a data set of the texts of the case
+statements and the first- and second-recension *dicta* that I very
+carefully and laboriously prepared.[^3] To summarize: the overarching
+goal is the same --- to use computational distant reading techniques to
+enhance our close reading of the *Decretum* --- but each individual
+project attempts to answer different questions using different tools and
+techniques on the data set.
 
 It is worth noting that this is *not* my first attempt to make
 progress on the problem of computationally identifying topics added to
@@ -58,13 +58,6 @@ number of topics to look for (a necessary precondition for unsupervised
 topic modeling) and second, the fact that there was no obvious way to
 subtract topics.
 
-<!--
-  Stan Chodorow:
-  "This explanation belongs earlier. You have been referring to the
-  first and second recensions from the beginning. It is late to
-  explain what you mean. The end of the sentence is awkward."
-  -->
-
 For the purpose of the discussion that follows, I am defining
 "first-recension *dicta*" as the text of the *dicta* as they are listed
 in the appendix of Winroth's *The Making of Gratian's Decretum*, and I
@@ -76,17 +69,16 @@ first sentence of the *dictum* appears in the first recension.
 Therefore, the first sentence of the *dictum* is assigned to the first
 recension text sample:
 
-> **Ecce, quomodo serui ad clericatum ualeant assumi, uel quomodo non
-> admittantur.** Liberti quoque non sunt promouendi ad clerum, nisi ab
+> *Ecce, quomodo serui ad clericatum ualeant assumi, uel quomodo non
+> admittantur.* Liberti quoque non sunt promouendi ad clerum, nisi ab
 > obsequiis sui patroni fuerint absoluti. Unde in Concilio Eliberitano:
 
 The remainder of the dictum is assigned to the second recension text
 sample:
 
 > Ecce, quomodo serui ad clericatum ualeant assumi, uel quomodo non
-> admittantur. **Liberti quoque non sunt promouendi ad clerum, nisi ab
-> obsequiis sui patroni fuerint absoluti. Unde in Concilio
-> Eliberitano:**
+> admittantur. *Liberti quoque non sunt promouendi ad clerum, nisi ab
+> obsequiis sui patroni fuerint absoluti. Unde in Concilio Eliberitano:*
 
 By this definition, the first- and second-recension *dicta* contain
 56,713 and 14,255 words respectively.
@@ -108,7 +100,7 @@ number of unique forms that a first conjugation deponent verb like
 *calumnior*, *calumniari*, *calumniatus* has, but the number is large.
 So if we want to use distinctive vocabulary as a basis for determining
 whether or not an idea or topic is present in a Latin text, we need to
-lemmatize every word form we encounter -- that is, reduce it to its
+lemmatize every word form we encounter --- that is, reduce it to its
 dictionary headword.
 
 The results of my initial experiments with the Classical Language
@@ -125,8 +117,8 @@ In early 2021, Mike Kestemont made me aware of the PIE lemmatizer.
 Kestemont is a researcher at the University of Antwerp specializing in
 medieval Latin and Middle Dutch literature and also a leading figure in
 the field of computational text analysis. I want to make it clear that
-PIE is not just a program that you run -- you do not just type a command
-or click a button and get lemmatized text as output. PIE and PIE
+PIE is not just a program that you run --- you do not just type a
+command or click a button and get lemmatized text as output. PIE and PIE
 extended are a collection of libraries, packages, and toolkits, that
 provide an extremely versatile set of software building blocks that can
 be called upon to perform a wide range of natural language processing
@@ -149,46 +141,6 @@ the first- and second-recension *dicta*, and then to compare the two
 lists to identify lemmas that appear only in the second-recension
 *dicta*. The program produced a list of 725 unique lemmas present only
 in second-recension *dicta*.[^9]
-
-<!--
-&#10;I generated the sample text for the first-recension *dicta* by
-extracting from the MGH e-text of the Friedberg edition all of the
-*dicta* listed by Winroth in the appendix of *The Making of Gratian's
-Decretum*, and by applying the changes to the *dicta* that differed
-between the first and second recensions. [@winroth_making_2000,
-197-227] I generated the sample text for the second-recension *dicta*
-by starting with all the *dicta* in parts 1 and 2 of the Friedberg
-edition, and then taking away every word that appeared in the
-first-recension *dicta*.
-&#10;* * *
-&#10;For the purpose of the following discussion, the second-recension
-*dicta* are defined as the ordered set of every word from the *dicta*
-in the text of Friedberg's 1879 edition of Gratian's *Decretum* for
-which there is not a one-to-one correspondence to a word in the
-first-recension *dicta* as defined by Anders Winroth's appendix
-"The Contents of the First Recension of Gratian's *Decretum*."[^7]
-Hence, for the purposes of this study, the text of the *dicta* of
-the second recension is the remainder of the *dicta* of the Friedberg
-text after the text of the *dicta* of the first recension has been
-subtracted.
-&#10;[^7]: The definition is implemented by passing
-sequentially through the *dicta* and applying three rules. First,
-if a *dictum* is listed in Winroth's appendix as being in the first
-recension of the *Decretum*, and as not having been added to or
-changed in the second recension, the text for that *dictum* is
-assigned to the first recension sample. This rule is applied on a
-per-*dictum* basis. Second, if a *dictum* is in the text of the
-Friedberg edition and is not listed in Winroth's appendix as being
-in the first recension, in either unmodified or modified form, the
-text for that *dictum* is assigned to the second recension sample.
-This rule is applied on a per-*dictum* basis. Third, if a *dictum*
-is listed Winroth's appendix as being in the first recension, but
-as having been added to or changed in the second recension, those
-words indicated by the appendix are assigned to the first recension
-sample, while those words in the text of Friedberg not corresponding
-to the words indicated by the appendix are assigned to the second
-recension sample. This rule is applied on a word-by-word basis.
-&#10;  -->
 
 An understanding of whether an idea or topic is present in or absent
 from a selection of text can almost never be arrived at based on the
@@ -226,50 +178,11 @@ lemmatized by PIE as the verb *calumpnio*. As a result, the lemma
 *calumpnio* does not appear on the list of lemmas unique to the
 second-recension *dicta*.
 
-\[Table Slide\]
-
-<!--
-&#10;Notably, the context for the only appearance of the concept of
-calumny in the first-recension *dicta*, at C.24 q.3 d.p.c.9, is a
-scriptural reference: "Ait enim Christus in euangelio: 'Orate pro
-persequentibus et calumpniantibus uos, benefacite his, qui oderunt
-uos.'" "For Christ says in the gospel: 'Pray for them that persecute
-and calumniate you, do good to them that hate you.'" It appears
-that Gratian was quoting Matthew 5:44 from memory since his use of
-the passage reverses its order from the Vulgate: "benefacite his
-qui oderunt vos et orate pro persequentibus et calumniantibus vos"
-"do good to them that hate you: and pray for them that persecute
-and calumniate you".[^10] The important point is that in the *dictum*
-Gratian quotes the word *calumpniantibus* in the same general sense
-in which it had been used throughout the first millennium of Christian
-discourse, not in the formal canon law sense it and related terms
-took on during the later classical period.
-&#10;[^10]: Douai-Rheims translations.
-&#10;Words derived from the extended family of lemmas concerned with the
-concept of calumny appear in two second-recension *dicta*, in C.2
-q.3 d.p.c.8 (edF 1.453-454) (C.2 q.3 c.8 is a first-recension canon
-from the Libro Capitulorum) and C.23 q.4 d.p.c.23 §3 (edF 1.908).
-&#10;The word *calumpniantur*, lemmatized by PIE as a form of the verb
-*calumpnio*, appears in the second-recension *dictum* C.23 q.4
-d.p.c.23 §3 (edF 1.908). As was the case with the use of *calumpniantibus*
-in the first-recension *dictum* C.24 q.3 d.p.c.9, the word
-*calumpniantur* is used here in the context of a quotation (in this
-case from Augustine's *Perseverance*, commenting on Matthew 11:21-24
-or Luke 10:12-15 or both), and in a general rather than legal sense:
-&#10;> Item Augustinus: "De Tyriis uero et Sydoniis quid aliud possumus
-> dicere, quam non datum esse eis ut crederent, quos credituros
-> fuisse ipsa ueritas docet, si talia qualia apud non credentes
-> facta sunt, uirtutum signa uidissent? Quare autem hoc negatum eis
-> fuerit, dicant, si possunt, qui calumpniantur, et ostendant, cur
-> apud eos Dominus mirabilia, quibus profutura non erant, fecerit,
-> et apud eos, quibus erant profutura, non fecerit."
-&#10;  -->
-
 ### Conclusion (minor)
 
 The long-term goal of this  project has has been to find a way to use
-computationally-enabled distant reading -- "reading machines" in the
-words of Stephen Ramsay -- to efficiently direct the attention of
+computationally-enabled distant reading --- "reading machines" in the
+words of Stephen Ramsay --- to efficiently direct the attention of
 scholars to specific sites in the text of Gratian's *Decretum* where new
 topics added between the first and second recensions are likely to
 produce meaningful results from close readings.
@@ -347,8 +260,8 @@ taken as anything more than a proof of concept.
 Casual searching through the MGH e-text of the Friedberg edition that
 was created for the *Wortkonkordanz zum Decretum Gratiani* edited
 by Reuter and Silagi indicates that there are occurrences of forms of
-the words I have been focusing on -- *calumnia*, *calumnior*, and
-*calumniator* -- in the rubrics and canons.[^12]
+the words I have been focusing on --- *calumnia*, *calumnior*, and
+*calumniator* --- in the rubrics and canons.[^12]
 
 A really thorough approach to the problem of systematically identifying
 new topics added to the *Decretum* between the first and second
@@ -486,7 +399,7 @@ Law* 31, no. 1 (2014): 111–24.
     lemmatization environment as an independent study project with me
     during the Spring 2024 semester and who learned something about
     Gratian in the process. PIE can only be installed with the 2019
-    Python 3.8 release -- the current release is Python 3.13.
+    Python 3.8 release --- the current release is Python 3.13.
 
 [^9]: The 728 lines of program output included 3 numbers, which I
     discarded. The complete list is available at

@@ -49,21 +49,21 @@ and techniques. As noted, the project that forms the basis for this
 paper was concerned with the question of the authorship of the case
 statements and the first- and second recension *dicta*, including
 the *dicta* in *de Penitentia*. It employed stylometric authorship
-analysis using a statistical technique -- principal component
+analysis using a statistical technique --- principal component
 analysis of the frequencies of commonly occurring function words
--- to obtain its results. In contrast, this project concerns changes
-in the teaching -- the doctrine -- of the *Decretum* between the
+--- to obtain its results. In contrast, this project concerns changes
+in the teaching --- the doctrine --- of the *Decretum* between the
 first and second recensions as indicated by the use of distinctive
 vocabulary in the *dicta* of the two recensions. It employs
-lemmatization -- a linguistic technique that uses the PIE lemmatizer
+lemmatization --- a linguistic technique that uses the PIE lemmatizer
 and a large language model (LLM) based on the LASLA
 corpus.[@manjavacas-etal-2019-improving] What the two projects have
 in common is the data set. The original project relied on a data
 set of the texts of the case statements and the first- and
 second-recension *dicta* that I very carefully and laboriously
-prepared.[^3] To summarize: the overarching goal is the same -- to
+prepared.[^3] To summarize: the overarching goal is the same --- to
 use computational distant reading techniques to enhance our close
-reading of the *Decretum* -- but each individual project attempts
+reading of the *Decretum* --- but each individual project attempts
 to answer different questions using different tools and techniques
 on the data set.
 
@@ -98,8 +98,8 @@ appendix indicates that only the first sentence of the *dictum*
 appears in the first recension. Therefore, the first sentence of
 the *dictum* is assigned to the first recension text sample:
 
-> **Ecce, quomodo serui ad clericatum ualeant assumi, uel quomodo
-non admittantur.** Liberti quoque non sunt promouendi ad clerum,
+> *Ecce, quomodo serui ad clericatum ualeant assumi, uel quomodo
+non admittantur.* Liberti quoque non sunt promouendi ad clerum,
 nisi ab obsequiis sui patroni fuerint absoluti. Unde in Concilio
 Eliberitano:
 
@@ -107,9 +107,9 @@ The remainder of the dictum is assigned to the second recension
 text sample:
 
 > Ecce, quomodo serui ad clericatum ualeant assumi, uel quomodo non
-admittantur. **Liberti quoque non sunt promouendi ad clerum, nisi
+admittantur. *Liberti quoque non sunt promouendi ad clerum, nisi
 ab obsequiis sui patroni fuerint absoluti. Unde in Concilio
-Eliberitano:**
+Eliberitano:*
 
 By this definition, the first- and second-recension *dicta* contain
 56,713 and 14,255 words respectively.
@@ -133,7 +133,7 @@ deponent verb like *calumnior*, *calumniari*, *calumniatus* has,
 but the number is large. So if we want to use distinctive vocabulary
 as a basis for determining whether or not an idea or topic is present
 in a Latin text, we need to lemmatize every word form we encounter
--- that is, reduce it to its dictionary headword.
+--- that is, reduce it to its dictionary headword.
 
 The results of my initial experiments with the Classical Language
 Toolkit (CLTK), built on top of the Python Natural Language Toolkit
@@ -150,7 +150,7 @@ In early 2021, Mike Kestemont made me aware of the PIE lemmatizer.
 Kestemont is a researcher at the University of Antwerp specializing
 in medieval Latin and Middle Dutch literature and also a leading
 figure in the field of computational text analysis. I want to make
-it clear that PIE is not just a program that you run -- you do not
+it clear that PIE is not just a program that you run --- you do not
 just type a command or click a button and get lemmatized text as
 output. PIE and PIE extended are a collection of libraries, packages,
 and toolkits, that provide an extremely versatile set of software
@@ -215,8 +215,8 @@ second-recension *dicta*.
 ### Conclusion (minor)
 
 The long-term goal of this  project has has been to find a way to
-use computationally-enabled distant reading -- "reading machines"
-in the words of Stephen Ramsay -- to efficiently direct the attention
+use computationally-enabled distant reading --- "reading machines"
+in the words of Stephen Ramsay --- to efficiently direct the attention
 of scholars to specific sites in the text of Gratian's *Decretum*
 where new topics added between the first and second recensions are
 likely to produce meaningful results from close readings.
@@ -296,8 +296,8 @@ be taken as anything more than a proof of concept.
 Casual searching through the MGH e-text of the Friedberg edition
 that was created for the *Wortkonkordanz zum Decretum Gratiani*
 edited by Reuter and Silagi indicates that there are occurrences of
-forms of the words I have been focusing on -- *calumnia*, *calumnior*,
-and *calumniator* -- in the rubrics and canons.[^12]
+forms of the words I have been focusing on --- *calumnia*, *calumnior*,
+and *calumniator* --- in the rubrics and canons.[^12]
 
 A really thorough approach to the problem of systematically identifying
 new topics added to the *Decretum* between the first and second
@@ -373,7 +373,7 @@ Computer Science student at the University of San Diego, who set
 up the PIE lemmatization environment as an independent study project
 with me during the Spring 2024 semester and who learned something
 about Gratian in the process. PIE can only be installed with the
-2019 Python 3.8 release -- the current release is Python 3.13.
+2019 Python 3.8 release --- the current release is Python 3.13.
 
 [^9]: The 728 lines of program output included 3 numbers, which I
 discarded. The complete list is available at
