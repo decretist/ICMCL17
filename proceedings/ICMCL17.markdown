@@ -1,4 +1,4 @@
-The project that forms the basis of the current study used techniques
+The project that forms the basis for the current study used techniques
 from computational linguistics to analyze the authorship of the case
 statements and *dicta* in Gratian's *Decretum*. Its conclusion was that
 the case statements were written by a single author who was not the
@@ -8,7 +8,7 @@ Penitentia*. Results from stylometric analysis for authorship of the
 championed by Kenneth Pennington or the two-author theory championed by
 Anders Winroth. Instead, the results suggested, but did not conclusively
 prove, that both the first and the second recension *dicta* were the
-work of multiple authors.
+work of multiple authors.[^1]
 
 All of this work is part of an overarching project to enhance the
 effectiveness of close reading medieval texts, Gratian's *Decretum* in
@@ -28,11 +28,11 @@ concerns changes in the teaching -- the doctrine -- of the *Decretum*
 between the first and second recensions as indicated by the use of
 distinctive vocabulary in the *dicta* of the two recensions. It employs
 lemmatization -- a linguistic technique that uses the PIE lemmatizer and
-a large language model (LLM) based on the LASLA corpus.[^1] What the two
+a large language model (LLM) based on the LASLA corpus.[^2] What the two
 projects have in common is the data set. The original project relied on
 a data set of the texts of the case statements and the first- and
 second-recension *dicta* that I very carefully and laboriously
-prepared.[^2] To summarize: the overarching goal is the same -- to use
+prepared.[^3] To summarize: the overarching goal is the same -- to use
 computational distant reading techniques to enhance our close reading of
 the *Decretum* -- but each individual project attempts to answer
 different questions using different tools and techniques on the data
@@ -44,10 +44,10 @@ the *dicta* between the first and second recensions. At the stage in my
 PhD program when I was starting to think about my dissertation proposal
 (around 2012), there was tremendous enthusiasm in the Digital Humanities
 world for a technique called unsupervised topic modeling and in
-particular for a topic-modeling tool called MALLET.[^3] Inspired by
+particular for a topic-modeling tool called MALLET.[^4] Inspired by
 Pennington's observation that most passages in the *Decretum* dealing
 with the legal status of Jews, particularly those dealing with forced
-conversion, were introduced only in the second recension,[^4] I hoped to
+conversion, were introduced only in the second recension,[^5] I hoped to
 use MALLET to identify other new topics added in the second recension.
 The approach was to topic model all *dicta* in the *Decretum* and then
 to topic model the first recension *dicta*, which would show which
@@ -98,26 +98,26 @@ alternative approach to the problem appeared to be using lemmatization
 to identify distinctive *vocabulary* (as a signpost pointing to new
 ideas) added between the first and second recensions.
 
-Because, when working in a highly inflected language like Latin, using
-words as the signposts pointing to corresponding ideas is not
-sufficiently precise. As an example that we will look at more closely
-later in the presentation, the noun *calumnia* has 6 unique declined
-forms. A regular Latin verb has 120 conjugated forms, although not all
-of them are unique, and that does not include the participial forms. I
-have not counted the number of unique forms that a first conjugation
-deponent verb like *calumnior*, *calumniari*, *calumniatus* has, but the
-number is large. So if we want to use distinctive vocabulary as a basis
-for determining whether or not an idea or topic is present in a Latin
-text, we need to lemmatize every word form we encounter -- that is,
-reduce it to its dictionary headword.
+When working in a highly inflected language like Latin, using words as
+the signposts pointing to corresponding ideas is not sufficiently
+precise. As an example that we will look at more closely later in this
+paper, the noun *calumnia* has 6 unique declined forms. A regular Latin
+verb has 120 conjugated forms, although not all of them are unique, and
+that does not include the participial forms. I have not counted the
+number of unique forms that a first conjugation deponent verb like
+*calumnior*, *calumniari*, *calumniatus* has, but the number is large.
+So if we want to use distinctive vocabulary as a basis for determining
+whether or not an idea or topic is present in a Latin text, we need to
+lemmatize every word form we encounter -- that is, reduce it to its
+dictionary headword.
 
 The results of my initial experiments with the Classical Language
 Toolkit (CLTK), built on top of the Python Natural Language Toolkit
 (NLTK) and the best lemmatization tool available at the time, were not
-encouraging.[^5] The first- and second-recension *dicta* might
+encouraging.[^6] The first- and second-recension *dicta* might
 reasonably be expected to include a few hundred unique lemmas, but CLTK
 reported many thousands (over four thousand just for the first-recension
-*dicta*), the overwhelming majority of which were false positives.[^6]
+*dicta*), the overwhelming majority of which were false positives.[^7]
 Lemmatization was not ready for my purposes, and that remained the case
 for many years, from around 2014 through around 2020.
 
@@ -127,14 +127,14 @@ medieval Latin and Middle Dutch literature and also a leading figure in
 the field of computational text analysis. I want to make it clear that
 PIE is not just a program that you run -- you do not just type a command
 or click a button and get lemmatized text as output. PIE and PIE
-extended are libraries, packages, toolkits, that provide an extremely
-versatile set of software building blocks that can be called upon to
-perform a wide range of natural language processing functions, like
-part-of-speech tagging or lemmatization, from within a Python
-program.[^7] They are based on large language models (LLMs) trained
-using machine learning techniques on annotated corpora of texts in the
-target language. In this case, I am using a model trained on the LASLA
-corpus of 1.7 million words or "tokens" of classical Latin, each
+extended are a collection of libraries, packages, and toolkits, that
+provide an extremely versatile set of software building blocks that can
+be called upon to perform a wide range of natural language processing
+functions, like part-of-speech tagging or lemmatization, from within a
+Python program.[^8] They are based on large language models (LLMs)
+trained using machine learning techniques on annotated corpora of texts
+in the target language. In this case, I am using a model trained on the
+LASLA corpus of 1.7 million words or "tokens" of classical Latin, each
 annotated with lemma, part of speech, and other morphological and
 syntactic information.
 
@@ -148,7 +148,7 @@ program that used PIE to create separate lists of every lemma found in
 the first- and second-recension *dicta*, and then to compare the two
 lists to identify lemmas that appear only in the second-recension
 *dicta*. The program produced a list of 725 unique lemmas present only
-in second-recension *dicta*.[^8]
+in second-recension *dicta*.[^9]
 
 <!--
 &#10;I generated the sample text for the first-recension *dicta* by
@@ -197,7 +197,7 @@ machine) readers must look for the presence of families of related
 lemmas to signal the presence of an idea or topic in a selection of
 text. In reviewing the list of 725 unique lemmas, one such family of
 lemmas in particular stands out: *calumpia*, *calumniator*,
-*calumpniatus*.[^9] This family will be the exemplar of what the new
+*calumpniatus*.[^10] This family will be the exemplar of what the new
 computational techniques reveal about the evolution of the text and
 ideas of the *Decretum*.
 
@@ -274,16 +274,6 @@ scholars to specific sites in the text of Gratian's *Decretum* where new
 topics added between the first and second recensions are likely to
 produce meaningful results from close readings.
 
-<!--
-Stan Chodorow:
-"This needs a revision. Too focused on you.
-The focus needs to be on the findings."
-&#10;And as a proof of concept, I think this effort was a success. It
-is certainly closer to an interesting result than I have gotten in
-the 12 years or so I have been thinking about and intermittently
-working on this problem.
-  -->
-
 And as a proof of concept, I think this effort was a success. Using the
 PIE lemmatizer in conjunction with the LASLA Latin large language model
 (LLM) to systematically lemmatize every word in the *dicta* and then
@@ -307,16 +297,9 @@ second recension *dicta*.
 
 The concept of calumny makes its initial appearance in the form of a
 slightly misquoted scriptural reference in the first-recension *dictum*
-C.24 q.3 d.p.c.9.
-
-<!--
-  Stan Chodorow:
-  "Specify it. What platitude?
-  rejoin paragraphs
-  -->
-
-The treatment of the concept in the second-recension *dictum* C.23 q.4
-d.p.c.23 §3 is in a similar spirit, although in that recension the
+C.24 q.3 d.p.c.9. <!-- Stan Chodorow: "Specify it. What
+platitude? --> The treatment of the concept in the second-recension
+*dictum* C.23 q.4 d.p.c.23 §3 is in a similar spirit, although there the
 scriptural allusions are mediated through a patristic source,
 Augustine's *de Dono perseverantiae*, a treatise on predestination. Both
 of these *dicta* use the words associated with the concept of calumny in
@@ -336,17 +319,6 @@ and *calumnia*. While Gratian's own intervention is relatively modest,
 the *dictum* shows progress toward greater legal sophistication in the
 sense that the discussion draws on resources from Justinianic Roman Law.
 
-<!--
-Stan Chodorow:
-"Awkward and it is not clear what you want to say here. Whoever wrote
-the dictum was showing knowledge of Justinian. In the context, was
-that a modest achievement?"
-&#10;This shows an increased, but still limited, level of legal
-sophistication in the sense that the discussion draws on resources
-from Justinianic Roman law, but that Gratian's own intervention is
-relatively modest.
-  -->
-
 To summarize: the technique of searching among lemmas that are unique to
 the second recension using distant or machine reading was successful at
 least as a proof of concept insofar as it did surface one family of
@@ -358,7 +330,7 @@ teaching of the *Decretum* on this topic. Calumny was the most obvious
 topic (at least to me), and I was surprised that there were no other
 such immediately obvious conceptually related families of lemmas in the
 results, although I strongly encourage interested readers to examine the
-complete list of unique lemmas for themselves.[^10] As I previously
+complete list of unique lemmas for themselves.[^11] As I previously
 indicated, there is limited value in the results of machine reading by
 itself. The real value of the results of machine reading lies in the
 patterns that trained researchers see in them.
@@ -376,22 +348,23 @@ Casual searching through the MGH e-text of the Friedberg edition that
 was created for the *Wortkonkordanz zum Decretum Gratiani* edited
 by Reuter and Silagi indicates that there are occurrences of forms of
 the words I have been focusing on -- *calumnia*, *calumnior*, and
-*calumniator* -- in the rubrics and canons.
+*calumniator* -- in the rubrics and canons.[^12]
 
 A really thorough approach to the problem of systematically identifying
 new topics added to the *Decretum* between the first and second
 recensions is going to require a data set that includes the rubrics and
-canons with inscriptions as well as the *dicta* and case statements.
-Ideally, such a data set would be in the form of a new e-text in TEI-P5
-XML format incorporating texts from both the old Friedberg edition and
-the new Winroth edition-in-progress of the first recension. And this is
-where the scale of the undertaking starts to get really challenging.
-Even without the overhead of structuring the data set as a TEI-P5
-document, I spent something like 12 person-weeks on corpus preparation
-for the *dicta* and the case statements as part of my dissertation
-project. Since the word count of the canons is roughly five times that
-of the *dicta*, one person-year is not an unreasonable initial estimate
-for corpus preparation for a comparable data set for the canons.
+canons with their inscriptions as well as the *dicta* and case
+statements. Ideally, such a data set would be in the form of a new
+e-text in TEI-P5 XML format incorporating texts from both the old
+Friedberg edition and the new Winroth edition-in-progress of the first
+recension. And this is where the scale of the undertaking starts to get
+really challenging. Even without the overhead of structuring the data
+set as a TEI-P5 document, I spent something like 12 person-weeks on
+corpus preparation for the *dicta* and the case statements as part of my
+dissertation project. Since the word count of the canons is roughly five
+times that of the *dicta*, one person-year is not an unreasonable
+initial estimate for corpus preparation for a comparable data set for
+the canons.
 
 The work I have discussed in this paper is based on a highly customized
 version of a 20th century e-text of a 19th century print edition of the
@@ -428,6 +401,14 @@ Speakers in sessions lasting 90 minutes and comprising three presentations:
 <div id="refs" class="references csl-bib-body hanging-indent"
 entry-spacing="0">
 
+<div id="ref-evans_distant_2022" class="csl-entry">
+
+Evans, Paul. “Distant Reading of Gratian’s Decretum.” PhD thesis, The
+Catholic University of America, 2022.
+<https://jstor.org/stable/community.38760479>.
+
+</div>
+
 <div id="ref-manjavacas-etal-2019-improving" class="csl-entry">
 
 Manjavacas, Enrique, Ákos Kádár, and Mike Kestemont. “Improving
@@ -462,7 +443,11 @@ Law* 31, no. 1 (2014): 111–24.
 
 </div>
 
-[^1]: Enrique Manjavacas, Ákos Kádár, and Mike Kestemont, “Improving
+[^1]: Paul Evans, “Distant Reading of Gratian’s Decretum” (PhD thesis,
+    The Catholic University of America, 2022),
+    <https://jstor.org/stable/community.38760479>.
+
+[^2]: Enrique Manjavacas, Ákos Kádár, and Mike Kestemont, “Improving
     Lemmatization of Non-Standard Languages with Joint Learning,” in
     *Proceedings of the 2019 Conference of the North American Chapter of
     the Association for Computational Linguistics: Human Language
@@ -470,45 +455,50 @@ Law* 31, no. 1 (2014): 111–24.
     Minnesota: Association for Computational Linguistics, 2019),
     1493–503.
 
-[^2]: This research could usefully be expanded to include the rubrics
+[^3]: This research could usefully be expanded to include the rubrics
     and canons, and I have made preparations to do so. The work required
     to expand the corpus to include the canons themselves would
     realistically require grant funding.
 
-[^3]: MAchine Learning for LanguagE Toolkit  
+[^4]: MAchine Learning for LanguagE Toolkit  
     Andrew Kachites McCallum, “MALLET: A Machine Learning for Language
     Toolkit” (2002).
 
-[^4]: Kenneth Pennington, “The Law’s Violence Against Medieval and Early
+[^5]: Kenneth Pennington, “The Law’s Violence Against Medieval and Early
     Modern Jews,” *Rivista Internazionale Di Diritto Comune* 23 (2013):
     23–44; and Kenneth Pennington, “Gratian and the Jews,” *Bulletin of
     Medieval Canon Law* 31, no. 1 (2014): 111–24.
 
-[^5]: Python is a widely-used general-purpose programming language.
+[^6]: Python is a widely-used general-purpose programming language.
     According to one frequently-cited industry metric, the [TIOBE
     Index](https://www.tiobe.com/tiobe-index/), Python is the most
     popular programming language worldwide as of June 2025. Python
     provides powerful features for performing operations on textual
     data.
 
-[^6]: This may be the place to get explicit about what I mean by
+[^7]: This may be the place to get explicit about what I mean by
     *unique* lemmas. When comparing any two text samples (here, the
     first- and second-recension *dicta*), every lemma either appears in
     both, or is unique to one or the other.
 
-[^7]: I would like to acknowledge Jake Bayon, an undergraduate Computer
+[^8]: I would like to acknowledge Jake Bayon, an undergraduate Computer
     Science student at the University of San Diego, who set up the PIE
     lemmatization environment as an independent study project with me
     during the Spring 2024 semester and who learned something about
     Gratian in the process. PIE can only be installed with the 2019
     Python 3.8 release -- the current release is Python 3.13.
 
-[^8]: The 728 lines of program output included 3 numbers, which I
-    discarded.
+[^9]: The 728 lines of program output included 3 numbers, which I
+    discarded. The complete list is available at
+    <https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt>.
 
-[^9]: *calumpia* is almost certainly a typo in the LASLA Latin language
+[^10]: *calumpia* is almost certainly a typo in the LASLA Latin language
     model for *calumpnia*.
 
-[^10]: The complete list of 725 lemmas unique to the second recension
-    *dicta* is available from my GitHub repository for ICMCL17 at
+[^11]: The complete list of 725 lemmas unique to the second recension
+    *dicta* is available from my GitHub repository for the Seventeenth
+    International Congress of Medieval Canon Law at
     <https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt>.
+
+[^12]: See, for example, the rubrics for D.9 c.9 (R1), D.87 c.9 (R2),
+    C.3 q.1 c.6 (R1), and C.5 q.5 c.8 (R2)
