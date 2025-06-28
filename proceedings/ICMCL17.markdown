@@ -178,27 +178,6 @@ lemmatized by PIE as the verb *calumpnio*. As a result, the lemma
 *calumpnio* does not appear on the list of lemmas unique to the
 second-recension *dicta*.
 
-### Conclusion (minor)
-
-The long-term goal of this  project has has been to find a way to use
-computationally-enabled distant reading --- "reading machines" in the
-words of Stephen Ramsay --- to efficiently direct the attention of
-scholars to specific sites in the text of Gratian's *Decretum* where new
-topics added between the first and second recensions are likely to
-produce meaningful results from close readings.
-
-And as a proof of concept, I think this effort was a success. Using the
-PIE lemmatizer in conjunction with the LASLA Latin large language model
-(LLM) to systematically lemmatize every word in the *dicta* and then
-listing all of the lemmas that *do* appear in the second recension
-*dicta* but *not* in the first recension *dicta* allowed me to identify
-a family of lemmas (*calumnia*, *calumniator*, and *calumniatus*) that
-point towards the development of the canonically significant concept of
-calumny.  The detection of calumny as a topic that the authors of the
-*Decretum* develop in a meaningful way in the second recension
-demonstrates the usefulness of lemmatization as a technique for
-investigating this type of question.
-
 When we turn our attention to the substantive treatment of the topic of
 calumny in the *dicta*, there is variation in terms of the legal
 sophistication with which the concept is handled, moving generally in
@@ -232,6 +211,27 @@ and *calumnia*. While Gratian's own intervention is relatively modest,
 the *dictum* shows progress toward greater legal sophistication in the
 sense that the discussion draws on resources from Justinianic Roman Law.
 
+### Conclusions
+
+The long-term goal of this  project has has been to find a way to use
+computationally-enabled distant reading --- "reading machines" in the
+words of Stephen Ramsay --- to efficiently direct the attention of
+scholars to specific sites in the text of Gratian's *Decretum* where new
+topics added between the first and second recensions are likely to
+produce meaningful results from close readings.
+
+And as a proof of concept, I think this effort was a success. Using the
+PIE lemmatizer in conjunction with the LASLA Latin large language model
+(LLM) to systematically lemmatize every word in the *dicta* and then
+listing all of the lemmas that *do* appear in the second recension
+*dicta* but *not* in the first recension *dicta* allowed me to identify
+a family of lemmas (*calumnia*, *calumniator*, and *calumniatus*) that
+point towards the development of the canonically significant concept of
+calumny.  The detection of calumny as a topic that the authors of the
+*Decretum* develop in a meaningful way in the second recension
+demonstrates the usefulness of lemmatization as a technique for
+investigating this type of question.
+
 To summarize: the technique of searching among lemmas that are unique to
 the second recension using distant or machine reading was successful at
 least as a proof of concept insofar as it did surface one family of
@@ -248,7 +248,7 @@ indicated, there is limited value in the results of machine reading by
 itself. The real value of the results of machine reading lies in the
 patterns that trained researchers see in them.
 
-### Conclusion (major)
+<!-- Second Conclusion -->
 
 Is it enough? No.
 
