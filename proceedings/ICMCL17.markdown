@@ -7,25 +7,26 @@ contrast with traditional close reading. Each project that uses a
 distant or machine reading approach aims to answer different questions,
 and therefore uses different tools and techniques.
 
-The project that forms the basis for the current study used techniques
-from computational linguistics to analyze the authorship of the case
-statements and *dicta* in Gratian's *Decretum*.
+The project that provides the background for this paper:
 
-As noted, the project that forms the basis for this paper was concerned
-with the question of the authorship of the case statements and the
-first- and second recension *dicta*, including the *dicta* in *de
-Penitentia*. It employed stylometric authorship analysis using a
-statistical technique---principal component analysis of the frequencies
-of commonly occurring function words ---to obtain its results.
+- used techniques from computational linguistics to analyze the
+  authorship of the case statements and *dicta* in Gratian's *Decretum*.
 
-Its conclusion was that the case statements were written by a single
-author who was not the author of the *dicta* either in the first or
-second recensions or in *de Penitentia*. Results from stylometric
-analysis for authorship of the *dicta*, however, were not consistent
-with either the one-author theory championed by Kenneth Pennington or
-the two-author theory championed by Anders Winroth. Instead, the results
-suggested, but did not conclusively prove, that both the first and the
-second recension *dicta* were the work of multiple authors.[^1]
+- was concerned with the question of the authorship of the case
+  statements and the first- and second recension *dicta*, including the
+  *dicta* in *de Penitentia*.
+
+It employed stylometric authorship analysis using a statistical
+technique, principal component analysis of the frequencies of commonly
+occurring function words, to obtain its results. Its conclusion was that
+the case statements were written by a single author who was not the
+author of the *dicta* either in the first or second recensions or in *de
+Penitentia*. Results from stylometric analysis for authorship of the
+*dicta*, however, were not consistent with either the one-author theory
+championed by Kenneth Pennington or the two-author theory championed by
+Anders Winroth. Instead, the results suggested, but did not conclusively
+prove, that both the first and the second recension *dicta* were the
+work of multiple authors.[^1]
 
 In contrast, this project concerns changes in the teaching---the
 doctrine---of the *Decretum* between the first and second recensions as
