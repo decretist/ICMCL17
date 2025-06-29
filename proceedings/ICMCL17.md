@@ -118,7 +118,7 @@ Once it became clear that unsupervised topic modeling using MALLET
 was not going to be an effective way to identify topics added to
 Gratian's *Decretum* between the first and second recensions, the
 most promising alternative approach to the problem appeared to be
-using lemmatization to identify distinctive *vocabulary* as an
+using lemmatization to identify distinctive vocabulary as an
 indicator pointing to new ideas added between the first and second
 recensions. When working in a highly inflected language like Latin,
 using words as the indicators pointing to corresponding ideas is
@@ -170,12 +170,11 @@ speech, and other morphological and syntactic information. (If the
 term large language model or the acronym LLM sound familiar, they
 should. LLMs are the basis for the growing family of generative AI
 tools, such as ChatGPT and friends, that have been the subject of
-so much attention for the last several years.)
-
-Once the PIE lemmatization environment had been set up, I wrote a
-Python program that used PIE to create separate lists of every lemma
-found in the first- and second-recension *dicta*, and then to compare
-the two lists to identify lemmas that appear only in the second-recension
+so much attention for the last several years.) Once the PIE
+lemmatization environment had been set up, I wrote a Python program
+that used PIE to create separate lists of every lemma found in the
+first- and second-recension *dicta*, and then to compare the two
+lists to identify lemmas that appear only in the second-recension
 *dicta*. The program produced a list of 725 unique lemmas present
 only in second-recension *dicta*.[^9]
 
