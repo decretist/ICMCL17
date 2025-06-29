@@ -40,7 +40,7 @@ questions using different tools and techniques on the common data set.
 This is not my first attempt to make progress on the problem of
 computationally identifying topics added to the *dicta* between the
 first and second recensions. Around 2012, there was tremendous
-enthusiasm in the Digital Humanities world for a technique called
+enthusiasm in the Digital Humanities community for a technique called
 unsupervised topic modeling and in particular for a topic-modeling tool
 called MALLET.[^4] Inspired by Pennington's observation that most
 passages in the *Decretum* dealing with the legal status of Jews,
@@ -92,21 +92,20 @@ added between the first and second recensions. When working in a highly
 inflected language like Latin, using words as the indicators pointing to
 corresponding ideas is not sufficiently precise. As an example that we
 will look at more closely later in this paper, the noun *calumnia* has 6
-<!-- unique
---> declined forms. A regular first conjugation deponent verb like
+declined forms. A regular first conjugation deponent verb like
 *calumnior*, *calumniari*, *calumniatus* has 120 conjugated forms,
-around 80 of which are unique, not including participial forms. So if we
-want to use distinctive vocabulary as a basis for determining whether or
-not an idea or topic is present in a Latin text, we need to lemmatize
-every word form we encounter, that is, reduce it to its dictionary
-headword or *lemma*. Once text samples for the first- and second
-recension *dicta* have been reduced to corresponding lists of lemmas,
-those lists can be compared to generate three further lists, (i) lemmas
-that appear in both the first- and second-recension *dicta*, (ii) lemmas
-that are unique to the first-recension *dicta*, and (iii) lemmas that
-are unique to the second-recension *dicta*. It is the list of lemmas
-unique to the second-recension *dicta* that is relevant to the problem
-of topics added to the *Decretum* in the second recension.
+around 80 of which are unique, not including participial forms.
+Therefore if we want to use distinctive vocabulary as a basis for
+determining whether or not an idea or topic is present in a Latin text,
+we need to lemmatize every word form we encounter, that is, reduce it to
+its dictionary headword or *lemma*. Once text samples for the first- and
+second recension *dicta* have been reduced to corresponding lists of
+lemmas, those lists can be compared to generate three further lists, (i)
+lemmas that appear in both the first- and second-recension *dicta*, (ii)
+lemmas that are unique to the first-recension *dicta*, and (iii) lemmas
+that are unique to the second-recension *dicta*. It is the list of
+lemmas unique to the second-recension *dicta* that is relevant to the
+problem of topics added to the *Decretum* in the second recension.
 
 The results of my initial experiments with the Classical Language
 Toolkit (CLTK), built on top of the Python Natural Language Toolkit
@@ -131,7 +130,7 @@ like part-of-speech tagging or lemmatization, in a Python program.[^7]
 They are based on large language models (LLMs) trained using machine
 learning techniques on annotated corpora of texts in the target
 language. In this case, I am using a model trained on the LASLA corpus
-of 1.7 million words or "tokens" of classical Latin, each annotated with
+of 1.7 million words or tokens of classical Latin, each annotated with
 lemma, part of speech, and other morphological and syntactic
 information. (If the term large language model or the acronym LLM sound
 familiar, they should. LLMs are the basis for the growing family of
@@ -148,7 +147,7 @@ An understanding of whether an idea or topic is present in or absent
 from a selection of text can almost never be arrived at based on the
 presence or absence of a single lemma. Instead, human (as opposed to
 machine) readers must look for the presence of families of related
-lemmas to signal the presence of an idea or topic in a selection of
+lemmas to indicate the presence of an idea or topic in a selection of
 text. In reviewing the list of 725 unique lemmas, one such family of
 lemmas in particular stands out: *calumpia*, *calumniator*,
 *calumpniatus*.[^9] This family will be the exemplar of what the new
