@@ -7,42 +7,36 @@ contrast with traditional close reading. Each project that uses a
 distant or machine reading approach aims to answer different questions,
 and therefore uses different tools and techniques.
 
-The project that provides the background for this paper:
-
-- used techniques from computational linguistics to analyze the
-  authorship of the case statements and *dicta* in Gratian's *Decretum*.
-
-- was concerned with the question of the authorship of the case
-  statements and the first- and second recension *dicta*, including the
-  *dicta* in *de Penitentia*.
-
-It employed stylometric authorship analysis using a statistical
-technique, principal component analysis of the frequencies of commonly
-occurring function words, to obtain its results. Its conclusion was that
-the case statements were written by a single author who was not the
-author of the *dicta* either in the first or second recensions or in *de
-Penitentia*. Results from stylometric analysis for authorship of the
-*dicta*, however, were not consistent with either the one-author theory
+The original project from which the current work grew was concerned with
+the question of the authorship of the case statements and the first- and
+second recension *dicta* in Gratian's *Decretum*, including the *dicta*
+in *de Penitentia*. It employed stylometric authorship analysis using a
+statistical technique from computational linguistics, principal
+component analysis of the frequencies of commonly occurring function
+words, to obtain its results. Its conclusion was that the case
+statements were written by a single author who was not the author of the
+*dicta* either in the first or second recensions or in *de Penitentia*.
+Results from stylometric analysis for authorship of the *dicta*,
+however, were not consistent with either the one-author theory
 championed by Kenneth Pennington or the two-author theory championed by
 Anders Winroth. Instead, the results suggested, but did not conclusively
 prove, that both the first and the second recension *dicta* were the
 work of multiple authors.[^1]
 
-In contrast, this project concerns changes in the teaching---the
-doctrine---of the *Decretum* between the first and second recensions as
+In contrast, the current work concerns changes in the teaching or
+doctrine of the *Decretum* between the first and second recensions as
 indicated by the use of distinctive vocabulary in the *dicta* of the two
-recensions. It employs lemmatization---a linguistic technique that uses
-the PIE lemmatizer and a large language model (LLM) based on the LASLA
-corpus.[^2]
-
-What the two projects have in common is the data set. The original
-project relied on a data set of the texts of the case statements and the
-first- and second-recension *dicta* that I very carefully and
-laboriously prepared.[^3] To summarize: the overarching goal is the
+recensions. It employs another computational linguistic technique,
+lemmatization, using the PIE lemmatizer and a large language model (LLM)
+based on the LASLA corpus.[^2] The two projects share a common data set.
+The original project relied on a very carefully prepared data set of the
+texts of the case statements and the first- and second-recension
+*dicta*.[^3] <!-- The current work uses the
+same data set. --> The overarching goal of the two projects is the
 same---to use computational distant reading techniques to enhance our
 close reading of the *Decretum*---but each individual project attempts
 to answer different questions using different tools and techniques on
-the data set.
+the common data set.
 
 This is not my first attempt to make progress on the problem of
 computationally identifying topics added to the *dicta* between the
