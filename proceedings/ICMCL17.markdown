@@ -145,22 +145,22 @@ produced a list of 725 unique lemmas present only in second-recension
 
 An understanding of whether an idea or topic is present in or absent
 from a selection of text can almost never be arrived at based on the
-presence or absence of a single lemma. Instead, human (as opposed to
-machine) readers must look for the presence of families of related
+presence or absence of a single lemma. Instead, human, as opposed to
+machine, readers must look for the presence of families of related
 lemmas to indicate the presence of an idea or topic in a selection of
-text. In reviewing the list of 725 unique lemmas, one such family of
-lemmas in particular stands out: *calumpia*, *calumniator*,
-*calumpniatus*.[^9] This family will be the exemplar of what the new
-computational techniques reveal about the evolution of the text and
-ideas of the *Decretum*.
+text. In reviewing the list of the 725 lemmas unique to the
+second-recension *dicta*, one such family, all related to the concept of
+calumny, stands out in particular. This family will be the exemplar of
+what new computational techniques are able to reveal about the evolution
+of the text and ideas of the *Decretum*.
 
-We know that between 1140 and 1234, what we think of as the classical
-period in the history of medieval canon law, the concept of calumny took
-on a significance and a formal legal meaning that was derived from but
-was considerably more precise than its previous general use in Christian
-discourse. For example, during this period, oaths of non-calumniation at
-the onset of legal proceedings came to be required of all litigants in
-canonical courts.
+Calumny is a promising lead because we know that between 1140 and 1234,
+what we think of as the classical period in the history of medieval
+canon law, the concept of calumny took on a significance and a formal
+legal meaning that was derived from but was considerably more precise
+than its previous general use in Christian discourse. For example,
+during this period, oaths of non-calumniation at the onset of legal
+proceedings came to be required of all litigants in canonical courts.
 
 We should expect to see at least three Latin lemmas associated with the
 concept of calumny:
@@ -173,11 +173,12 @@ concept of calumny:
 
 - and the masculine noun *calumniator*.
 
-One form related to the extended family of lemmas we are considering
-*does* appear in the first-recension *dicta*, *calumpniantibus*,
-lemmatized by PIE as the verb *calumpnio*. As a result, the lemma
-*calumpnio* does not appear on the list of lemmas unique to the
-second-recension *dicta*.
+PIE does report three lemmas from this family among the 725 unique to
+the second-recension *dicta*: *calumnia*, *calumniator*, and
+*calumniatus*. It does not report the lemma *calumnior* because, as we
+shall see, the word *calumniantibus* appears in a first-recension
+*dictum*, and therefore the verb form does not appear on the list of
+lemmas unique to the second-recension *dicta*.[^9]
 
 When we turn our attention to the substantive treatment of the topic of
 calumny in the *dicta*, there is variation in terms of the legal
@@ -185,21 +186,31 @@ sophistication with which the concept is handled, moving generally in
 the direction of greater technical precision and sophistication. (I say
 "generally" because while we can assume the first recension *dicta* were
 written before the second recension *dicta*, we do not have enough
-information to speculate about the temporal relationship within the
-second recension *dicta*.
+information to speculate about the temporal relationship among the
+second recension *dicta*.)
 
 <!-- Introduce table here. -->
 
 The concept of calumny makes its initial appearance in the form of a
 slightly misquoted scriptural reference in the first-recension *dictum*
-C.24 q.3 d.p.c.9. <!-- Stan Chodorow: "Specify it. What
-platitude? --> The treatment of the concept in the second-recension
-*dictum* C.23 q.4 d.p.c.23 §3 is in a similar spirit, although there the
-scriptural allusions are mediated through a patristic source,
-Augustine's *de Dono perseverantiae*, a treatise on predestination. Both
-of these *dicta* use the words associated with the concept of calumny in
-the same general, non-technical, sense they had in the first millennium
-of Christian discourse.
+C.24 q.3 d.p.c.9:
+
+> Ait enim Christus in euangelio: "Orate pro persequentibus et
+> calumpniantibus uos, benefacite his, qui oderunt uos."
+
+The treatment of the concept in the second-recension *dictum* C.23 q.4
+d.p.c.23 §3 is in a similar spirit, although there the scriptural
+allusions are mediated through a patristic source, Augustine's *de Dono
+perseverantiae*, a treatise on predestination.
+
+> "Quare autem hoc negatum eis fuerit, dicant, si possunt, qui
+> calumpniantur, et ostendant, cur apud eos Dominus mirabilia, quibus
+> profutura non erant, fecerit, et apud eos, quibus erant profutura, non
+> fecerit."
+
+Both of these *dicta* use the words associated with the concept of
+calumny in the same general, non-technical, sense they had in the first
+millennium of Christian discourse.
 
 That is not the case in the second recension *dictum* C.23 q.3 d.p.c.8.
 Here we see a series of quotations from book 48 of the *Digest*,
@@ -402,8 +413,13 @@ Law* 31, no. 1 (2014): 111–24.
     discarded. The complete list is available at
     <https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt>.
 
-[^9]: *calumpia* is almost certainly a typo in the LASLA Latin language
-    model for *calumpnia*.
+[^9]: PIE reports the lemmas as *calumpia*, *calumniator*, and
+    *calumpniatus*. *calumpia* is almost certainly a typo in the LASLA
+    Latin language model for *calumpnia*. PIE reports the lemma of
+    *calumpniantibus* as *calumpnio*. The spelling is consistent with
+    the orthographic conventions of the Friedberg edition, from which
+    the text samples of the first- and second-recension *dicta* are
+    ultimately derived.
 
 [^10]: The complete list of 725 lemmas unique to the second recension
     *dicta* is available from my GitHub repository for the Seventeenth

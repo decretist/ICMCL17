@@ -68,24 +68,24 @@ on the common data set.
 This is not my first attempt to make progress on the problem of
 computationally identifying topics added to the *dicta* between the
 first and second recensions. Around 2012, there was tremendous
-enthusiasm in the Digital Humanities community for a technique called
-unsupervised topic modeling and in particular for a topic-modeling
-tool called MALLET.[^4] Inspired by Pennington's observation that
-most passages in the *Decretum* dealing with the legal status of
-Jews, particularly those dealing with forced conversion, were
-introduced only in the second recension,[^5] I hoped to use MALLET
-to identify other new topics added in the second recension. The
-approach was to topic model the first- and second-recension *dicta*
-together, then separately, which would show which topics were left
-when the first recension topics were subtracted. (It would not be
-enough to just topic model the second-recension *dicta* because
-many of the topics present in the second recension *dicta* are also
-present in the first-recension *dicta*.) This approach was simple
-in concept, but prohibitively difficult in practice, for two reasons:
-first, because of the difficulty in determining the number of topics
-to look for, a necessary precondition for unsupervised topic modeling,
-and second, because of the fact that there was no obvious way to
-subtract topics.
+enthusiasm in the Digital Humanities community for a technique
+called unsupervised topic modeling and in particular for a
+topic-modeling tool called MALLET.[^4] Inspired by Pennington's
+observation that most passages in the *Decretum* dealing with the
+legal status of Jews, particularly those dealing with forced
+conversion, were introduced only in the second recension,[^5] I
+hoped to use MALLET to identify other new topics added in the second
+recension. The approach was to topic model the first- and
+second-recension *dicta* together, then separately, which would
+show which topics were left when the first recension topics were
+subtracted. (It would not be enough to just topic model the
+second-recension *dicta* because many of the topics present in the
+second recension *dicta* are also present in the first-recension
+*dicta*.) This approach was simple in concept, but prohibitively
+difficult in practice, for two reasons: first, because of the
+difficulty in determining the number of topics to look for, a
+necessary precondition for unsupervised topic modeling, and second,
+because of the fact that there was no obvious way to subtract topics.
 
 For the purpose of the discussion that follows, I am defining
 "first-recension *dicta*" as the text of the *dicta* as they are
@@ -118,27 +118,27 @@ Once it became clear that unsupervised topic modeling using MALLET
 was not going to be an effective way to identify topics added to
 Gratian's *Decretum* between the first and second recensions, the
 most promising alternative approach to the problem appeared to be
-using lemmatization to identify distinctive vocabulary as an
-indicator pointing to new ideas added between the first and second
-recensions. When working in a highly inflected language like Latin,
-using words as the indicators pointing to corresponding ideas is
-not sufficiently precise. As an example that we will look at more
-closely later in this paper, the noun *calumnia* has 6
-declined forms. A regular first conjugation deponent verb like
-*calumnior*, *calumniari*, *calumniatus* has 120 conjugated forms,
-around 80 of which are unique, not including participial forms. Therefore
-if we want to use distinctive vocabulary as a basis for determining
-whether or not an idea or topic is present in a Latin text, we need
-to lemmatize every word form we encounter, that is, reduce it to
-its dictionary headword or *lemma*. Once text samples for the first-
-and second recension *dicta* have been reduced to corresponding
-lists of lemmas, those lists can be compared to generate three
-further lists, (i) lemmas that appear in both the first- and
-second-recension *dicta*, (ii) lemmas that are unique to the
-first-recension *dicta*, and (iii) lemmas that are unique to the
-second-recension *dicta*. It is the list of lemmas unique to the
-second-recension *dicta* that is relevant to the problem of topics
-added to the *Decretum* in the second recension.
+using lemmatization to identify distinctive vocabulary as an indicator
+pointing to new ideas added between the first and second recensions.
+When working in a highly inflected language like Latin, using words
+as the indicators pointing to corresponding ideas is not sufficiently
+precise. As an example that we will look at more closely later in
+this paper, the noun *calumnia* has 6 declined forms. A regular
+first conjugation deponent verb like *calumnior*, *calumniari*,
+*calumniatus* has 120 conjugated forms, around 80 of which are
+unique, not including participial forms. Therefore if we want to
+use distinctive vocabulary as a basis for determining whether or
+not an idea or topic is present in a Latin text, we need to lemmatize
+every word form we encounter, that is, reduce it to its dictionary
+headword or *lemma*. Once text samples for the first- and second
+recension *dicta* have been reduced to corresponding lists of lemmas,
+those lists can be compared to generate three further lists, (i)
+lemmas that appear in both the first- and second-recension *dicta*,
+(ii) lemmas that are unique to the first-recension *dicta*, and
+(iii) lemmas that are unique to the second-recension *dicta*. It
+is the list of lemmas unique to the second-recension *dicta* that
+is relevant to the problem of topics added to the *Decretum* in the
+second recension.
 
 The results of my initial experiments with the Classical Language
 Toolkit (CLTK), built on top of the Python Natural Language Toolkit
@@ -161,7 +161,7 @@ and PIE extended are a collection of libraries, packages, and
 toolkits, that provide an extremely versatile set of software
 building blocks that can be called upon to perform a wide range of
 natural language processing functions, like part-of-speech tagging
-or lemmatization, in a Python program.[^8] They are based on large
+or lemmatization, in a Python program.[^7] They are based on large
 language models (LLMs) trained using machine learning techniques
 on annotated corpora of texts in the target language. In this case,
 I am using a model trained on the LASLA corpus of 1.7 million words
@@ -176,26 +176,27 @@ that used PIE to create separate lists of every lemma found in the
 first- and second-recension *dicta*, and then to compare the two
 lists to identify lemmas that appear only in the second-recension
 *dicta*. The program produced a list of 725 unique lemmas present
-only in second-recension *dicta*.[^9]
+only in second-recension *dicta*.[^8]
 
 An understanding of whether an idea or topic is present in or absent
 from a selection of text can almost never be arrived at based on
-the presence or absence of a single lemma. Instead, human (as opposed
-to machine) readers must look for the presence of families of related
+the presence or absence of a single lemma. Instead, human, as opposed
+to machine, readers must look for the presence of families of related
 lemmas to indicate the presence of an idea or topic in a selection
-of text. In reviewing the list of 725 unique lemmas, one such family
-of lemmas in particular stands out: *calumpia*, *calumniator*,
-*calumpniatus*.[^10] This family will be the exemplar of what the
-new computational techniques reveal about the evolution of the text
-and ideas of the *Decretum*.
+of text. In reviewing the list of the 725 lemmas unique to the
+second-recension *dicta*, one such family, all related to the concept
+of calumny, stands out in particular. This family will be the
+exemplar of what new computational techniques are able to reveal
+about the evolution of the text and ideas of the *Decretum*.
 
-We know that between 1140 and 1234, what we think of as the classical
-period in the history of medieval canon law, the concept of calumny
-took on a significance and a formal legal meaning that was derived
-from but was considerably more precise than its previous general
-use in Christian discourse. For example, during this period, oaths
-of non-calumniation at the onset of legal proceedings came to be
-required of all litigants in canonical courts.
+Calumny is a promising lead because we know that between 1140 and
+1234, what we think of as the classical period in the history of
+medieval canon law, the concept of calumny took on a significance
+and a formal legal meaning that was derived from but was considerably
+more precise than its previous general use in Christian discourse.
+For example, during this period, oaths of non-calumniation at the
+onset of legal proceedings came to be required of all litigants in
+canonical courts.
 
 We should expect to see at least three Latin lemmas associated with
 the concept of calumny:
@@ -208,11 +209,20 @@ in the abstract,
 
 + and the masculine noun *calumniator*.
 
-One form related to the extended family of lemmas we are considering
-*does* appear in the first-recension *dicta*, *calumpniantibus*,
-lemmatized by PIE as the verb *calumpnio*. As a result, the lemma
-*calumpnio* does not appear on the list of lemmas unique to the
-second-recension *dicta*.
+PIE does report three lemmas from this family among the 725 unique
+to the second-recension *dicta*: *calumnia*, *calumniator*, and
+*calumniatus*. It does not report the lemma *calumnior* because,
+as we shall see, the word *calumniantibus* appears in a first-recension
+*dictum*, and therefore the verb form does not appear on the list
+of lemmas unique to the second-recension *dicta*.[^9]
+
+[^9]: PIE reports the lemmas as *calumpia*, *calumniator*, and
+*calumpniatus*. *calumpia* is almost certainly a typo in the LASLA
+Latin language model for *calumpnia*. PIE reports the lemma of
+*calumpniantibus* as *calumpnio*. The spelling is consistent with
+the orthographic conventions of the Friedberg edition, from which
+the text samples of the first- and second-recension *dicta* are
+ultimately derived.
 
 When we turn our attention to the substantive treatment of the topic
 of calumny in the *dicta*, there is variation in terms of the legal
@@ -221,17 +231,27 @@ in the direction of greater technical precision and sophistication.
 (I say "generally" because while we can assume the first recension
 *dicta* were written before the second recension *dicta*, we do not
 have enough information to speculate about the temporal relationship
-within the second recension *dicta*.
+among the second recension *dicta*.)
 
 <!-- Introduce table here. -->
 
 The concept of calumny makes its initial appearance in the form of
 a slightly misquoted scriptural reference in the first-recension
-*dictum* C.24 q.3 d.p.c.9. <!-- Stan Chodorow: "Specify it. What
-platitude? --> The treatment of the concept in the second-recension
-*dictum* C.23 q.4 d.p.c.23 §3 is in a similar spirit, although there
-the scriptural allusions are mediated through a patristic source,
-Augustine's *de Dono perseverantiae*, a treatise on predestination.
+*dictum* C.24 q.3 d.p.c.9:
+
+> Ait enim Christus in euangelio: "Orate pro persequentibus et
+calumpniantibus uos, benefacite his, qui oderunt uos."
+
+The treatment of the concept in the second-recension *dictum* C.23
+q.4 d.p.c.23 §3 is in a similar spirit, although there the scriptural
+allusions are mediated through a patristic source, Augustine's *de
+Dono perseverantiae*, a treatise on predestination.
+
+> "Quare autem hoc negatum eis fuerit, dicant, si possunt, qui
+calumpniantur, et ostendant, cur apud eos Dominus mirabilia, quibus
+profutura non erant, fecerit, et apud eos, quibus erant profutura,
+non fecerit."
+
 Both of these *dicta* use the words associated with the concept of
 calumny in the same general, non-technical, sense they had in the
 first millennium of Christian discourse.
@@ -283,7 +303,7 @@ the most obvious topic (at least to me), and I was surprised that
 there were no other such immediately obvious conceptually related
 families of lemmas in the results, although I strongly encourage
 interested readers to examine the complete list of unique lemmas
-for themselves.[^11] As I previously indicated, there is limited
+for themselves.[^10] As I previously indicated, there is limited
 value in the results of machine reading by itself. The real value
 of the results of machine reading lies in the patterns that trained
 researchers see in them.
@@ -301,7 +321,7 @@ An unsystematic search through the MGH e-text of the Friedberg
 edition that was created for the *Wortkonkordanz zum Decretum
 Gratiani* edited by Reuter and Silagi indicates that there are
 occurrences of forms of the words I have been focusing on---*calumnia*,
-*calumnior*, and *calumniator*---in the rubrics and canons.[^12] A
+*calumnior*, and *calumniator*---in the rubrics and canons.[^11] A
 thorough approach to the problem of systematically identifying new
 topics added to the *Decretum* between the first and second recensions
 will therefore require a data set that includes the rubrics and
@@ -367,23 +387,20 @@ popular programming language worldwide as of June 2025. Python
 provides powerful features for performing operations on textual
 data.
 
-[^8]: I would like to acknowledge Jake Bayon, an undergraduate
+[^7]: I would like to acknowledge Jake Bayon, an undergraduate
 Computer Science student at the University of San Diego, who set
 up the PIE lemmatization environment as an independent study project
 with me during the Spring 2024 semester and who learned something
 about Gratian in the process. PIE can only be installed with the
 2019 Python 3.8 release---the current release is Python 3.13.
 
-[^9]: The 728 lines of program output included 3 numbers, which I
+[^8]: The 728 lines of program output included 3 numbers, which I
 discarded. The complete list is available at
 [https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt](https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt).
 
-[^10]: *calumpia* is almost certainly a typo in the LASLA Latin
-language model for *calumpnia*.
-
-[^11]: The complete list of 725 lemmas unique to the second recension *dicta*
+[^10]: The complete list of 725 lemmas unique to the second recension *dicta*
 is available from my GitHub repository for the Seventeenth International Congress of Medieval Canon Law at
 [https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt](https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt).
 
-[^12]: See, for example, the rubrics for D.9 c.9 (R1), D.87 c.9 (R2),
+[^11]: See, for example, the rubrics for D.9 c.9 (R1), D.87 c.9 (R2),
 C.3 q.1 c.6 (R1), and C.5 q.5 c.8 (R2)
