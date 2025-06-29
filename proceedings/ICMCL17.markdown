@@ -49,14 +49,14 @@ in the second recension,[^5] I hoped to use MALLET to identify other new
 topics added in the second recension. The approach was to topic model
 the first- and second-recension *dicta* together, then separately, which
 would show which topics were left when the first recension topics were
-subtracted. <!-- Why is it not
-enough to just topic model the second-recension *dicta*? Because
-many of the topics in the second recension *dicta* are also present
-in the first-recension *dicta* --> This was simple in concept, but
-prohibitively difficult in practice, for two reasons: first, because of
-the difficulty in determining the number of topics to look for (a
-necessary precondition for unsupervised topic modeling) and second,
-because of the fact that there was no obvious way to subtract topics.
+subtracted. (It would not be enough to just topic model the
+second-recension *dicta* because many of the topics present in the
+second recension *dicta* are also present in the first-recension
+*dicta*.) This approach was simple in concept, but prohibitively
+difficult in practice, for two reasons: first, because of the difficulty
+in determining the number of topics to look for, a necessary
+precondition for unsupervised topic modeling, and second, because of the
+fact that there was no obvious way to subtract topics.
 
 For the purpose of the discussion that follows, I am defining
 "first-recension *dicta*" as the text of the *dicta* as they are listed
@@ -87,22 +87,26 @@ Once it became clear that unsupervised topic modeling using MALLET was
 not going to be an effective way to identify topics added to Gratian's
 *Decretum* between the first and second recensions, the most promising
 alternative approach to the problem appeared to be using lemmatization
-to identify distinctive *vocabulary* (as a signpost pointing to new
-ideas) added between the first and second recensions.
-<!-- Insert definition of "unique lemmas" here! -->
-
-When working in a highly inflected language like Latin, using words as
-the signposts pointing to corresponding ideas is not sufficiently
-precise. As an example that we will look at more closely later in this
-paper, the noun *calumnia* has 6 unique declined forms. A regular Latin
-verb has 120 conjugated forms, although not all of them are unique, and
-that does not include the participial forms. I have not counted the
-number of unique forms that a first conjugation deponent verb like
-*calumnior*, *calumniari*, *calumniatus* has, but the number is large.
-So if we want to use distinctive vocabulary as a basis for determining
-whether or not an idea or topic is present in a Latin text, we need to
-lemmatize every word form we encounter ---that is, reduce it to its
-dictionary headword or lemma.
+to identify distinctive *vocabulary* as an indicator pointing to new
+ideas added between the first and second recensions. When working in a
+highly inflected language like Latin, using words as the indicators
+pointing to corresponding ideas is not sufficiently precise. As an
+example that we will look at more closely later in this paper, the noun
+*calumnia* has 6 <!-- unique
+--> declined forms. A regular first conjugation deponent verb like
+*calumnior*, *calumniari*, *calumniatus* has 120 conjugated forms,
+around 80 of which are unique, not including participial forms. So if we
+want to use distinctive vocabulary as a basis for determining whether or
+not an idea or topic is present in a Latin text, we need to lemmatize
+every word form we encounter, that is, reduce it to its dictionary
+headword or *lemma*. Once text samples for the first- and second
+recension *dicta* have been reduced to corresponding lists of lemmas,
+those lists can be compared to generate three further lists, (i) lemmas
+that appear in both the first- and second-recension *dicta*, (ii) lemmas
+that are unique to the first-recension *dicta*, and (iii) lemmas that
+are unique to the second-recension *dicta*. It is the list of lemmas
+unique to the second-recension *dicta* that is relevant to the problem
+of topics added to the *Decretum* in the second recension.
 
 The results of my initial experiments with the Classical Language
 Toolkit (CLTK), built on top of the Python Natural Language Toolkit
@@ -110,38 +114,36 @@ Toolkit (CLTK), built on top of the Python Natural Language Toolkit
 encouraging.[^6] The first- and second-recension *dicta* might
 reasonably be expected to include a few hundred unique lemmas, but CLTK
 reported many thousands (over four thousand just for the first-recension
-*dicta*), the overwhelming majority of which were false positives.[^7]
-Lemmatization was not ready for my purposes, and that remained the case
-for many years, from around 2014 through around 2020.
+*dicta*), the overwhelming majority of which were false positives.
+Lemmatization was not ready for the purpose of this project, and that
+remained the case for many years, from around 2014 through around 2020.
 
 In early 2021, Mike Kestemont made me aware of the PIE lemmatizer.
 Kestemont is a researcher at the University of Antwerp specializing in
 medieval Latin and Middle Dutch literature and also a leading figure in
-the field of computational text analysis. I want to make it clear that
-PIE is not just a program that you run---you do not just type a command
-or click a button and get lemmatized text as output. PIE and PIE
-extended are a collection of libraries, packages, and toolkits, that
-provide an extremely versatile set of software building blocks that can
-be called upon to perform a wide range of natural language processing
-functions, like part-of-speech tagging or lemmatization, from within a
-Python program.[^8] They are based on large language models (LLMs)
-trained using machine learning techniques on annotated corpora of texts
-in the target language. In this case, I am using a model trained on the
-LASLA corpus of 1.7 million words or "tokens" of classical Latin, each
-annotated with lemma, part of speech, and other morphological and
-syntactic information.
-
-If the term large language model or the acronym LLM sound familiar, they
-should. LLMs are the basis for the growing family of generative AI
-tools, such as ChatGPT and friends, that have been the subject of so
-much attention for the last several years.
+the field of computational text analysis. PIE is not an application or
+program---the user does not simply type a command or click a button and
+get lemmatized text as output. Instead, PIE and PIE extended are a
+collection of libraries, packages, and toolkits, that provide an
+extremely versatile set of software building blocks that can be called
+upon to perform a wide range of natural language processing functions,
+like part-of-speech tagging or lemmatization, in a Python program.[^7]
+They are based on large language models (LLMs) trained using machine
+learning techniques on annotated corpora of texts in the target
+language. In this case, I am using a model trained on the LASLA corpus
+of 1.7 million words or "tokens" of classical Latin, each annotated with
+lemma, part of speech, and other morphological and syntactic
+information. (If the term large language model or the acronym LLM sound
+familiar, they should. LLMs are the basis for the growing family of
+generative AI tools, such as ChatGPT and friends, that have been the
+subject of so much attention for the last several years.)
 
 Once the PIE lemmatization environment had been set up, I wrote a Python
 program that used PIE to create separate lists of every lemma found in
 the first- and second-recension *dicta*, and then to compare the two
 lists to identify lemmas that appear only in the second-recension
 *dicta*. The program produced a list of 725 unique lemmas present only
-in second-recension *dicta*.[^9]
+in second-recension *dicta*.[^8]
 
 An understanding of whether an idea or topic is present in or absent
 from a selection of text can almost never be arrived at based on the
@@ -150,7 +152,7 @@ machine) readers must look for the presence of families of related
 lemmas to signal the presence of an idea or topic in a selection of
 text. In reviewing the list of 725 unique lemmas, one such family of
 lemmas in particular stands out: *calumpia*, *calumniator*,
-*calumpniatus*.[^10] This family will be the exemplar of what the new
+*calumpniatus*.[^9] This family will be the exemplar of what the new
 computational techniques reveal about the evolution of the text and
 ideas of the *Decretum*.
 
@@ -247,7 +249,7 @@ teaching of the *Decretum* on this topic. Calumny was the most obvious
 topic (at least to me), and I was surprised that there were no other
 such immediately obvious conceptually related families of lemmas in the
 results, although I strongly encourage interested readers to examine the
-complete list of unique lemmas for themselves.[^11] As I previously
+complete list of unique lemmas for themselves.[^10] As I previously
 indicated, there is limited value in the results of machine reading by
 itself. The real value of the results of machine reading lies in the
 patterns that trained researchers see in them.
@@ -265,35 +267,35 @@ An unsystematic search through the MGH e-text of the Friedberg edition
 that was created for the *Wortkonkordanz zum Decretum Gratiani* edited
 by Reuter and Silagi indicates that there are occurrences of forms of
 the words I have been focusing on---*calumnia*, *calumnior*, and
-*calumniator*---in the rubrics and canons.[^12]
+*calumniator*---in the rubrics and canons.[^11] A thorough approach to
+the problem of systematically identifying new topics added to the
+*Decretum* between the first and second recensions will therefore
+require a data set that includes the rubrics and canons with their
+inscriptions as well as the *dicta* and case statements.
 
-A thorough approach to the problem of systematically identifying new
-topics added to the *Decretum* between the first and second recensions
-will require a data set that includes the rubrics and canons with their
-inscriptions as well as the *dicta* and case statements. Ideally, such a
-data set would be in the form of a new e-text in TEI-P5 XML format
-incorporating texts from both the old Friedberg edition and the new
-Winroth edition-in-progress of the first recension. This is where the
-scale of the undertaking becomes really challenging. Even without the
-overhead of structuring the data set as a TEI-P5 document, I spent
-approximately 12 person-weeks on corpus preparation for the *dicta* and
-the case statements as part of my dissertation project. Since the word
-count of the canons is roughly five times that of the *dicta*, one
-person-year is not an unreasonable initial estimate for corpus
-preparation for a comparable data set for the canons.
+Ideally, such a data set would be in the form of a new e-text in TEI-P5
+XML format incorporating texts from both the old Friedberg edition and
+the new Winroth edition-in-progress of the first recension. This is
+where the scale of the undertaking becomes really challenging. Even
+without the overhead of structuring the data set as a TEI-P5 document, I
+spent approximately 12 person-weeks on corpus preparation for the
+*dicta* and the case statements as part of my dissertation project.
+Since the word count of the canons is roughly five times that of the
+*dicta*, one person-year is not an unreasonable initial estimate for
+corpus preparation for a comparable data set for the canons.
 
 The work I have discussed in this paper is based on a highly customized
 version of a twentieth century e-text of a nineteenth century print
 edition of the *Decretum*. The MGH e-text of the Friedberg edition is
 the indispensable free resource without which none of my work, and I
 suspect the work of many others, would be possible. But like so many
-free things in life, someone paid a great deal of money to make it free
-(in this case, the taxpayers of the State of Bavaria and the Federal
-Republic of Germany in the 1980s and 1990s). However, the MGH e-text is
-a resource that because of its archaic format is approaching the end of
-it useful life. If we want to continue to advance in our understanding
-of Gratian's *Decretum* with the help of electronic resources, we need
-to invest time, effort, and grant funding into a twenty-first century
+free things in life, someone paid a great deal of money to make it free,
+in this case, the taxpayers of the State of Bavaria and the Federal
+Republic of Germany in the 1980s and 1990s. However, the MGH e-text is a
+resource that because of its archaic format is approaching the end of it
+useful life. If we want to continue to advance in our understanding of
+Gratian's *Decretum* with the help of electronic resources, we need to
+invest time, effort, and grant funding into a twenty-first century
 electronic text, or better still an electronic edition, of Gratian's
 *Decretum* that meets 21st century research needs.
 
@@ -391,29 +393,24 @@ Law* 31, no. 1 (2014): 111–24.
     provides powerful features for performing operations on textual
     data.
 
-[^7]: This may be the place to get explicit about what I mean by
-    *unique* lemmas. When comparing any two text samples (here, the
-    first- and second-recension *dicta*), every lemma either appears in
-    both, or is unique to one or the other.
-
-[^8]: I would like to acknowledge Jake Bayon, an undergraduate Computer
+[^7]: I would like to acknowledge Jake Bayon, an undergraduate Computer
     Science student at the University of San Diego, who set up the PIE
     lemmatization environment as an independent study project with me
     during the Spring 2024 semester and who learned something about
     Gratian in the process. PIE can only be installed with the 2019
     Python 3.8 release---the current release is Python 3.13.
 
-[^9]: The 728 lines of program output included 3 numbers, which I
+[^8]: The 728 lines of program output included 3 numbers, which I
     discarded. The complete list is available at
     <https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt>.
 
-[^10]: *calumpia* is almost certainly a typo in the LASLA Latin language
+[^9]: *calumpia* is almost certainly a typo in the LASLA Latin language
     model for *calumpnia*.
 
-[^11]: The complete list of 725 lemmas unique to the second recension
+[^10]: The complete list of 725 lemmas unique to the second recension
     *dicta* is available from my GitHub repository for the Seventeenth
     International Congress of Medieval Canon Law at
     <https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt>.
 
-[^12]: See, for example, the rubrics for D.9 c.9 (R1), D.87 c.9 (R2),
+[^11]: See, for example, the rubrics for D.9 c.9 (R1), D.87 c.9 (R2),
     C.3 q.1 c.6 (R1), and C.5 q.5 c.8 (R2)
