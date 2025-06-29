@@ -47,21 +47,16 @@ passages in the *Decretum* dealing with the legal status of Jews,
 particularly those dealing with forced conversion, were introduced only
 in the second recension,[^5] I hoped to use MALLET to identify other new
 topics added in the second recension. The approach was to topic model
-all *dicta* in the *Decretum* and then to topic model the first
-recension *dicta*, which would show which topics were left when the
-first recension topics were subtracted from all topics. This was simple
-in concept, but prohibitively difficult in practice, for two reasons:
-first, because of the difficulty in determining the number of topics to
-look for (a necessary precondition for unsupervised topic modeling) and
-second, because of the fact that there was no obvious way to subtract
-topics.
-
-Once it became clear that unsupervised topic modeling using MALLET was
-not going to be an effective way to identify topics added to Gratian's
-*Decretum* between the first and second recensions, the most promising
-alternative approach to the problem appeared to be using lemmatization
-to identify distinctive *vocabulary* (as a signpost pointing to new
-ideas) added between the first and second recensions.
+the first- and second-recension *dicta* together, then separately, which
+would show which topics were left when the first recension topics were
+subtracted. <!-- Why is it not
+enough to just topic model the second-recension *dicta*? Because
+many of the topics in the second recension *dicta* are also present
+in the first-recension *dicta* --> This was simple in concept, but
+prohibitively difficult in practice, for two reasons: first, because of
+the difficulty in determining the number of topics to look for (a
+necessary precondition for unsupervised topic modeling) and second,
+because of the fact that there was no obvious way to subtract topics.
 
 For the purpose of the discussion that follows, I am defining
 "first-recension *dicta*" as the text of the *dicta* as they are listed
@@ -88,6 +83,14 @@ sample:
 By this definition, the first- and second-recension *dicta* contain
 56,713 and 14,255 words respectively.
 
+Once it became clear that unsupervised topic modeling using MALLET was
+not going to be an effective way to identify topics added to Gratian's
+*Decretum* between the first and second recensions, the most promising
+alternative approach to the problem appeared to be using lemmatization
+to identify distinctive *vocabulary* (as a signpost pointing to new
+ideas) added between the first and second recensions.
+<!-- Insert definition of "unique lemmas" here! -->
+
 When working in a highly inflected language like Latin, using words as
 the signposts pointing to corresponding ideas is not sufficiently
 precise. As an example that we will look at more closely later in this
@@ -99,7 +102,7 @@ number of unique forms that a first conjugation deponent verb like
 So if we want to use distinctive vocabulary as a basis for determining
 whether or not an idea or topic is present in a Latin text, we need to
 lemmatize every word form we encounter ---that is, reduce it to its
-dictionary headword.
+dictionary headword or lemma.
 
 The results of my initial experiments with the Classical Language
 Toolkit (CLTK), built on top of the Python Natural Language Toolkit
@@ -182,8 +185,10 @@ sophistication with which the concept is handled, moving generally in
 the direction of greater technical precision and sophistication. (I say
 "generally" because while we can assume the first recension *dicta* were
 written before the second recension *dicta*, we do not have enough
-information to  speculate about the temporal relationship within the
+information to speculate about the temporal relationship within the
 second recension *dicta*.
+
+<!-- Introduce table here. -->
 
 The concept of calumny makes its initial appearance in the form of a
 slightly misquoted scriptural reference in the first-recension *dictum*
@@ -198,16 +203,17 @@ of Christian discourse.
 
 That is not the case in the second recension *dictum* C.23 q.3 d.p.c.8.
 Here we see a series of quotations from book 48 of the *Digest*,
-containing 7 words, 5 of them unique, corresponding to all 4 of the
-expected lemmas related to the concept of calumny. It is of obvious
-interest that the quotations in this *dictum* are from Justinianic Roman
-law rather than from scriptural or patristic sources. And most
-interesting of all is the fact that the *dictum* contains two
-first-person sayings by the author of the second-recension *dicta* (or
-at least of this *dictum*), in effect glossing the terms *calumniator*
-and *calumnia*. While Gratian's own intervention is relatively modest,
-the *dictum* shows progress toward greater legal sophistication in the
-sense that the discussion draws on resources from Justinianic Roman Law.
+containing <!-- 7 words, 5 of them unique --> 7 occurrences of 5 words,
+corresponding to all 4 of the expected lemmas related to the concept of
+calumny. It is of obvious interest that the quotations in this *dictum*
+are from Justinianic Roman law rather than from scriptural or patristic
+sources. And most interesting of all is the fact that the *dictum*
+contains two first-person sayings by the author of the second-recension
+*dicta* (or at least of this *dictum*), in effect glossing the terms
+*calumniator* and *calumnia*. While Gratian's own intervention is
+relatively modest, the *dictum* shows progress toward greater legal
+sophistication in the sense that the discussion draws on resources from
+Justinianic Roman Law.
 
 ### Conclusions
 
@@ -215,8 +221,8 @@ The long-term goal of this  project has has been to find a way to use
 computationally-enabled distant reading---"reading machines" in the
 words of Stephen Ramsay---to efficiently direct the attention of
 scholars to specific sites in the text of Gratian's *Decretum* where new
-topics added between the first and second recensions are likely to
-produce meaningful results from close readings.
+topics added between the first and second recensions are likely to be
+found by close reading.
 
 And as a proof of concept, I think this effort was a success. Using the
 PIE lemmatizer in conjunction with the LASLA Latin large language model
@@ -225,7 +231,7 @@ listing all of the lemmas that *do* appear in the second recension
 *dicta* but *not* in the first recension *dicta* allowed me to identify
 a family of lemmas (*calumnia*, *calumniator*, and *calumniatus*) that
 point towards the development of the canonically significant concept of
-calumny.  The detection of calumny as a topic that the authors of the
+calumny. The detection of calumny as a topic that the authors of the
 *Decretum* develop in a meaningful way in the second recension
 demonstrates the usefulness of lemmatization as a technique for
 investigating this type of question.
@@ -246,7 +252,7 @@ indicated, there is limited value in the results of machine reading by
 itself. The real value of the results of machine reading lies in the
 patterns that trained researchers see in them.
 
-<!-- Second Conclusion -->
+<!-- Second Conclusion, can be shipped from here on down -->
 
 Is it enough? No.
 
@@ -255,43 +261,41 @@ paper is very much a work in progress and that the results, although
 interesting, are limited to the *dicta*, and therefore should not be
 taken as anything more than a proof of concept.
 
-Casual searching through the MGH e-text of the Friedberg edition that
-was created for the *Wortkonkordanz zum Decretum Gratiani* edited
+An unsystematic search through the MGH e-text of the Friedberg edition
+that was created for the *Wortkonkordanz zum Decretum Gratiani* edited
 by Reuter and Silagi indicates that there are occurrences of forms of
 the words I have been focusing on---*calumnia*, *calumnior*, and
 *calumniator*---in the rubrics and canons.[^12]
 
-A really thorough approach to the problem of systematically identifying
-new topics added to the *Decretum* between the first and second
-recensions is going to require a data set that includes the rubrics and
-canons with their inscriptions as well as the *dicta* and case
-statements. Ideally, such a data set would be in the form of a new
-e-text in TEI-P5 XML format incorporating texts from both the old
-Friedberg edition and the new Winroth edition-in-progress of the first
-recension. And this is where the scale of the undertaking starts to get
-really challenging. Even without the overhead of structuring the data
-set as a TEI-P5 document, I spent something like 12 person-weeks on
-corpus preparation for the *dicta* and the case statements as part of my
-dissertation project. Since the word count of the canons is roughly five
-times that of the *dicta*, one person-year is not an unreasonable
-initial estimate for corpus preparation for a comparable data set for
-the canons.
+A thorough approach to the problem of systematically identifying new
+topics added to the *Decretum* between the first and second recensions
+will require a data set that includes the rubrics and canons with their
+inscriptions as well as the *dicta* and case statements. Ideally, such a
+data set would be in the form of a new e-text in TEI-P5 XML format
+incorporating texts from both the old Friedberg edition and the new
+Winroth edition-in-progress of the first recension. This is where the
+scale of the undertaking becomes really challenging. Even without the
+overhead of structuring the data set as a TEI-P5 document, I spent
+approximately 12 person-weeks on corpus preparation for the *dicta* and
+the case statements as part of my dissertation project. Since the word
+count of the canons is roughly five times that of the *dicta*, one
+person-year is not an unreasonable initial estimate for corpus
+preparation for a comparable data set for the canons.
 
 The work I have discussed in this paper is based on a highly customized
 version of a twentieth century e-text of a nineteenth century print
-edition of the *Decretum*. The MGH e-text of the Friedberg edition that
-was created for the *Wortkonkordanz zum Decretum Gratiani* edited by
-Reuter and Silagi is the indispensable free resource without which none
-of my work, and I suspect the work of many others, would be possible.
-But like so many free things in life, someone paid a great deal of money
-to make it free (in this case, the taxpayers of the State of Bavaria and
-the Federal Republic of Germany in the 1980s and 1990s). But the MGH
-e-text is a resource that because of its archaic format is approaching
-the end of it useful life. If we want to continue to advance in our
-understanding of Gratian's *Decretum* with the help of electronic
-resources, we need to invest time, effort, and grant funding into a
-twenty-first century electronic text, or better still an electronic
-edition, of Gratian's *Decretum* that meets 21st century research needs.
+edition of the *Decretum*. The MGH e-text of the Friedberg edition is
+the indispensable free resource without which none of my work, and I
+suspect the work of many others, would be possible. But like so many
+free things in life, someone paid a great deal of money to make it free
+(in this case, the taxpayers of the State of Bavaria and the Federal
+Republic of Germany in the 1980s and 1990s). However, the MGH e-text is
+a resource that because of its archaic format is approaching the end of
+it useful life. If we want to continue to advance in our understanding
+of Gratian's *Decretum* with the help of electronic resources, we need
+to invest time, effort, and grant funding into a twenty-first century
+electronic text, or better still an electronic edition, of Gratian's
+*Decretum* that meets 21st century research needs.
 
 <!--
 [ICMCL XVII – Congress Programme](https://sites.google.com/view/icmcl2024/academic-programme/congress-programme)
