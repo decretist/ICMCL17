@@ -24,68 +24,73 @@ abstract: |
   vocabularies of different compositional stages revealed by this
   method then provide a roadmap for close reading.
 ---
-The project that forms the basis for the current study used techniques
-from computational linguistics to analyze the authorship of the
-case statements and *dicta* in Gratian's *Decretum*. Its conclusion
-was that the case statements were written by a single author who
-was not the author of the *dicta* either in the first or second
-recensions or in *de Penitentia*. Results from stylometric analysis
-for authorship of the *dicta*, however, were not consistent with
-either the one-author theory championed by Kenneth Pennington or
-the two-author theory championed by Anders Winroth. Instead, the
-results suggested, but did not conclusively prove, that both the
-first and the second recension *dicta* were the work of multiple
-authors.[@evans_distant_2022]
-
-All of this work is part of an overarching project to enhance the
-effectiveness of close reading medieval texts, Gratian's *Decretum* in
-particular, using computational assistance. The Digital Humanities
-world uses the term "distant reading" to describe this kind of
-computational assistance, emphasizing both its connection to and
-its contrast with traditional close reading. However, each project
+This paper presents work that is part of a larger project to enhance
+the effectiveness of close reading medieval texts, Gratian's
+*Decretum* in particular, using computational assistance. The Digital
+Humanities community uses the term "distant reading" to describe
+this kind of computational assistance, emphasizing both its connection
+to and its contrast with traditional close reading. Each project
 that uses a distant or machine reading approach aims to answer
-different questions, and therefore the studies use different tools
-and techniques. As noted, the project that forms the basis for this
-paper was concerned with the question of the authorship of the case
-statements and the first- and second recension *dicta*, including
-the *dicta* in *de Penitentia*. It employed stylometric authorship
-analysis using a statistical technique --- principal component
-analysis of the frequencies of commonly occurring function words
---- to obtain its results. In contrast, this project concerns changes
-in the teaching --- the doctrine --- of the *Decretum* between the
-first and second recensions as indicated by the use of distinctive
-vocabulary in the *dicta* of the two recensions. It employs
-lemmatization --- a linguistic technique that uses the PIE lemmatizer
-and a large language model (LLM) based on the LASLA
-corpus.[@manjavacas-etal-2019-improving] What the two projects have
-in common is the data set. The original project relied on a data
-set of the texts of the case statements and the first- and
-second-recension *dicta* that I very carefully and laboriously
-prepared.[^3] To summarize: the overarching goal is the same --- to
-use computational distant reading techniques to enhance our close
-reading of the *Decretum* --- but each individual project attempts
-to answer different questions using different tools and techniques
-on the data set.
+different questions, and therefore uses different tools and techniques.
 
-It is worth noting that this is *not* my first attempt to make
-progress on the problem of computationally identifying topics added
-to the *dicta* between the first and second recensions. At the stage
-in my PhD program when I was starting to think about my dissertation
-proposal (around 2012), there was tremendous enthusiasm in the
-Digital Humanities world for a technique called unsupervised topic
-modeling and in particular for a topic-modeling tool called MALLET.[^4]
-Inspired by Pennington's observation that most passages in the
-*Decretum* dealing with the legal status of Jews, particularly those
-dealing with forced conversion, were introduced only in the second
-recension,[^5] I hoped to use MALLET to identify other new topics
-added in the second recension. The approach was to topic model all
-*dicta* in the *Decretum* and then to topic model the first recension
-*dicta*, which would show which topics were left when the first
-recension topics were subtracted from all topics. This was simple
-in concept, but prohibitively difficult in practice, for two reasons.
-First, the difficulty in determining the number of topics to look
-for (a necessary precondition for unsupervised topic modeling) and
-second, the fact that there was no obvious way to subtract topics.
+The original project from which the current work grew was concerned
+with the question of the authorship of the case statements and the
+first- and second recension *dicta* in Gratian's *Decretum*, including
+the *dicta* in *de Penitentia*. It employed stylometric authorship
+analysis using a statistical technique from computational linguistics,
+principal component analysis of the frequencies of commonly occurring
+function words, to obtain its results. Its conclusion was that the
+case statements were written by a single author who was not the
+author of the *dicta* either in the first or second recensions or
+in *de Penitentia*. Results from stylometric analysis for authorship
+of the *dicta*, however, were not consistent with either the
+one-author theory championed by Kenneth Pennington or the two-author
+theory championed by Anders Winroth. Instead, the results suggested,
+but did not conclusively prove, that both the first and the second
+recension *dicta* were the work of multiple authors.[@evans_distant_2022]
+
+In contrast, the current work concerns changes in the teaching or
+doctrine of the *Decretum* between the first and second recensions
+as indicated by the use of distinctive vocabulary in the *dicta*
+of the two recensions. It employs another computational linguistic
+technique, lemmatization, using the PIE lemmatizer and a large
+language model (LLM) based on the LASLA
+corpus.[@manjavacas-etal-2019-improving] The two projects share a
+common data set. The original project relied on a very carefully
+prepared data set of the texts of the case statements and the first-
+and second-recension *dicta*.[^3] The current work uses the
+same data set. The overarching goal of the two projects is the
+same---to use computational distant reading techniques to enhance
+our close reading of the *Decretum*---but each individual project
+attempts to answer different questions using different tools and
+techniques on the common data set.
+
+This is not my first attempt to make progress on the problem of
+computationally identifying topics added to the *dicta* between the
+first and second recensions. Around 2012, there was tremendous
+enthusiasm in the Digital Humanities world for a technique called
+unsupervised topic modeling and in particular for a topic-modeling
+tool called MALLET.[^4] Inspired by Pennington's observation that
+most passages in the *Decretum* dealing with the legal status of
+Jews, particularly those dealing with forced conversion, were
+introduced only in the second recension,[^5] I hoped to use MALLET
+to identify other new topics added in the second recension. The
+approach was to topic model all *dicta* in the *Decretum* and then
+to topic model the first recension *dicta*, which would show which
+topics were left when the first recension topics were subtracted
+from all topics. This was simple in concept, but prohibitively
+difficult in practice, for two reasons: first, because of the
+difficulty in determining the number of topics to look for (a
+necessary precondition for unsupervised topic modeling) and second,
+because of the fact that there was no obvious way to subtract topics.
+
+Once it became clear that unsupervised topic modeling using MALLET
+was not going to be an effective way to identify topics added to
+Gratian's *Decretum* between the first and second recensions, the
+most promising alternative approach to the problem appeared to be
+using lemmatization to identify distinctive *vocabulary* (as a
+signpost pointing to new ideas) added between the first and second
+recensions.
 
 For the purpose of the discussion that follows, I am defining
 "first-recension *dicta*" as the text of the *dicta* as they are
@@ -114,14 +119,6 @@ Eliberitano:*
 By this definition, the first- and second-recension *dicta* contain
 56,713 and 14,255 words respectively.
 
-Once it became clear that unsupervised topic modeling using MALLET
-was not going to be an effective way to identify topics added to
-Gratian's *Decretum* between the first and second recensions, the
-most promising alternative approach to the problem appeared to be
-using lemmatization to identify distinctive *vocabulary* (as a
-signpost pointing to new ideas) added between the first and second
-recensions.
-
 When working in a highly inflected language like Latin, using words
 as the signposts pointing to corresponding ideas is not sufficiently
 precise. As an example that we will look at more closely later in
@@ -133,7 +130,7 @@ deponent verb like *calumnior*, *calumniari*, *calumniatus* has,
 but the number is large. So if we want to use distinctive vocabulary
 as a basis for determining whether or not an idea or topic is present
 in a Latin text, we need to lemmatize every word form we encounter
---- that is, reduce it to its dictionary headword.
+---that is, reduce it to its dictionary headword.
 
 The results of my initial experiments with the Classical Language
 Toolkit (CLTK), built on top of the Python Natural Language Toolkit
@@ -150,7 +147,7 @@ In early 2021, Mike Kestemont made me aware of the PIE lemmatizer.
 Kestemont is a researcher at the University of Antwerp specializing
 in medieval Latin and Middle Dutch literature and also a leading
 figure in the field of computational text analysis. I want to make
-it clear that PIE is not just a program that you run --- you do not
+it clear that PIE is not just a program that you run---you do not
 just type a command or click a button and get lemmatized text as
 output. PIE and PIE extended are a collection of libraries, packages,
 and toolkits, that provide an extremely versatile set of software
@@ -249,8 +246,8 @@ from Justinianic Roman Law.
 ### Conclusions
 
 The long-term goal of this  project has has been to find a way to
-use computationally-enabled distant reading --- "reading machines"
-in the words of Stephen Ramsay --- to efficiently direct the attention
+use computationally-enabled distant reading---"reading machines"
+in the words of Stephen Ramsay---to efficiently direct the attention
 of scholars to specific sites in the text of Gratian's *Decretum*
 where new topics added between the first and second recensions are
 likely to produce meaningful results from close readings.
@@ -296,8 +293,8 @@ be taken as anything more than a proof of concept.
 Casual searching through the MGH e-text of the Friedberg edition
 that was created for the *Wortkonkordanz zum Decretum Gratiani*
 edited by Reuter and Silagi indicates that there are occurrences of
-forms of the words I have been focusing on --- *calumnia*, *calumnior*,
-and *calumniator* --- in the rubrics and canons.[^12]
+forms of the words I have been focusing on---*calumnia*, *calumnior*,
+and *calumniator*---in the rubrics and canons.[^12]
 
 A really thorough approach to the problem of systematically identifying
 new topics added to the *Decretum* between the first and second
@@ -316,7 +313,7 @@ person-year is not an unreasonable initial estimate for corpus
 preparation for a comparable data set for the canons.
 
 The work I have discussed in this paper is based on a highly
-customized version of a 20th century e-text of a 19th century print
+customized version of a twentieth century e-text of a nineteenth century print
 edition of the *Decretum*. The MGH e-text of the Friedberg edition
 that was created for the *Wortkonkordanz zum Decretum Gratiani*
 edited by Reuter and Silagi is the indispensable free resource
@@ -328,7 +325,7 @@ in the 1980s and 1990s). But the MGH e-text is a resource that
 because of its archaic format is approaching the end of it useful
 life. If we want to continue to advance in our understanding of
 Gratian's *Decretum* with the help of electronic resources, we need
-to invest time, effort, and grant funding into a 21st century
+to invest time, effort, and grant funding into a twenty-first century
 electronic text, or better still an electronic edition, of Gratian's
 *Decretum* that meets 21st century research needs.
 
@@ -373,7 +370,7 @@ Computer Science student at the University of San Diego, who set
 up the PIE lemmatization environment as an independent study project
 with me during the Spring 2024 semester and who learned something
 about Gratian in the process. PIE can only be installed with the
-2019 Python 3.8 release --- the current release is Python 3.13.
+2019 Python 3.8 release---the current release is Python 3.13.
 
 [^9]: The 728 lines of program output included 3 numbers, which I
 discarded. The complete list is available at

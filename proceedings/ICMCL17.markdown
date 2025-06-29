@@ -31,12 +31,11 @@ lemmatization, using the PIE lemmatizer and a large language model (LLM)
 based on the LASLA corpus.[^2] The two projects share a common data set.
 The original project relied on a very carefully prepared data set of the
 texts of the case statements and the first- and second-recension
-*dicta*.[^3] <!-- The current work uses the
-same data set. --> The overarching goal of the two projects is the
-same---to use computational distant reading techniques to enhance our
-close reading of the *Decretum*---but each individual project attempts
-to answer different questions using different tools and techniques on
-the common data set.
+*dicta*.[^3] The current work uses the same data set. The overarching
+goal of the two projects is the same---to use computational
+distant reading techniques to enhance our close reading of the
+*Decretum*---but each individual project attempts to answer different
+questions using different tools and techniques on the common data set.
 
 This is not my first attempt to make progress on the problem of
 computationally identifying topics added to the *dicta* between the
@@ -51,10 +50,18 @@ topics added in the second recension. The approach was to topic model
 all *dicta* in the *Decretum* and then to topic model the first
 recension *dicta*, which would show which topics were left when the
 first recension topics were subtracted from all topics. This was simple
-in concept, but prohibitively difficult in practice, for two reasons.
-First, the difficulty in determining the number of topics to look for (a
-necessary precondition for unsupervised topic modeling) and second, the
-fact that there was no obvious way to subtract topics.
+in concept, but prohibitively difficult in practice, for two reasons:
+first, because of the difficulty in determining the number of topics to
+look for (a necessary precondition for unsupervised topic modeling) and
+second, because of the fact that there was no obvious way to subtract
+topics.
+
+Once it became clear that unsupervised topic modeling using MALLET was
+not going to be an effective way to identify topics added to Gratian's
+*Decretum* between the first and second recensions, the most promising
+alternative approach to the problem appeared to be using lemmatization
+to identify distinctive *vocabulary* (as a signpost pointing to new
+ideas) added between the first and second recensions.
 
 For the purpose of the discussion that follows, I am defining
 "first-recension *dicta*" as the text of the *dicta* as they are listed
@@ -80,13 +87,6 @@ sample:
 
 By this definition, the first- and second-recension *dicta* contain
 56,713 and 14,255 words respectively.
-
-Once it became clear that unsupervised topic modeling using MALLET was
-not going to be an effective way to identify topics added to Gratian's
-*Decretum* between the first and second recensions, the most promising
-alternative approach to the problem appeared to be using lemmatization
-to identify distinctive *vocabulary* (as a signpost pointing to new
-ideas) added between the first and second recensions.
 
 When working in a highly inflected language like Latin, using words as
 the signposts pointing to corresponding ideas is not sufficiently
