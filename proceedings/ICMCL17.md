@@ -279,36 +279,31 @@ of scholars to specific sites in the text of Gratian's *Decretum*
 where new topics added between the first and second recensions are
 likely to be found by close reading.
 
-And as a proof of concept, I think this effort was a success. Using
-the PIE lemmatizer in conjunction with the LASLA Latin large language
-model (LLM) to systematically lemmatize every word in the *dicta*
-and then listing all of the lemmas that *do* appear in the second
-recension *dicta* but *not* in the first recension *dicta* allowed me
-to identify a family of lemmas (*calumnia*, *calumniator*, and
-*calumniatus*) that point towards the development of the canonically
-significant concept of calumny. The detection of calumny as a topic
-that the authors of the *Decretum* develop in a meaningful way in
-the second recension demonstrates the usefulness of lemmatization
-as a technique for investigating this type of question.
+I think this effort was successful as a proof of concept. Using the
+PIE lemmatizer in conjunction with the LASLA Latin large language
+model (LLM) to systematically lemmatize every word in the first-
+and second-recension *dicta* and then to list all of the lemmas
+that *do* appear in the second-recension *dicta* but *not* in the
+first-recension *dicta* drew attention to a family of lemmas
+(*calumnia*, *calumniator*, and *calumniatus*) that indicated the
+treatment of a canonically significant concept, calumny. On close
+reading, the sites in the text of the *dicta* identified by the
+results did indeed show a meaningful development over time in the
+vocabulary of Gratian's *dicta* and to that extent in the teaching
+or doctrine of the *Decretum* on this topic. The detection of
+calumny as a topic that the authors of the *Decretum* developed in
+a significant way in the second recension demonstrates the usefulness
+of lemmatization as a technique for investigating this type of
+question.
 
-To summarize: the technique of searching among lemmas that are
-unique to the second recension using distant or machine reading was
-successful at least as a proof of concept insofar as it did surface
-one family of related lemmas pointing towards a canonically significant
-topic, calumny. On close reading, the sites in the text of the
-*dicta* identified by the results did indeed show an interesting
-change over time in the vocabulary of Gratian's *dicta* and to that
-extent in the teaching of the *Decretum* on this topic. Calumny was
-the most obvious topic (at least to me), and I was surprised that
-there were no other such immediately obvious conceptually related
-families of lemmas in the results, although I strongly encourage
-interested readers to examine the complete list of unique lemmas
-for themselves.[^10] As I previously indicated, there is limited
-value in the results of machine reading by itself. The real value
-of the results of machine reading lies in the patterns that trained
-researchers see in them.
-
-<!-- Second Conclusion, can be shipped from here on down -->
+Calumny was the most obvious topic (at least to me), and I was
+surprised that there were no other such immediately obvious
+conceptually related families of lemmas in the results, although I
+strongly encourage interested readers to examine the complete list
+of lemmas unique to the second-recension *dicta* for themselves.[^10]
+As previously indicated, there is limited value in the results of
+machine reading by itself. The real value of the results of machine
+reading lies in the patterns that trained researchers see in them.
 
 Is it enough? No.
 
@@ -355,6 +350,8 @@ want to continue to advance in our understanding of Gratian's
 time, effort, and grant funding into a twenty-first century electronic
 text, or better still an electronic edition, of Gratian's *Decretum*
 that meets 21st century research needs.
+
+![Table](Table.png)
 
 <!--
 [ICMCL XVII – Congress Programme](https://sites.google.com/view/icmcl2024/academic-programme/congress-programme)
