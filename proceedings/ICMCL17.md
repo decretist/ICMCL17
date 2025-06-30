@@ -251,7 +251,7 @@ first millennium of Christian discourse.
 That is not the case in the second recension *dictum* C.23 q.3
 d.p.c.8. Here we see a series of quotations from book 48 of the
 *Digest*, containing <!-- 7 words, 5 of them unique --> 7 occurrences
-of 5 words,[^a] corresponding to all 4 of the expected lemmas related
+of 5 words,[^10] corresponding to all 4 of the expected lemmas related
 to the concept of calumny. It is of obvious interest that the
 quotations in this *dictum* are from Justinianic Roman law rather
 than from scriptural or patristic sources. And most interesting of
@@ -292,7 +292,7 @@ Calumny was the most obvious topic (at least to me), and I was
 surprised that there were no other such immediately obvious
 conceptually related families of lemmas in the results, although I
 strongly encourage interested readers to examine the complete list
-of lemmas unique to the second-recension *dicta* for themselves.[^10]
+of lemmas unique to the second-recension *dicta* for themselves.[^11]
 As previously indicated, there is limited value in the results of
 machine reading by itself. The real value of the results of machine
 reading lies in the patterns that trained researchers see in them.
@@ -308,7 +308,7 @@ An unsystematic search through the MGH e-text of the Friedberg
 edition that was created for the *Wortkonkordanz zum Decretum
 Gratiani* edited by Reuter and Silagi indicates that there are
 occurrences of forms of the words I have been focusing on---*calumnia*,
-*calumnior*, and *calumniator*---in the rubrics and canons.[^11] A
+*calumnior*, and *calumniator*---in the rubrics and canons.[^12] A
 thorough approach to the problem of systematically identifying new
 topics added to the *Decretum* between the first and second recensions
 will therefore require a data set that includes the rubrics and
@@ -395,11 +395,12 @@ the orthographic conventions of the Friedberg edition, from which
 the text samples of the first- and second-recension *dicta* are
 ultimately derived.
 
-[^10]: The complete list of 725 lemmas unique to the second recension *dicta*
+[^10]: *calumpniari*, *calummpnia*, *calumpniatus*, *calumpniatorem*, and *calumpniae*.
+
+[^11]: The complete list of 725 lemmas unique to the second recension *dicta*
 is available from my GitHub repository for the Seventeenth International Congress of Medieval Canon Law at
 [https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt](https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt).
 
-[^11]: For example, see the rubrics for D.9 c.9 (R1), D.87 c.9 (R2),
+[^12]: For example, see the rubrics for D.9 c.9 (R1), D.87 c.9 (R2),
 C.3 q.1 c.6 (R1), and C.5 q.5 c.8 (R2).
 
-[^a]: *calumpniari*, *calummpnia*, *calumpniatus*, *calumpniatorem*, and *calumpniae*.
