@@ -185,13 +185,13 @@ lemmas unique to the second-recension *dicta*.[^10]
 ![](Table_1_w_Header.png)
 
 When we turn our attention to the substantive treatment of the topic of
-calumny in the *dicta*, there is variation in terms of the legal
-sophistication with which the concept is handled, moving generally in
-the direction of greater technical precision and sophistication. (I say
-"generally" because while we can assume the first recension *dicta* were
-written before the second recension *dicta*, we do not have enough
-information to speculate about the temporal relationship among the
-second recension *dicta*.)
+calumny in the *dicta* (see Table 1 above), there is variation in terms
+of the legal sophistication with which the concept is handled, moving
+generally in the direction of greater technical precision and
+sophistication. (I say "generally" because while we can assume the first
+recension *dicta* were written before the second recension *dicta*, we
+do not have enough information to speculate about the temporal
+relationship among the second recension *dicta*.)
 
 The concept of calumny makes its initial appearance in the form of a
 slightly misquoted scriptural reference in the first-recension *dictum*

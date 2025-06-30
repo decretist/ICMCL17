@@ -126,12 +126,12 @@ indicators pointing to corresponding ideas is not sufficiently
 precise. As an example that we will examine more closely later in
 this paper, the noun *calumnia* has seven unique declined forms. A
 regular first conjugation deponent verb like *calumnior*, *calumniari*,
-*calumniatus* has 120 conjugated forms, approximately eighty of which
-are unique, not including participial forms. Therefore, if we want
-to use distinctive vocabulary as a basis for determining whether
-or not an idea or topic is present in a Latin text, we need to
-lemmatize every word form we encounter, that is, reduce it to its
-dictionary headword or *lemma*. Once text samples for the first-
+*calumniatus* has 120 conjugated forms, approximately eighty of
+which are unique, not including participial forms. Therefore, if
+we want to use distinctive vocabulary as a basis for determining
+whether or not an idea or topic is present in a Latin text, we need
+to lemmatize every word form we encounter, that is, reduce it to
+its dictionary headword or *lemma*. Once text samples for the first-
 and second recension *dicta* have been reduced to corresponding
 lists of lemmas, those lists can be compared to generate three
 further lists, (i) of lemmas that appear in both the first- and
@@ -148,9 +148,9 @@ not encouraging.[^6] The first- and second-recension *dicta* might
 reasonably be expected to include a few hundred unique lemmas, but
 CLTK reported many thousands (over four thousand for the first-recension
 *dicta* alone), the overwhelming majority of which were false
-positives. Clearly, lemmatization was not ready for the purpose of this
-project, and that remained the case for many years, from
-2014 through 2020.
+positives. Clearly, lemmatization was not ready for the purpose of
+this project, and that remained the case for many years, from 2014
+through 2020.
 
 In 2021, Mike Kestemont made me aware of the PIE lemmatizer.
 Kestemont is a researcher at the University of Antwerp specializing
@@ -158,37 +158,37 @@ in medieval Latin and Middle Dutch literature and also a leading
 figure in the field of computational text analysis. PIE is not an
 application or program---the user does not simply type a command
 or click a button and get lemmatized text as output. Instead, PIE
-and PIE Extended[@thibault_clerice_2020_3883590] are a collection of libraries, packages, and
-toolkits, that provide an extremely versatile set of software
-building blocks that can be called upon to perform a wide range of
-natural language processing functions, like part-of-speech tagging
-or lemmatization, in a Python program.[^7] They are based on large
-language models (LLMs) trained using machine learning techniques
-on annotated corpora of texts in the target language. In this case,
-PIE uses a model trained on the LASLA corpus of 1.7 million words
-or tokens of classical Latin, each annotated with lemma, part of
-speech, and other morphological and syntactic information. (If the
-term large language model or the acronym LLM sound familiar, they
-should. LLMs are the basis for the growing family of generative AI
-tools, such as ChatGPT and friends, that have been the subject of
-so much attention over the last several years.) Once the PIE
-lemmatization environment had been set up, I wrote a Python program
-that used PIE to create separate lists of every lemma found in the
-first- and second-recension *dicta*, and then to compare the two
-lists to identify lemmas that appear only in the second-recension
-*dicta*. The program produced a list of 725 unique lemmas present
-only in second-recension *dicta*.[^8]
+and PIE Extended[@thibault_clerice_2020_3883590] are a collection
+of libraries, packages, and toolkits, that provide an extremely
+versatile set of software building blocks that can be called upon
+to perform a wide range of natural language processing functions,
+like part-of-speech tagging or lemmatization, in a Python program.[^8]
+They are based on large language models (LLMs) trained using machine
+learning techniques on annotated corpora of texts in the target
+language. In this case, PIE uses a model trained on the LASLA corpus
+of 1.7 million words or tokens of classical Latin, each annotated
+with lemma, part of speech, and other morphological and syntactic
+information. (If the term large language model or the acronym LLM
+sound familiar, they should. LLMs are the basis for the growing
+family of generative AI tools, such as ChatGPT and friends, that
+have been the subject of so much attention over the last several
+years.) Once the PIE lemmatization environment had been set up, I
+wrote a Python program that used PIE to create separate lists of
+every lemma found in the first- and second-recension *dicta*, and
+then to compare the two lists to identify lemmas that appear only
+in the second-recension *dicta*. The program produced a list of 725
+unique lemmas present only in second-recension *dicta*.[^9]
 
-An understanding of whether an idea or topic is present in, or absent
-from, a selection of text can almost never be arrived at based on
-the presence or absence of a single lemma. Instead, human, as opposed
-to machine, readers must look for the presence of families of related
-lemmas to indicate the presence of an idea or topic in a selection
-of text. In reviewing the list of the 725 lemmas unique to the
-second-recension *dicta*, one such family, all related to the concept
-of calumny, stood out in particular. This family will be the exemplar
-of what new computational techniques are able to reveal about the
-evolution of the text and ideas of the *Decretum*.
+An understanding of whether an idea or topic is present in, or
+absent from, a selection of text can almost never be arrived at
+based on the presence or absence of a single lemma. Instead, human,
+as opposed to machine, readers must look for the presence of families
+of related lemmas to indicate the presence of an idea or topic in
+a selection of text. In reviewing the list of the 725 lemmas unique
+to the second-recension *dicta*, one such family, all related to
+the concept of calumny, stood out in particular. This family will
+be the exemplar of what new computational techniques are able to
+reveal about the evolution of the text and ideas of the *Decretum*.
 
 Calumny is a promising lead because we know that between 1140 and
 1234, what we think of as the classical period in the history of
@@ -215,18 +215,19 @@ to the second-recension *dicta*: *calumnia*, *calumniator*, and
 *calumniatus*. It does not report the lemma *calumnior* because,
 as we shall see, the word *calumniantibus* appears in a first-recension
 *dictum*, and therefore the verb form is not included in the list
-of lemmas unique to the second-recension *dicta*.[^9]
+of lemmas unique to the second-recension *dicta*.[^10]
 
 ![](Table_1_w_Header.png)
 
 When we turn our attention to the substantive treatment of the topic
-of calumny in the *dicta*, there is variation in terms of the legal
-sophistication with which the concept is handled, moving generally
-in the direction of greater technical precision and sophistication.
-(I say "generally" because while we can assume the first recension
-*dicta* were written before the second recension *dicta*, we do not
-have enough information to speculate about the temporal relationship
-among the second recension *dicta*.)
+of calumny in the *dicta* (see Table 1 above), there is variation
+in terms of the legal sophistication with which the concept is
+handled, moving generally in the direction of greater technical
+precision and sophistication. (I say "generally" because while we
+can assume the first recension *dicta* were written before the
+second recension *dicta*, we do not have enough information to
+speculate about the temporal relationship among the second
+recension *dicta*.)
 
 The concept of calumny makes its initial appearance in the form of
 a slightly misquoted scriptural reference in the first-recension
@@ -251,7 +252,7 @@ first millennium of Christian discourse.
 
 That is not the case in the second recension *dictum* C.23 q.3
 d.p.c.8. Here we see a series of quotations from book 48 of the
-*Digest*, containing seven occurrences of five words,[^10] corresponding
+*Digest*, containing seven occurrences of five words,[^11] corresponding
 to all four of the expected lemmas related to the concept of calumny.
 It is of obvious interest that the quotations in this *dictum* are
 from Justinianic Roman law rather than from scriptural or patristic
@@ -293,7 +294,7 @@ Calumny was the most obvious topic (at least to me), and I was
 surprised that there were no other such immediately obvious
 conceptually related families of lemmas in the results, although I
 strongly encourage interested readers to examine the complete list
-of lemmas unique to the second-recension *dicta* for themselves.[^11]
+of lemmas unique to the second-recension *dicta* for themselves.[^12]
 As previously indicated, there is limited value in the results of
 machine reading by itself. The real value of the results of machine
 reading lies in the patterns that trained researchers see in them.
@@ -309,7 +310,7 @@ An unsystematic search through the MGH e-text of the Friedberg
 edition that was created for the *Wortkonkordanz zum Decretum
 Gratiani* edited by Reuter and Silagi indicates that there are
 occurrences of forms of the words I have been focusing on---*calumnia*,
-*calumnior*, and *calumniator*---in the rubrics and canons.[^12] A
+*calumnior*, and *calumniator*---in the rubrics and canons.[^13] A
 thorough approach to the problem of systematically identifying new
 topics added to the *Decretum* between the first and second recensions
 will therefore require a data set that includes the rubrics and
@@ -360,18 +361,18 @@ popular programming language worldwide as of June 2025. Python
 provides powerful features for performing operations on textual
 data.
 
-[^7]: I would like to acknowledge Jake Bayon, an undergraduate
+[^8]: I would like to acknowledge Jake Bayon, an undergraduate
 Computer Science student at the University of San Diego, who set
 up the PIE lemmatization environment as an independent study project
 with me during the Spring 2024 semester and who learned something
 about Gratian in the process. PIE can only be installed with the
 2019 Python 3.8 release---the current release is Python 3.13.
 
-[^8]: The 728 lines of program output included three numbers, which I
-discarded. The complete list is available at
+[^9]: The 728 lines of program output included three numbers, which
+I discarded. The complete list is available at
 [https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt](https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt).
 
-[^9]: PIE reports the lemmas as *calumpia*, *calumniator*, and
+[^10]: PIE reports the lemmas as *calumpia*, *calumniator*, and
 *calumpniatus*. *calumpia* is almost certainly a typo in the LASLA
 Latin language model for *calumpnia*. PIE reports the lemma of
 *calumpniantibus* as *calumpnio*. The spelling is consistent with
@@ -379,14 +380,14 @@ the orthographic conventions of the Friedberg edition, from which
 the text samples of the first- and second-recension *dicta* are
 ultimately derived.
 
-[^10]: *calumpniari*, *calummpnia*, *calumpniatus*, *calumpniatorem*,
+[^11]: *calumpniari*, *calummpnia*, *calumpniatus*, *calumpniatorem*,
 and *calumpniae*.
 
-[^11]: The complete list of 725 lemmas unique to the second recension
+[^12]: The complete list of 725 lemmas unique to the second recension
 *dicta* is available from my GitHub repository for the Seventeenth
 International Congress of Medieval Canon Law at
 [https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt](https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt).
 
-[^12]: For example, see the rubrics for D.9 c.9 (R1), D.87 c.9 (R2),
+[^13]: For example, see the rubrics for D.9 c.9 (R1), D.87 c.9 (R2),
 C.3 q.1 c.6 (R1), and C.5 q.5 c.8 (R2).
 
