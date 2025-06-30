@@ -60,8 +60,8 @@ common data set. The original project relied on a very carefully
 prepared data set of the texts of the case statements and the first-
 and second-recension *dicta*.[^3] The current work uses the same
 data set. The overarching goal of the two projects is the same---to
-use computational distant reading techniques to enhance our close
-reading of the *Decretum*---but each individual project attempts
+use computational distant reading techniques to enhance close
+readings of the *Decretum*---but each individual project attempts
 to answer different questions using different tools and techniques
 on the common data set.
 
@@ -78,7 +78,7 @@ hoped to use MALLET to identify other new topics added in the second
 recension. The approach was to topic model the first- and
 second-recension *dicta* together, then separately, which would
 show which topics were left when the first recension topics were
-subtracted. (It would not be enough to just topic model the
+subtracted. (It would not be enough to topic model the just
 second-recension *dicta* because many of the topics present in the
 second recension *dicta* are also present in the first-recension
 *dicta*.) This approach was simple in concept, but prohibitively
@@ -103,7 +103,7 @@ non admittantur.* Liberti quoque non sunt promouendi ad clerum,
 nisi ab obsequiis sui patroni fuerint absoluti. Unde in Concilio
 Eliberitano:
 
-The remainder of the dictum is assigned to the second recension
+The remainder of the *dictum* is assigned to the second recension
 text sample:
 
 > Ecce, quomodo serui ad clericatum ualeant assumi, uel quomodo non
@@ -133,20 +133,20 @@ every word form we encounter, that is, reduce it to its dictionary
 headword or *lemma*. Once text samples for the first- and second
 recension *dicta* have been reduced to corresponding lists of lemmas,
 those lists can be compared to generate three further lists, (i)
-lemmas that appear in both the first- and second-recension *dicta*,
-(ii) lemmas that are unique to the first-recension *dicta*, and
-(iii) lemmas that are unique to the second-recension *dicta*. It
+of lemmas that appear in both the first- and second-recension *dicta*,
+(ii) of lemmas that are unique to the first-recension *dicta*, and
+(iii) of lemmas that are unique to the second-recension *dicta*. It
 is the list of lemmas unique to the second-recension *dicta* that
 is relevant to the problem of topics added to the *Decretum* in the
 second recension.
 
-The results of my initial experiments with the Classical Language
+The results of initial experiments with the Classical Language
 Toolkit (CLTK), built on top of the Python Natural Language Toolkit
 (NLTK) and the best lemmatization tool available at the time, were
 not encouraging.[^6] The first- and second-recension *dicta* might
 reasonably be expected to include a few hundred unique lemmas, but
-CLTK reported many thousands (over four thousand just for the
-first-recension *dicta*), the overwhelming majority of which were
+CLTK reported many thousands (over four thousand for the
+first-recension *dicta* alone), the overwhelming majority of which were
 false positives. Lemmatization was not ready for the purpose of
 this project, and that remained the case for many years, from around
 2014 through around 2020.
@@ -164,7 +164,7 @@ natural language processing functions, like part-of-speech tagging
 or lemmatization, in a Python program.[^7] They are based on large
 language models (LLMs) trained using machine learning techniques
 on annotated corpora of texts in the target language. In this case,
-I am using a model trained on the LASLA corpus of 1.7 million words
+PIE uses a model trained on the LASLA corpus of 1.7 million words
 or tokens of classical Latin, each annotated with lemma, part of
 speech, and other morphological and syntactic information. (If the
 term large language model or the acronym LLM sound familiar, they
@@ -185,7 +185,7 @@ to machine, readers must look for the presence of families of related
 lemmas to indicate the presence of an idea or topic in a selection
 of text. In reviewing the list of the 725 lemmas unique to the
 second-recension *dicta*, one such family, all related to the concept
-of calumny, stands out in particular. This family will be the
+of calumny, stood out in particular. This family will be the
 exemplar of what new computational techniques are able to reveal
 about the evolution of the text and ideas of the *Decretum*.
 
@@ -213,16 +213,10 @@ PIE does report three lemmas from this family among the 725 unique
 to the second-recension *dicta*: *calumnia*, *calumniator*, and
 *calumniatus*. It does not report the lemma *calumnior* because,
 as we shall see, the word *calumniantibus* appears in a first-recension
-*dictum*, and therefore the verb form does not appear on the list
+*dictum*, and therefore the verb form is not included in the list
 of lemmas unique to the second-recension *dicta*.[^9]
 
-[^9]: PIE reports the lemmas as *calumpia*, *calumniator*, and
-*calumpniatus*. *calumpia* is almost certainly a typo in the LASLA
-Latin language model for *calumpnia*. PIE reports the lemma of
-*calumpniantibus* as *calumpnio*. The spelling is consistent with
-the orthographic conventions of the Friedberg edition, from which
-the text samples of the first- and second-recension *dicta* are
-ultimately derived.
+![Table 1](Table_1_landscape.png)
 
 When we turn our attention to the substantive treatment of the topic
 of calumny in the *dicta*, there is variation in terms of the legal
@@ -232,8 +226,6 @@ in the direction of greater technical precision and sophistication.
 *dicta* were written before the second recension *dicta*, we do not
 have enough information to speculate about the temporal relationship
 among the second recension *dicta*.)
-
-<!-- Introduce table here. -->
 
 The concept of calumny makes its initial appearance in the form of
 a slightly misquoted scriptural reference in the first-recension
@@ -259,7 +251,7 @@ first millennium of Christian discourse.
 That is not the case in the second recension *dictum* C.23 q.3
 d.p.c.8. Here we see a series of quotations from book 48 of the
 *Digest*, containing <!-- 7 words, 5 of them unique --> 7 occurrences
-of 5 words, corresponding to all 4 of the expected lemmas related
+of 5 words,[^a] corresponding to all 4 of the expected lemmas related
 to the concept of calumny. It is of obvious interest that the
 quotations in this *dictum* are from Justinianic Roman law rather
 than from scriptural or patristic sources. And most interesting of
@@ -351,7 +343,7 @@ time, effort, and grant funding into a twenty-first century electronic
 text, or better still an electronic edition, of Gratian's *Decretum*
 that meets 21st century research needs.
 
-![Table](Table.png)
+![Table 1](Table_1_portrait.png)
 
 <!--
 [ICMCL XVII – Congress Programme](https://sites.google.com/view/icmcl2024/academic-programme/congress-programme)
@@ -395,9 +387,19 @@ about Gratian in the process. PIE can only be installed with the
 discarded. The complete list is available at
 [https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt](https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt).
 
+[^9]: PIE reports the lemmas as *calumpia*, *calumniator*, and
+*calumpniatus*. *calumpia* is almost certainly a typo in the LASLA
+Latin language model for *calumpnia*. PIE reports the lemma of
+*calumpniantibus* as *calumpnio*. The spelling is consistent with
+the orthographic conventions of the Friedberg edition, from which
+the text samples of the first- and second-recension *dicta* are
+ultimately derived.
+
 [^10]: The complete list of 725 lemmas unique to the second recension *dicta*
 is available from my GitHub repository for the Seventeenth International Congress of Medieval Canon Law at
 [https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt](https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt).
 
-[^11]: See, for example, the rubrics for D.9 c.9 (R1), D.87 c.9 (R2),
-C.3 q.1 c.6 (R1), and C.5 q.5 c.8 (R2)
+[^11]: For example, see the rubrics for D.9 c.9 (R1), D.87 c.9 (R2),
+C.3 q.1 c.6 (R1), and C.5 q.5 c.8 (R2).
+
+[^a]: *calumpniari*, *calummpnia*, *calumpniatus*, *calumpniatorem*, and *calumpniae*.
