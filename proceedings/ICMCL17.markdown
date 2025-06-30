@@ -2,25 +2,25 @@ This paper presents work that is part of a larger project to enhance the
 effectiveness of close reading medieval texts, Gratian's *Decretum* in
 particular, using computational assistance. The Digital Humanities
 community uses the term "distant reading" to describe this kind of
-computational assistance, emphasizing both its connection to and its
-contrast with traditional close reading. Each project that uses a
+computational assistance, emphasizing both its connection to, and its
+contrast with, traditional close reading. Each project that uses a
 distant or machine reading approach aims to answer different questions,
 and therefore uses different tools and techniques.
 
 The original project from which the current work grew was concerned with
 the question of the authorship of the case statements and the first- and
-second recension *dicta* in Gratian's *Decretum*, including the *dicta*
+second-recension *dicta* in Gratian's *Decretum*, including the *dicta*
 in *de Penitentia*. It employed stylometric authorship analysis using a
-statistical technique from computational linguistics, principal
+statistical technique from computational linguistics---principal
 component analysis of the frequencies of commonly occurring function
-words, to obtain its results. Its conclusion was that the case
+words---to obtain its results. Its conclusion was that the case
 statements were written by a single author who was not the author of the
 *dicta* either in the first or second recensions or in *de Penitentia*.
 Results from stylometric analysis for authorship of the *dicta*,
 however, were not consistent with either the one-author theory
 championed by Kenneth Pennington or the two-author theory championed by
 Anders Winroth. Instead, the results suggested, but did not conclusively
-prove, that both the first and the second recension *dicta* were the
+prove, that both the first- and the second-recension *dicta* were the
 work of multiple authors.[^1]
 
 In contrast, the current work concerns changes in the teaching or
@@ -35,13 +35,14 @@ texts of the case statements and the first- and second-recension
 goal of the two projects is the same---to use computational
 distant reading techniques to enhance close readings of the
 *Decretum*---but each individual project attempts to answer different
-questions using different tools and techniques on the common data set.
+questions using different tools and techniques using the common data
+set.
 
 This is not my first attempt to make progress on the problem of
 computationally identifying topics added to the *dicta* between the
 first and second recensions. Around 2012, there was tremendous
 enthusiasm in the Digital Humanities community for a technique called
-unsupervised topic modeling and in particular for a topic-modeling tool
+unsupervised topic modeling, and in particular for a topic-modeling tool
 called MALLET.[^4] Inspired by Pennington's observation that most
 passages in the *Decretum* dealing with the legal status of Jews,
 particularly those dealing with forced conversion, were introduced only
@@ -83,29 +84,29 @@ sample:
 By this definition, the first- and second-recension *dicta* contain
 56,713 and 14,255 words respectively.
 
-Once it became clear that unsupervised topic modeling using MALLET was
-not going to be an effective way to identify topics added to Gratian's
-*Decretum* between the first and second recensions, the most promising
-alternative approach to the problem appeared to be using lemmatization
-to identify distinctive vocabulary as an indicator pointing to new ideas
-added between the first and second recensions. When working in a highly
+Once it became clear that unsupervised topic modeling using MALLET would
+not be an effective way to identify topics added to Gratian's *Decretum*
+between the first and second recensions, the most promising alternative
+approach to the problem appeared to be using lemmatization to identify
+distinctive vocabulary as an indicator pointing to new ideas added
+between the first and second recensions. When working in a highly
 inflected language like Latin, using words as the indicators pointing to
 corresponding ideas is not sufficiently precise. As an example that we
-will look at more closely later in this paper, the noun *calumnia* has 6
-declined forms. A regular first conjugation deponent verb like
-*calumnior*, *calumniari*, *calumniatus* has 120 conjugated forms,
-around 80 of which are unique, not including participial forms.
-Therefore if we want to use distinctive vocabulary as a basis for
-determining whether or not an idea or topic is present in a Latin text,
-we need to lemmatize every word form we encounter, that is, reduce it to
-its dictionary headword or *lemma*. Once text samples for the first- and
-second recension *dicta* have been reduced to corresponding lists of
-lemmas, those lists can be compared to generate three further lists, (i)
-of lemmas that appear in both the first- and second-recension *dicta*,
-(ii) of lemmas that are unique to the first-recension *dicta*, and (iii)
-of lemmas that are unique to the second-recension *dicta*. It is the
-list of lemmas unique to the second-recension *dicta* that is relevant
-to the problem of topics added to the *Decretum* in the second
+will examine more closely later in this paper, the noun *calumnia* has
+seven unique declined forms. A regular first conjugation deponent verb
+like *calumnior*, *calumniari*, *calumniatus* has 120 conjugated forms,
+approximately eighty of which are unique, not including participial
+forms. Therefore, if we want to use distinctive vocabulary as a basis
+for determining whether or not an idea or topic is present in a Latin
+text, we need to lemmatize every word form we encounter, that is, reduce
+it to its dictionary headword or *lemma*. Once text samples for the
+first- and second recension *dicta* have been reduced to corresponding
+lists of lemmas, those lists can be compared to generate three further
+lists, (i) of lemmas that appear in both the first- and second-recension
+*dicta*, (ii) of lemmas that are unique to the first-recension *dicta*,
+and (iii) of lemmas that are unique to the second-recension *dicta*. It
+is the list of lemmas unique to the second-recension *dicta* that is
+relevant to the problem of topics added to the *Decretum* in the second
 recension.
 
 The results of initial experiments with the Classical Language Toolkit
@@ -115,19 +116,19 @@ encouraging.[^6] The first- and second-recension *dicta* might
 reasonably be expected to include a few hundred unique lemmas, but CLTK
 reported many thousands (over four thousand for the first-recension
 *dicta* alone), the overwhelming majority of which were false positives.
-Lemmatization was not ready for the purpose of this project, and that
-remained the case for many years, from around 2014 through around 2020.
+Clearly, lemmatization was not ready for the purpose of this project,
+and that remained the case for many years, from 2014 through 2020.
 
-In early 2021, Mike Kestemont made me aware of the PIE lemmatizer.
-Kestemont is a researcher at the University of Antwerp specializing in
-medieval Latin and Middle Dutch literature and also a leading figure in
-the field of computational text analysis. PIE is not an application or
+In 2021, Mike Kestemont made me aware of the PIE lemmatizer. Kestemont
+is a researcher at the University of Antwerp specializing in medieval
+Latin and Middle Dutch literature and also a leading figure in the field
+of computational text analysis. PIE is not an application or
 program---the user does not simply type a command or click a button and
-get lemmatized text as output. Instead, PIE and PIE extended are a
+get lemmatized text as output. Instead, PIE and PIE Extended[^7] are a
 collection of libraries, packages, and toolkits, that provide an
 extremely versatile set of software building blocks that can be called
 upon to perform a wide range of natural language processing functions,
-like part-of-speech tagging or lemmatization, in a Python program.[^7]
+like part-of-speech tagging or lemmatization, in a Python program.[^8]
 They are based on large language models (LLMs) trained using machine
 learning techniques on annotated corpora of texts in the target
 language. In this case, PIE uses a model trained on the LASLA corpus of
@@ -136,16 +137,16 @@ lemma, part of speech, and other morphological and syntactic
 information. (If the term large language model or the acronym LLM sound
 familiar, they should. LLMs are the basis for the growing family of
 generative AI tools, such as ChatGPT and friends, that have been the
-subject of so much attention for the last several years.) Once the PIE
+subject of so much attention over the last several years.) Once the PIE
 lemmatization environment had been set up, I wrote a Python program that
 used PIE to create separate lists of every lemma found in the first- and
 second-recension *dicta*, and then to compare the two lists to identify
 lemmas that appear only in the second-recension *dicta*. The program
 produced a list of 725 unique lemmas present only in second-recension
-*dicta*.[^8]
+*dicta*.[^9]
 
-An understanding of whether an idea or topic is present in or absent
-from a selection of text can almost never be arrived at based on the
+An understanding of whether an idea or topic is present in, or absent
+from, a selection of text can almost never be arrived at based on the
 presence or absence of a single lemma. Instead, human, as opposed to
 machine, readers must look for the presence of families of related
 lemmas to indicate the presence of an idea or topic in a selection of
@@ -179,12 +180,9 @@ the second-recension *dicta*: *calumnia*, *calumniator*, and
 *calumniatus*. It does not report the lemma *calumnior* because, as we
 shall see, the word *calumniantibus* appears in a first-recension
 *dictum*, and therefore the verb form is not included in the list of
-lemmas unique to the second-recension *dicta*.[^9]
+lemmas unique to the second-recension *dicta*.[^10]
 
-<figure>
-<img src="Table_1_landscape.png" alt="Table 1" />
-<figcaption aria-hidden="true">Table 1</figcaption>
-</figure>
+![](Table_1_w_Header.png)
 
 When we turn our attention to the substantive treatment of the topic of
 calumny in the *dicta*, there is variation in terms of the legal
@@ -218,11 +216,11 @@ millennium of Christian discourse.
 
 That is not the case in the second recension *dictum* C.23 q.3 d.p.c.8.
 Here we see a series of quotations from book 48 of the *Digest*,
-containing 7 occurrences of 5 words,[^10] corresponding to all 4 of the
-expected lemmas related to the concept of calumny. It is of obvious
-interest that the quotations in this *dictum* are from Justinianic Roman
-law rather than from scriptural or patristic sources. And most
-interesting of all is the fact that the *dictum* contains two
+containing seven occurrences of five words,[^11] corresponding to all
+four of the expected lemmas related to the concept of calumny. It is of
+obvious interest that the quotations in this *dictum* are from
+Justinianic Roman law rather than from scriptural or patristic sources.
+And most interesting of all is the fact that the *dictum* contains two
 first-person sayings by the author of the second-recension *dicta* (or
 at least of this *dictum*), in effect glossing the terms *calumniator*
 and *calumnia*. While Gratian's own intervention is relatively modest,
@@ -258,7 +256,7 @@ Calumny was the most obvious topic (at least to me), and I was surprised
 that there were no other such immediately obvious conceptually related
 families of lemmas in the results, although I strongly encourage
 interested readers to examine the complete list of lemmas unique to the
-second-recension *dicta* for themselves.[^11] As previously indicated,
+second-recension *dicta* for themselves.[^12] As previously indicated,
 there is limited value in the results of machine reading by itself. The
 real value of the results of machine reading lies in the patterns that
 trained researchers see in them.
@@ -274,7 +272,7 @@ An unsystematic search through the MGH e-text of the Friedberg edition
 that was created for the *Wortkonkordanz zum Decretum Gratiani* edited
 by Reuter and Silagi indicates that there are occurrences of forms of
 the words I have been focusing on---*calumnia*, *calumnior*, and
-*calumniator*---in the rubrics and canons.[^12] A thorough approach to
+*calumniator*---in the rubrics and canons.[^13] A thorough approach to
 the problem of systematically identifying new topics added to the
 *Decretum* between the first and second recensions will therefore
 require a data set that includes the rubrics and canons with their
@@ -285,7 +283,7 @@ XML format incorporating texts from both the old Friedberg edition and
 the new Winroth edition-in-progress of the first recension. This is
 where the scale of the undertaking becomes really challenging. Even
 without the overhead of structuring the data set as a TEI-P5 document, I
-spent approximately 12 person-weeks on corpus preparation for the
+spent approximately twelve person-weeks on corpus preparation for the
 *dicta* and the case statements as part of my dissertation project.
 Since the word count of the canons is roughly five times that of the
 *dicta*, one person-year is not an unreasonable initial estimate for
@@ -306,15 +304,18 @@ invest time, effort, and grant funding into a twenty-first century
 electronic text, or better still an electronic edition, of Gratian's
 *Decretum* that meets 21st century research needs.
 
-<figure>
-<img src="Table_1_portrait.png" alt="Table 1" />
-<figcaption aria-hidden="true">Table 1</figcaption>
-</figure>
-
 # Bibliography
 
 <div id="refs" class="references csl-bib-body hanging-indent"
 entry-spacing="0">
+
+<div id="ref-thibault_clerice_2020_3883590" class="csl-entry">
+
+Clérice, Thibault. “Pie Extended, an Extension for Pie with
+Pre-Processing and Post-Processing.” Zenodo, June 2020.
+<https://doi.org/10.5281/zenodo.3883589>.
+
+</div>
 
 <div id="ref-evans_distant_2022" class="csl-entry">
 
@@ -390,18 +391,22 @@ Law* 31, no. 1 (2014): 111–24.
     provides powerful features for performing operations on textual
     data.
 
-[^7]: I would like to acknowledge Jake Bayon, an undergraduate Computer
+[^7]: Thibault Clérice, “Pie Extended, an Extension for Pie with
+    Pre-Processing and Post-Processing” (Zenodo, June 2020),
+    <https://doi.org/10.5281/zenodo.3883589>.
+
+[^8]: I would like to acknowledge Jake Bayon, an undergraduate Computer
     Science student at the University of San Diego, who set up the PIE
     lemmatization environment as an independent study project with me
     during the Spring 2024 semester and who learned something about
     Gratian in the process. PIE can only be installed with the 2019
     Python 3.8 release---the current release is Python 3.13.
 
-[^8]: The 728 lines of program output included 3 numbers, which I
+[^9]: The 728 lines of program output included three numbers, which I
     discarded. The complete list is available at
     <https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt>.
 
-[^9]: PIE reports the lemmas as *calumpia*, *calumniator*, and
+[^10]: PIE reports the lemmas as *calumpia*, *calumniator*, and
     *calumpniatus*. *calumpia* is almost certainly a typo in the LASLA
     Latin language model for *calumpnia*. PIE reports the lemma of
     *calumpniantibus* as *calumpnio*. The spelling is consistent with
@@ -409,13 +414,13 @@ Law* 31, no. 1 (2014): 111–24.
     the text samples of the first- and second-recension *dicta* are
     ultimately derived.
 
-[^10]: *calumpniari*, *calummpnia*, *calumpniatus*, *calumpniatorem*,
+[^11]: *calumpniari*, *calummpnia*, *calumpniatus*, *calumpniatorem*,
     and *calumpniae*.
 
-[^11]: The complete list of 725 lemmas unique to the second recension
+[^12]: The complete list of 725 lemmas unique to the second recension
     *dicta* is available from my GitHub repository for the Seventeenth
     International Congress of Medieval Canon Law at
     <https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt>.
 
-[^12]: For example, see the rubrics for D.9 c.9 (R1), D.87 c.9 (R2), C.3
+[^13]: For example, see the rubrics for D.9 c.9 (R1), D.87 c.9 (R2), C.3
     q.1 c.6 (R1), and C.5 q.5 c.8 (R2).
