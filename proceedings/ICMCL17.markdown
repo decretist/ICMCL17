@@ -218,17 +218,16 @@ millennium of Christian discourse.
 
 That is not the case in the second recension *dictum* C.23 q.3 d.p.c.8.
 Here we see a series of quotations from book 48 of the *Digest*,
-containing <!-- 7 words, 5 of them unique --> 7 occurrences of 5
-words,[^10] corresponding to all 4 of the expected lemmas related to the
-concept of calumny. It is of obvious interest that the quotations in
-this *dictum* are from Justinianic Roman law rather than from scriptural
-or patristic sources. And most interesting of all is the fact that the
-*dictum* contains two first-person sayings by the author of the
-second-recension *dicta* (or at least of this *dictum*), in effect
-glossing the terms *calumniator* and *calumnia*. While Gratian's own
-intervention is relatively modest, the *dictum* shows progress toward
-greater legal sophistication in the sense that the discussion draws on
-resources from Justinianic Roman Law.
+containing 7 occurrences of 5 words,[^10] corresponding to all 4 of the
+expected lemmas related to the concept of calumny. It is of obvious
+interest that the quotations in this *dictum* are from Justinianic Roman
+law rather than from scriptural or patristic sources. And most
+interesting of all is the fact that the *dictum* contains two
+first-person sayings by the author of the second-recension *dicta* (or
+at least of this *dictum*), in effect glossing the terms *calumniator*
+and *calumnia*. While Gratian's own intervention is relatively modest,
+the *dictum* shows progress toward greater legal sophistication in the
+sense that the discussion draws on resources from Justinianic Roman Law.
 
 ### Conclusions
 
@@ -312,20 +311,6 @@ electronic text, or better still an electronic edition, of Gratian's
 <figcaption aria-hidden="true">Table 1</figcaption>
 </figure>
 
-<!--
-[ICMCL XVII – Congress Programme](https://sites.google.com/view/icmcl2024/academic-programme/congress-programme)
-Tuesday (9 July): Cathedral Conference Suite
-15.30-17.00: Sessions VI
-Session 18: Texts and Manuscripts in the Age of Gratian and Beyond
-Room: Clagett Auditorium Balcony.
-Moderator: Anders Winroth, University of Oslo, Norway.
-Speaker 18b: Paul Evans, University of San Diego, USA.
-'The Vocabulary of Gratian's Decretum: Change Over Time'
-The maximum duration of each presentation (not inclusive of questions) is:
-Speakers in sessions lasting 90 minutes and comprising three presentations:
-20 minutes.
--->
-
 # Bibliography
 
 <div id="refs" class="references csl-bib-body hanging-indent"
@@ -390,9 +375,8 @@ Law* 31, no. 1 (2014): 111–24.
     to expand the corpus to include the canons themselves would
     realistically require grant funding.
 
-[^4]: MAchine Learning for LanguagE Toolkit  
-    Andrew Kachites McCallum, “MALLET: A Machine Learning for Language
-    Toolkit” (2002).
+[^4]: MAchine Learning for LanguagE Toolkit Andrew Kachites McCallum,
+    “MALLET: A Machine Learning for Language Toolkit” (2002).
 
 [^5]: Kenneth Pennington, “The Law’s Violence Against Medieval and Early
     Modern Jews,” *Rivista Internazionale Di Diritto Comune* 23 (2013):

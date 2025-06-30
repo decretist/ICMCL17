@@ -133,22 +133,22 @@ every word form we encounter, that is, reduce it to its dictionary
 headword or *lemma*. Once text samples for the first- and second
 recension *dicta* have been reduced to corresponding lists of lemmas,
 those lists can be compared to generate three further lists, (i)
-of lemmas that appear in both the first- and second-recension *dicta*,
-(ii) of lemmas that are unique to the first-recension *dicta*, and
-(iii) of lemmas that are unique to the second-recension *dicta*. It
-is the list of lemmas unique to the second-recension *dicta* that
-is relevant to the problem of topics added to the *Decretum* in the
-second recension.
+of lemmas that appear in both the first- and second-recension
+*dicta*, (ii) of lemmas that are unique to the first-recension
+*dicta*, and (iii) of lemmas that are unique to the second-recension
+*dicta*. It is the list of lemmas unique to the second-recension
+*dicta* that is relevant to the problem of topics added to the
+*Decretum* in the second recension.
 
 The results of initial experiments with the Classical Language
 Toolkit (CLTK), built on top of the Python Natural Language Toolkit
 (NLTK) and the best lemmatization tool available at the time, were
 not encouraging.[^6] The first- and second-recension *dicta* might
 reasonably be expected to include a few hundred unique lemmas, but
-CLTK reported many thousands (over four thousand for the
-first-recension *dicta* alone), the overwhelming majority of which were
-false positives. Lemmatization was not ready for the purpose of
-this project, and that remained the case for many years, from around
+CLTK reported many thousands (over four thousand for the first-recension
+*dicta* alone), the overwhelming majority of which were false
+positives. Lemmatization was not ready for the purpose of this
+project, and that remained the case for many years, from around
 2014 through around 2020.
 
 In early 2021, Mike Kestemont made me aware of the PIE lemmatizer.
@@ -185,9 +185,9 @@ to machine, readers must look for the presence of families of related
 lemmas to indicate the presence of an idea or topic in a selection
 of text. In reviewing the list of the 725 lemmas unique to the
 second-recension *dicta*, one such family, all related to the concept
-of calumny, stood out in particular. This family will be the
-exemplar of what new computational techniques are able to reveal
-about the evolution of the text and ideas of the *Decretum*.
+of calumny, stood out in particular. This family will be the exemplar
+of what new computational techniques are able to reveal about the
+evolution of the text and ideas of the *Decretum*.
 
 Calumny is a promising lead because we know that between 1140 and
 1234, what we think of as the classical period in the history of
@@ -250,17 +250,17 @@ first millennium of Christian discourse.
 
 That is not the case in the second recension *dictum* C.23 q.3
 d.p.c.8. Here we see a series of quotations from book 48 of the
-*Digest*, containing <!-- 7 words, 5 of them unique --> 7 occurrences
-of 5 words,[^10] corresponding to all 4 of the expected lemmas related
-to the concept of calumny. It is of obvious interest that the
-quotations in this *dictum* are from Justinianic Roman law rather
-than from scriptural or patristic sources. And most interesting of
-all is the fact that the *dictum* contains two first-person sayings
-by the author of the second-recension *dicta* (or at least of this
-*dictum*), in effect glossing the terms *calumniator* and *calumnia*.
-While Gratian's own intervention is relatively modest, the *dictum*
-shows progress toward greater legal sophistication in the sense
-that the discussion draws on resources from Justinianic Roman Law.
+*Digest*, containing 7 occurrences of 5 words,[^10] corresponding
+to all 4 of the expected lemmas related to the concept of calumny.
+It is of obvious interest that the quotations in this *dictum* are
+from Justinianic Roman law rather than from scriptural or patristic
+sources. And most interesting of all is the fact that the *dictum*
+contains two first-person sayings by the author of the second-recension
+*dicta* (or at least of this *dictum*), in effect glossing the terms
+*calumniator* and *calumnia*. While Gratian's own intervention is
+relatively modest, the *dictum* shows progress toward greater legal
+sophistication in the sense that the discussion draws on resources
+from Justinianic Roman Law.
 
 ### Conclusions
 
@@ -282,9 +282,9 @@ treatment of a canonically significant concept, calumny. On close
 reading, the sites in the text of the *dicta* identified by the
 results did indeed show a meaningful development over time in the
 vocabulary of Gratian's *dicta* and to that extent in the teaching
-or doctrine of the *Decretum* on this topic. The detection of
-calumny as a topic that the authors of the *Decretum* developed in
-a significant way in the second recension demonstrates the usefulness
+or doctrine of the *Decretum* on this topic. The detection of calumny
+as a topic that the authors of the *Decretum* developed in a
+significant way in the second recension demonstrates the usefulness
 of lemmatization as a technique for investigating this type of
 question.
 
@@ -345,27 +345,12 @@ that meets 21st century research needs.
 
 ![Table 1](Table_1_portrait.png)
 
-<!--
-[ICMCL XVII – Congress Programme](https://sites.google.com/view/icmcl2024/academic-programme/congress-programme)
-Tuesday (9 July): Cathedral Conference Suite
-15.30-17.00: Sessions VI
-Session 18: Texts and Manuscripts in the Age of Gratian and Beyond
-Room: Clagett Auditorium Balcony.
-Moderator: Anders Winroth, University of Oslo, Norway.
-Speaker 18b: Paul Evans, University of San Diego, USA.
-'The Vocabulary of Gratian's Decretum: Change Over Time'
-The maximum duration of each presentation (not inclusive of questions) is:
-Speakers in sessions lasting 90 minutes and comprising three presentations:
-20 minutes.
--->
-
 [^3]: This research could usefully be expanded to include the rubrics
 and canons, and I have made preparations to do so. The work required
 to expand the corpus to include the canons themselves would
 realistically require grant funding.
 
-[^4]: MAchine Learning for LanguagE Toolkit  
-@McCallumMALLET
+[^4]: MAchine Learning for LanguagE Toolkit @McCallumMALLET
 
 [^5]: @pennington_laws_2013; and @pennington_gratian_2014.
 
@@ -395,10 +380,12 @@ the orthographic conventions of the Friedberg edition, from which
 the text samples of the first- and second-recension *dicta* are
 ultimately derived.
 
-[^10]: *calumpniari*, *calummpnia*, *calumpniatus*, *calumpniatorem*, and *calumpniae*.
+[^10]: *calumpniari*, *calummpnia*, *calumpniatus*, *calumpniatorem*,
+and *calumpniae*.
 
-[^11]: The complete list of 725 lemmas unique to the second recension *dicta*
-is available from my GitHub repository for the Seventeenth International Congress of Medieval Canon Law at
+[^11]: The complete list of 725 lemmas unique to the second recension
+*dicta* is available from my GitHub repository for the Seventeenth
+International Congress of Medieval Canon Law at
 [https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt](https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt).
 
 [^12]: For example, see the rubrics for D.9 c.9 (R1), D.87 c.9 (R2),
