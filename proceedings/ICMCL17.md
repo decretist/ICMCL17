@@ -9,8 +9,8 @@ suppress-bibliography: false
 abstract: |
   The textual history of Gratian's *Decretum* is now understood
   well enough to enable researchers to compare different recensions
-  of the text in order to identify evolutionary changes in its
-  doctrine. Specific developments can be identified by close reading
+  of the text to identify evolutionary changes in its
+  doctrine. Specific developments can be identified by the close reading of
   well-chosen selections from the text (e.g., Pennington, "The Law's
   Violence against Medieval and Early Modern Jews"). However, a
   systematic search for such doctrinal developments is best conducted
@@ -19,19 +19,19 @@ abstract: |
   processing tasks. Using the PIE lemmatizer in conjunction with
   the LASLA Latin models, it is possible to lemmatize samples
   reflecting different compositional stages of sections of the
-  *Decretum* and to compare the results, isolating lemmas unique
+  *Decretum* and to compare the results by isolating lemmas unique
   to specific stages in the development of the text. Distinctive
   vocabularies of different compositional stages revealed by this
   method then provide a roadmap for close reading.
 ---
 This paper presents work that is part of a larger project to enhance
-the effectiveness of close reading medieval texts, Gratian's
+the effectiveness of close reading of medieval texts, Gratian's
 *Decretum* in particular, using computational assistance. The Digital
 Humanities community uses the term "distant reading" to describe
 this kind of computational assistance, emphasizing both its connection
 to, and its contrast with, traditional close reading. Each project
 that uses a distant or machine reading approach aims to answer
-different questions, and therefore uses different tools and techniques.
+different questions and therefore uses different tools and techniques.
 
 The original project from which the current work grew was concerned
 with the question of the authorship of the case statements and the
@@ -62,15 +62,14 @@ prepared data set of the texts of the case statements and the first-
 and second-recension *dicta*.[^3] The current work uses the same
 data set. The overarching goal of the two projects is the same---to
 use computational distant reading techniques to enhance close
-readings of the *Decretum*---but each individual project attempts
-to answer different questions using different tools and techniques
-using the common data set.
+readings of the *Decretum*---but the two projects attempt
+to answer different questions using different tools and techniques.
 
 This is not my first attempt to make progress on the problem of
 computationally identifying topics added to the *dicta* between the
 first and second recensions. Around 2012, there was tremendous
 enthusiasm in the Digital Humanities community for a technique
-called unsupervised topic modeling, and in particular for a
+called unsupervised topic modeling and in particular for a
 topic-modeling tool called MALLET.[^4] Inspired by Pennington's
 observation that most passages in the *Decretum* dealing with the
 legal status of Jews, particularly those dealing with forced
@@ -82,10 +81,10 @@ show which topics were left when the first recension topics were
 subtracted. (It would not be enough to topic model the just
 second-recension *dicta* because many of the topics present in the
 second recension *dicta* are also present in the first-recension
-*dicta*.) This approach was simple in concept, but prohibitively
+*dicta*.) This approach was simple in concept but prohibitively
 difficult in practice, for two reasons: first, because of the
 difficulty in determining the number of topics to look for, a
-necessary precondition for unsupervised topic modeling, and second,
+necessary precondition for unsupervised topic modeling, and, second,
 because of the fact that there was no obvious way to subtract topics.
 
 For the purpose of the discussion that follows, I am defining
@@ -173,8 +172,8 @@ sound familiar, they should. LLMs are the basis for the growing
 family of generative AI tools, such as ChatGPT and friends, that
 have been the subject of so much attention over the last several
 years.) Once the PIE lemmatization environment had been set up, I
-wrote a Python program that used PIE to create separate lists of
-every lemma found in the first- and second-recension *dicta*, and
+wrote a Python program that used PIE first to create separate lists of
+every lemma found in the first- and second-recension *dicta* and
 then to compare the two lists to identify lemmas that appear only
 in the second-recension *dicta*. The program produced a list of 725
 unique lemmas present only in second-recension *dicta*.[^9]
@@ -217,13 +216,13 @@ as we shall see, the word *calumniantibus* appears in a first-recension
 *dictum*, and therefore the verb form is not included in the list
 of lemmas unique to the second-recension *dicta*.[^10]
 
-![](Table_1_w_Header.png)
+![](Table_1_w_Header.png){width=100%}
 
 When we turn our attention to the substantive treatment of the topic
 of calumny in the *dicta* (see Table 1 above), there is variation
 in terms of the legal sophistication with which the concept is
 handled, moving generally in the direction of greater technical
-precision and sophistication. (I say "generally" because while we
+precision and sophistication. (I say "generally" because, while we
 can assume the first recension *dicta* were written before the
 second recension *dicta*, we do not have enough information to
 speculate about the temporal relationship among the second
@@ -330,25 +329,25 @@ unreasonable initial estimate for corpus preparation for a comparable
 data set for the canons.
 
 The work I have discussed in this paper is based on a highly
-customized version of a twentieth century e-text of a nineteenth
-century print edition of the *Decretum*. The MGH e-text of the
+customized version of a twentieth-century e-text of a nineteenth-century
+print edition of the *Decretum*. The MGH e-text of the
 Friedberg edition is the indispensable free resource without which
 none of my work, and I suspect the work of many others, would be
-possible. But like so many free things in life, someone paid a great
+possible. But like so many free things, someone paid a great
 deal of money to make it free, in this case, the taxpayers of the
 State of Bavaria and the Federal Republic of Germany in the 1980s
 and 1990s. However, the MGH e-text is a resource that because of
 its archaic format is approaching the end of it useful life. If we
-want to continue to advance in our understanding of Gratian's
+want to continue to advance our understanding of Gratian's
 *Decretum* with the help of electronic resources, we need to invest
-time, effort, and grant funding into a twenty-first century electronic
+time, effort, and grant funding into a twenty-first-century electronic
 text, or better still an electronic edition, of Gratian's *Decretum*
-that meets 21st century research needs.
+that meets this century's research needs.
 
 [^3]: This research could usefully be expanded to include the rubrics
 and canons, and I have made preparations to do so. The work required
 to expand the corpus to include the canons themselves would
-realistically require grant funding.
+require grant funding.
 
 [^4]: MAchine Learning for LanguagE Toolkit @McCallumMALLET
 
