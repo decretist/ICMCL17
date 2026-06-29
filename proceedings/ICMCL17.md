@@ -11,8 +11,7 @@ abstract: |
   well enough to enable researchers to compare different recensions
   of the text to identify evolutionary changes in its
   doctrine. Specific developments can be identified by the close reading of
-  well-chosen selections from the text (e.g., Pennington, "The Law's
-  Violence against Medieval and Early Modern Jews"). However, a
+  well-chosen selections from the text. However, a
   systematic search for such doctrinal developments is best conducted
   with computational assistance, taking advantage of recent advances
   in the application of large language models to natural language
@@ -36,16 +35,16 @@ different questions and therefore uses different tools and techniques.
 The original project from which the current work grew was concerned
 with the question of the authorship of the case statements and the
 first- and second-recension *dicta* in Gratian's *Decretum*, including
-the *dicta* in *de Penitentia*. It employed stylometric authorship
+the *dicta* in *de penitentia*. It employed stylometric authorship
 analysis using a statistical technique from computational
 linguistics---principal component analysis of the frequencies of
 commonly occurring function words---to obtain its results. Its
 conclusion was that the case statements were written by a single
 author who was not the author of the *dicta* either in the first
-or second recensions or in *de Penitentia*. Results from stylometric
+or second recensions or in *de penitentia*. Results from stylometric
 analysis for authorship of the *dicta*, however, were not consistent
 with either the one-author theory championed by Kenneth Pennington
-or the two-author theory championed by Anders Winroth. Instead, the
+or the two-author theory championed by Anders Winroth.[@winroth_making_2000, 175-192] Instead, the
 results suggested, but did not conclusively prove, that both the
 first- and the second-recension *dicta* were the work of multiple
 authors.[@evans_distant_2022]
@@ -54,9 +53,9 @@ In contrast, the current work concerns changes in the teaching or
 doctrine of the *Decretum* between the first and second recensions
 as indicated by the use of distinctive vocabulary in the *dicta*
 of the two recensions. It employs another computational linguistic
-technique, lemmatization, using the PIE lemmatizer and a large
-language model (LLM) based on the LASLA
-corpus.[@manjavacas-etal-2019-improving] The two projects share a
+technique, lemmatization, using the PIE lemmatizer[@manjavacas-etal-2019-improving]
+and a large language model (LLM) based on the LASLA corpus[@verkerk_lsl_2020].
+The two projects share a
 common data set. The original project relied on a very carefully
 prepared data set of the texts of the case statements and the first-
 and second-recension *dicta*.[^3] The current work uses the same
@@ -78,7 +77,7 @@ hoped to use MALLET to identify other new topics added in the second
 recension. The approach was to topic model the first- and
 second-recension *dicta* together, then separately, which would
 show which topics were left when the first recension topics were
-subtracted. (It would not be enough to topic model the just
+subtracted. (It would not be enough to topic model just the
 second-recension *dicta* because many of the topics present in the
 second recension *dicta* are also present in the first-recension
 *dicta*.) This approach was simple in concept but prohibitively
@@ -167,11 +166,8 @@ learning techniques on annotated corpora of texts in the target
 language. In this case, PIE uses a model trained on the LASLA corpus
 of 1.7 million words or tokens of classical Latin, each annotated
 with lemma, part of speech, and other morphological and syntactic
-information. (If the term large language model or the acronym LLM
-sound familiar, they should. LLMs are the basis for the growing
-family of generative AI tools, such as ChatGPT and friends, that
-have been the subject of so much attention over the last several
-years.) Once the PIE lemmatization environment had been set up, I
+information.
+Once the PIE lemmatization environment had been set up, I
 wrote a Python program that used PIE first to create separate lists of
 every lemma found in the first- and second-recension *dicta* and
 then to compare the two lists to identify lemmas that appear only
@@ -196,7 +192,7 @@ and a formal legal meaning that was derived from but was considerably
 more precise than its previous general use in Christian discourse.
 For example, during this period, oaths of non-calumniation at the
 onset of legal proceedings came to be required of all litigants in
-canonical courts.
+canonical courts.[^b]
 
 We should expect to see at least three Latin lemmas associated with
 the concept of calumny:
@@ -216,7 +212,7 @@ as we shall see, the word *calumniantibus* appears in a first-recension
 *dictum*, and therefore the verb form is not included in the list
 of lemmas unique to the second-recension *dicta*.[^10]
 
-![](Table_1_w_Header.png){width=100%}
+![](Table.png){width=100%}
 
 When we turn our attention to the substantive treatment of the topic
 of calumny in the *dicta* (see Table 1 above), there is variation
@@ -249,7 +245,7 @@ Both of these *dicta* use the words associated with the concept of
 calumny in the same general, non-technical, sense they had in the
 first millennium of Christian discourse.
 
-That is not the case in the second recension *dictum* C.23 q.3
+That is not the case in the second recension *dictum* C.2 q.3
 d.p.c.8. Here we see a series of quotations from book 48 of the
 *Digest*, containing seven occurrences of five words,[^11] corresponding
 to all four of the expected lemmas related to the concept of calumny.
@@ -261,13 +257,13 @@ contains two first-person sayings by the author of the second-recension
 *calumniator* and *calumnia*. While Gratian's own intervention is
 relatively modest, the *dictum* shows progress toward greater legal
 sophistication in the sense that the discussion draws on resources
-from Justinianic Roman Law.
+from Justinianic Roman Law.[^a]
 
 ### Conclusions
 
 The long-term goal of this  project has has been to find a way to
 use computationally-enabled distant reading---"reading machines"
-in the words of Stephen Ramsay---to efficiently direct the attention
+in the words of Stephen Ramsay[@ramsay_reading_2011]---to efficiently direct the attention
 of scholars to specific sites in the text of Gratian's *Decretum*
 where new topics added between the first and second recensions are
 likely to be found by close reading.
@@ -305,9 +301,10 @@ paper is very much a work in progress and that the results, although
 interesting, are limited to the *dicta*, and therefore should not
 be taken as anything more than a proof of concept.
 
-An unsystematic search through the MGH e-text of the Friedberg
+An unsystematic search through the
+Monumenta Germaniae Historica (MGH) e-text of the Friedberg
 edition that was created for the *Wortkonkordanz zum Decretum
-Gratiani* edited by Reuter and Silagi indicates that there are
+Gratiani* indicates that there are
 occurrences of forms of the words I have been focusing on---*calumnia*,
 *calumnior*, and *calumniator*---in the rubrics and canons.[^13] A
 thorough approach to the problem of systematically identifying new
@@ -334,9 +331,8 @@ print edition of the *Decretum*. The MGH e-text of the
 Friedberg edition is the indispensable free resource without which
 none of my work, and I suspect the work of many others, would be
 possible. But like so many free things, someone paid a great
-deal of money to make it free, in this case, the taxpayers of the
-State of Bavaria and the Federal Republic of Germany in the 1980s
-and 1990s. However, the MGH e-text is a resource that because of
+deal of money to make it free.
+However, the MGH e-text is a resource that because of
 its archaic format is approaching the end of it useful life. If we
 want to continue to advance our understanding of Gratian's
 *Decretum* with the help of electronic resources, we need to invest
@@ -379,14 +375,18 @@ the orthographic conventions of the Friedberg edition, from which
 the text samples of the first- and second-recension *dicta* are
 ultimately derived.
 
+[^b]: See @brundage_calumny_2004 and @donahue_procedure_2016.
+
 [^11]: *calumpniari*, *calummpnia*, *calumpniatus*, *calumpniatorem*,
 and *calumpniae*.
+
+[^a]: @winroth_making_2000, 153-156.
 
 [^12]: The complete list of 725 lemmas unique to the second recension
 *dicta* is available from my GitHub repository for the Seventeenth
 International Congress of Medieval Canon Law at
 [https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt](https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt).
 
-[^13]: For example, see the rubrics for D.9 c.9 (R1), D.87 c.9 (R2),
+[^13]: @reuter_wortkonkordanz_1990. For example, see the rubrics for D.9 c.9 (R1), D.87 c.9 (R2),
 C.3 q.1 c.6 (R1), and C.5 q.5 c.8 (R2).
 
