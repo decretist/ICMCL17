@@ -28,14 +28,16 @@ doctrine of the *Decretum* between the first and second recensions as
 indicated by the use of distinctive vocabulary in the *dicta* of the two
 recensions. It employs another computational linguistic technique,
 lemmatization, using the PIE lemmatizer[^3] and a large language model
-(LLM) based on the LASLA corpus.[^4] The two projects share a common
-data set. The original project relied on a very carefully prepared data
-set of the texts of the case statements and the first- and
-second-recension *dicta*.[^5] The current work uses the same data set.
-The overarching goal of the two projects is the same---to use
-computational distant reading techniques to enhance close readings of
-the *Decretum*---but the two projects attempt to answer different
-questions using different tools and techniques.
+(LLM) trained on the corpus of lemmatized and tagged Latin text created
+by the Laboratoire d'Analyse Statistique des Langues Anciennes (LASLA)
+at the University of Liège.[^4] The two projects share a common data
+set. The original project relied on a very carefully prepared data set
+of the texts of the case statements and the first- and second-recension
+*dicta*.[^5] The current work uses the same data set. The overarching
+goal of the two projects is the same---to use computational
+distant reading techniques to enhance close readings of the
+*Decretum*---but the two projects attempt to answer different questions
+using different tools and techniques.
 
 This is not my first attempt to make progress on the problem of
 computationally identifying topics added to the *dicta* between the
