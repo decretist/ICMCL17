@@ -379,6 +379,14 @@ Topics in the Digital Humanities. Urbana: University of Illinois Press,
 
 </div>
 
+<div id="ref-reuter_wortkonkordanz_1990" class="csl-entry">
+
+Reuter, Timothy, and Gabriel Silagi, eds. *Wortkonkordanz zum Decretum
+Gratiani*. Monumenta Germaniae historica. Hilfsmittel 10. München:
+Monumenta Germaniae Historica, 1990.
+
+</div>
+
 <div id="ref-verkerk_lsl_2020" class="csl-entry">
 
 Verkerk, Philippe, Yves Ouvrard, Margherita Fantoli, and Dominique
@@ -480,6 +488,8 @@ Cambridge University Press, 2000.
     International Congress of Medieval Canon Law at
     <https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt>.
 
-[^18]:
-    1.  For example, see the rubrics for D.9 c.9 (R1), D.87 c.9 (R2),
-        C.3 q.1 c.6 (R1), and C.5 q.5 c.8 (R2).
+[^18]: Timothy Reuter and Gabriel Silagi, eds., *Wortkonkordanz zum
+    Decretum Gratiani*, Monumenta Germaniae historica. Hilfsmittel 10
+    (München: Monumenta Germaniae Historica, 1990). For example, see the
+    rubrics for D.9 c.9 (R1), D.87 c.9 (R2), C.3 q.1 c.6 (R1), and C.5
+    q.5 c.8 (R2).
