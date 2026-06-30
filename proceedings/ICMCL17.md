@@ -73,22 +73,23 @@ computationally identifying topics added to the *dicta* between the
 first and second recensions. Around 2012, there was tremendous
 enthusiasm in the Digital Humanities community for a technique
 called unsupervised topic modeling and in particular for a
-topic-modeling tool called MALLET.[^6] Inspired by Pennington's
-observation that most passages in the *Decretum* dealing with the
-legal status of Jews, particularly those dealing with forced
-conversion, were introduced only in the second recension,[^7] I
-hoped to use MALLET to identify other new topics added in the second
-recension. The approach was to topic model the first- and
-second-recension *dicta* together, then separately, which would
-show which topics were left when the first recension topics were
-subtracted. (It would not be enough to topic model just the
-second-recension *dicta* because many of the topics present in the
-second recension *dicta* are also present in the first-recension
-*dicta*.) This approach was simple in concept but prohibitively
-difficult in practice, for two reasons: first, because of the
-difficulty in determining the number of topics to look for, a
-necessary precondition for unsupervised topic modeling, and, second,
-because of the fact that there was no obvious way to subtract topics.
+topic-modeling tool called the MAchine Learning for LanguagE Toolkit
+(MALLET).[@McCallumMALLET] Inspired by Pennington's observation
+that most passages in the *Decretum* dealing with the legal status
+of Jews, particularly those dealing with forced conversion, were
+introduced only in the second recension,[^7] I hoped to use MALLET
+to identify other new topics added in the second recension. The
+approach was to topic model the first- and second-recension *dicta*
+together, then separately, which would show which topics were left
+when the first recension topics were subtracted. (It would not be
+enough to topic model just the second-recension *dicta* because
+many of the topics present in the second recension *dicta* are also
+present in the first-recension *dicta*.) This approach was simple
+in concept but prohibitively difficult in practice, for two reasons:
+first, because of the difficulty in determining the number of topics
+to look for, a necessary precondition for unsupervised topic modeling,
+and, second, because of the fact that there was no obvious way to
+subtract topics.
 
 For the purpose of the discussion that follows, I am defining
 "first-recension *dicta*" as the text of the *dicta* as they are
@@ -114,8 +115,8 @@ admittantur. *Liberti quoque non sunt promouendi ad clerum, nisi
 ab obsequiis sui patroni fuerint absoluti. Unde in Concilio
 Eliberitano:*
 
-By this definition, the first- and second-recension *dicta* contain
-56,713 and 14,255 words respectively.
+Using this definition, the first- and second-recension *dicta*
+contain 56,713 and 14,255 words respectively.
 
 Once it became clear that unsupervised topic modeling using MALLET
 would not be an effective way to identify topics added to Gratian's
@@ -236,8 +237,8 @@ calumpniantibus uos, benefacite his, qui oderunt uos."
 
 The treatment of the concept in the second-recension *dictum* C.23
 q.4 d.p.c.23 §3 is in a similar spirit, although there the scriptural
-allusions are mediated through a patristic source, Augustine's *de
-Dono perseverantiae*, a treatise on predestination.
+allusions are mediated through a patristic source, Augustine's *De
+dono perseverantiae*, a treatise on predestination.
 
 > "Quare autem hoc negatum eis fuerit, dicant, si possunt, qui
 calumpniantur, et ostendant, cur apud eos Dominus mirabilia, quibus
@@ -346,14 +347,12 @@ and canons, and I have made preparations to do so. The work required
 to expand the corpus to include the canons themselves would require
 grant funding.
 
-[^6]: MAchine Learning for LanguagE Toolkit @McCallumMALLET
-
 [^7]: @pennington_laws_2013; and @pennington_gratian_2014.
 
 [^8]: Python is a widely-used general-purpose programming language.
 According to one frequently-cited industry metric, the [TIOBE
 Index](https://www.tiobe.com/tiobe-index/), Python is the most
-popular programming language worldwide as of June 2025. Python
+popular programming language worldwide as of June 2026. Python
 provides powerful features for performing operations on textual
 data.
 
@@ -368,7 +367,11 @@ about Gratian in the process. PIE can only be installed with the
 I discarded. The complete list is available at
 [https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt](https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt).
 
-[^12]: See @brundage_calumny_2004 and @donahue_procedure_2016.
+[^12]: "By the close of the twelfth century the calumny oath had
+become a normal element of canonical civil procedure and might be
+required in most contested cases, at least if one of the parties
+insisted upon it." [@brundage_calumny_2004, 799]. See also
+@donahue_procedure_2016.
 
 [^13]: PIE reports the lemmas as *calumpia*, *calumniator*, and
 *calumpniatus*. *calumpia* is almost certainly a typo in the LASLA
