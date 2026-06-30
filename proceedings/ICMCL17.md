@@ -249,19 +249,26 @@ Both of these *dicta* use the words associated with the concept of
 calumny in the same general, non-technical, sense they had in the
 first millennium of Christian discourse.
 
-That is not the case in the second recension *dictum* C.2 q.3
-d.p.c.8. Here we see a series of quotations from book 48 of the
-*Digest*, containing seven occurrences of five words,[^14] corresponding
-to all four of the expected lemmas related to the concept of calumny.
+That is not the case in the second recension *dictum* C.2 q.3 d.p.c.8
+§1. Here we see a series of quotations from book 48 of the *Digest*,
+containing seven occurrences of five words,[^14] corresponding to
+all four of the expected lemmas related to the concept of calumny.
 It is of obvious interest that the quotations in this *dictum* are
 from Justinianic Roman law rather than from scriptural or patristic
-sources. And most interesting of all is the fact that the *dictum*
-contains two first-person sayings by the author of the second-recension
-*dicta* (or at least of this *dictum*), in effect glossing the terms
-*calumniator* and *calumnia*. While Gratian's own intervention is
-relatively modest, the *dictum* shows progress toward greater legal
-sophistication in the sense that the discussion draws on resources
-from Justinianic Roman Law.[^15]
+sources. And most interesting of all is the fact that this section
+of the *dictum* concludes with a first-person saying by the author
+of the second-recension *dicta* (or at least of this *dictum*)
+glossing the terms *calumniator* and *calumnia*.
+
+> Si autem interloquendo dixerit: Titius temere accusasse uidetur,
+non calumpniatorem pronunciauit. Temeritas enim facilitatis ueniam
+continet, et inconsultus calor calumpniae uicio caret, et ob hoc
+nullam penam huic irrogari oportet.
+
+While Gratian's own intervention is relatively modest, the *dictum*
+shows progress toward greater legal sophistication in the sense
+that the discussion draws on resources from Justinianic Roman
+Law.[^15]
 
 ### Conclusions
 
