@@ -195,34 +195,34 @@ medieval canon law, the concept of calumny took on a significance
 and a formal legal meaning that was derived from but was considerably
 more precise than its previous general use in Christian discourse.
 
-For example, during this period, oaths of non-calumniation at the
-onset of legal proceedings came to be required of all litigants in
-canonical courts. The calumny oath had been a normal part of Roman
-civil procedure in the age of Justinian but disappeared from use
-in the West along with the rest of Justinianic Roman law in the
-Early Middle Ages. It reemerged in the West in the second quarter
-of the eleventh century. For example, the judge in a 1029 case from
-the bishop's court in Ravenna asked first the plaintiff's notary
-on behalf of his client and then the defendant to take the oath *de
-calumnia vitanda*. Both declined to do so. It is noteworthy that
+For example, during this period, the oath of non-calumniation (*de
+calumnia vitanda*) came to be required of almost all litigants at the onset
+of legal proceedings in canonical courts. The oath had been a
+normal part of Roman civil procedure in the age of Justinian
+but disappeared from use in the West along with the rest of Justinianic
+Roman law in the Early Middle Ages. It reemerged in the West in the
+second quarter of the eleventh century. For example, the judge in a
+1029 case from the bishop's court in Ravenna asked first the
+plaintiff's notary on behalf of his client and then the defendant
+to take the oath. Both declined to do so. It is noteworthy that
 this episode took place almost half a century before the 1076
 Placitum of Marturi (Poggibonsi), usually taken as signaling the
 revival of Justinianic Roman law in the West. By the second quarter of
-the twelfth century, use of the calumny oath was widespread enough
-to make it an active topic of discussion during the reigns of
-Honorius II (1124-30), Innocent II (1130-1143), and Eugenius III
-(1145-1153). The contested issues were (i) who should be required
-to take the oath (some litigants, all litigants, advocates on behalf
-of litigants, or advocates as well as litigants), and (ii) the kinds
-of cases in which litigants or advocates or both should be required
-to take the oath (Eugenius treated cases concerning tithes, possession
-of churches, and "spiritual affairs" as exceptions to a general
+the twelfth century, use of the oath was widespread enough to make
+its use an active topic of discussion during the reigns of Honorius
+II (1124-30), Innocent II (1130-1143), and Eugenius III (1145-1153).
+The contested issues were (i) who should be required to take the
+oath (some litigants, all litigants, advocates on behalf of litigants,
+or advocates as well as litigants), and (ii) the kinds of cases in
+which litigants or advocates or both should be required to take the
+oath (Eugenius treated cases concerning tithes, possession of
+churches, and "spiritual affairs" as exceptions to a general
 requirement to take the oath). The general trend over the course
 of the second half of the century was in the direction of extending
 the requirement and "[b]y the close of the twelfth century the
 calumny oath had become a normal element of canonical civil procedure
 and might be required in most contested cases, at least if one of
-the parties insisted upon it."[^12]
+the parties insisted upon it."[@brundage_calumny_2004,795-799]
 
 We should expect to see at least three Latin lemmas associated with
 the concept of calumny:
@@ -399,12 +399,6 @@ about Gratian in the process. PIE can only be installed with the
 [^11]: The 728 lines of program output included three numbers, which
 I discarded. The complete list is available at
 [https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt](https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt).
-
-[^12]: "By the close of the twelfth century the calumny oath had
-become a normal element of canonical civil procedure and might be
-required in most contested cases, at least if one of the parties
-insisted upon it." [@brundage_calumny_2004, 799]. See also
-@donahue_procedure_2016.
 
 [^13]: PIE reports the lemmas as *calumpia*, *calumniator*, and
 *calumpniatus*. *calumpia* is almost certainly a typo in the LASLA
