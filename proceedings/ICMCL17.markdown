@@ -188,15 +188,10 @@ be required in most contested cases, at least if one of the parties
 insisted upon it."[^12]
 
 We should expect to see at least three Latin lemmas associated with the
-concept of calumny:
-
-- the deponent verb *calumnior*, *calumniari*, *calumniatus* including
-  participial forms like *calumnians* and *calumniatus*,
-
-- the feminine noun *calumnia* corresponding to the idea of calumny in
-  the abstract,
-
-- and the masculine noun *calumniator*.
+concept of calumny: the deponent verb *calumnior*, *calumniari*,
+*calumniatus* including participial forms like *calumnians* and
+*calumniatus*; the feminine noun *calumnia* corresponding to the idea of
+calumny in the abstract; and the masculine noun *calumniator*.
 
 PIE does report three lemmas from this family among the 725 unique to
 the second-recension *dicta*: *calumnia*, *calumniator*, and
@@ -205,16 +200,35 @@ shall see, the word *calumniantibus* appears in a first-recension
 *dictum*, and therefore the verb form is not included in the list of
 lemmas unique to the second-recension *dicta*.[^13]
 
+The results reported by PIE are summarized in Table 1 below. The columns
+indicate:
+
+- the form of the word as it appears in the Friedberg edition,
+
+- the lemmatized form of the word returned by PIE,
+
+- the standard citation for the unit in which the word appears (e.g.,
+  C.2, q.3, d.p.c.8),
+
+- the Friedberg edition column number in which the word appears,
+
+- whether the word appears in the first or second recension (e.g., R1 or
+  R2),
+
+- the context (sentence) in which the word appears,
+
+- and the source of the text in which the word appears.
+
 <img src="Table.png" style="width:100.0%" />
 
 When we turn our attention to the substantive treatment of the topic of
-calumny in the *dicta* (see Table 1 above), there is variation in terms
-of the legal sophistication with which the concept is handled, moving
-generally in the direction of greater technical precision and
-sophistication. (I say "generally" because, while we can assume the
-first recension *dicta* were written before the second recension
-*dicta*, we do not have enough information to speculate about the
-temporal relationship among the second recension *dicta*.)
+calumny in the *dicta*, there is variation in terms of the legal
+sophistication with which the concept is handled, moving generally in
+the direction of greater technical precision and sophistication. (I say
+"generally" because, while we can assume the first recension *dicta*
+were written before the second recension *dicta*, we do not have enough
+information to speculate about the temporal relationship among the
+second recension *dicta*.)
 
 The concept of calumny makes its initial appearance in the form of a
 slightly misquoted scriptural reference in the first-recension *dictum*
