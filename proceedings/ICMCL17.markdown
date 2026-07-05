@@ -153,16 +153,21 @@ calumny, stood out in particular. This family will be the exemplar of
 what new computational techniques are able to reveal about the evolution
 of the text and ideas of the *Decretum*.
 
-Calumny is a promising lead because we know that between 1140 and 1234,
-what we think of as the classical period in the history of medieval
-canon law, the concept of calumny took on a significance and a formal
-legal meaning that was derived from but was considerably more precise
-than its previous general use in Christian discourse.
+<!--
+Calumny is a promising lead because we know that between 1140 and
+1234, what we think of as the classical period in the history of
+medieval canon law, the concept of calumny took on a significance
+and a formal legal meaning that was derived from but was considerably
+more precise than its previous general use in Christian discourse.
+  -->
 
-For example, during this period, the oath of non-calumniation (*de
-calumnia vitanda*) came to be required of almost all litigants at the
-onset of legal proceedings in canonical courts. The oath had been a
-normal part of Roman civil procedure in the age of Justinian
+Calumny is a promising lead because we know that it was a topic to which
+canonists gave considerable attention before and during the classical
+period in the history of medieval canon law between 1140 and 1234. They
+concentrated their interest on the oath of non-calumniation (*de
+calumnia vitanda*), which came to be required of almost all litigants at
+the onset of legal proceedings in ecclesiastical courts. The oath had
+been a normal part of Roman civil procedure in the age of Justinian
 but disappeared from use in the West along with the rest of Justinianic
 Roman law in the Early Middle Ages. It reemerged in the West in the
 second quarter of the eleventh century. For example, the judge in a 1029
@@ -186,6 +191,18 @@ requirement and "\[b\]y the close of the twelfth century the calumny
 oath had become a normal element of canonical civil procedure and might
 be required in most contested cases, at least if one of the parties
 insisted upon it."[^12]
+
+The idea of calumny is used in two distinct senses in the *Decretum*.
+The first is general and biblical, and is derived from sayings
+attributed to Jesus in which a relationship between calumny and the
+Mosaic prohibition against bearing false witness is implied though not
+directly stated. This general and biblical sense is the one used in many
+of Gratian's patristic material sources. The second is specific and
+legal, and is derived from Justinianic Roman law. Where the idea of
+calumny is invoked in the *dicta* of the first recension of the
+*Decretum*, it is exclusively in the first sense; where it is invoked in
+the *dicta* of the second recension, it is predominantly, though not
+exclusively, in the second sense.
 
 We should expect to see at least three Latin lemmas associated with the
 concept of calumny: the deponent verb *calumnior*, *calumniari*,
@@ -257,25 +274,28 @@ containing seven occurrences of five words,[^14] corresponding to all
 four of the expected lemmas related to the concept of calumny. It is of
 obvious interest that the quotations in this *dictum* are from
 Justinianic Roman law rather than from scriptural or patristic sources.
-And most interesting of all is the fact that this section of the
-*dictum* concludes with a first-person saying by the author of the
-second-recension *dicta* (or at least of this *dictum*) glossing the
-terms *calumniator* and *calumnia*.
+
+Most interesting of all is the fact that this section of the *dictum*
+concludes with a first-person saying by the author of the
+second-recension *dicta* (or at least of this *dictum*) in effect
+glossing the term *calumniator*.
 
 > Si autem interloquendo dixerit: Titius temere accusasse uidetur, non
 > calumpniatorem pronunciauit. Temeritas enim facilitatis ueniam
 > continet, et inconsultus calor calumpniae uicio caret, et ob hoc
 > nullam penam huic irrogari oportet.
 
-While Gratian's own intervention is relatively modest, the *dictum*
-shows progress toward greater legal sophistication in the sense that the
-discussion draws on resources from Justinianic Roman Law.[^15]
+Gratian's own intervention is extremely modest---he does little more
+than paraphrase an opinion attributed to Papinian in *Dig*. 48.16.5.
+Nevertheless, the *dictum* shows progress toward greater legal
+sophistication in the sense that the discussion draws on resources from
+Justinianic Roman Law.
 
 ### Conclusions
 
 The long-term goal of this  project has has been to find a way to use
 computationally-enabled distant reading---"reading machines" in the
-words of Stephen Ramsay[^16]---to efficiently direct the attention of
+words of Stephen Ramsay[^15]---to efficiently direct the attention of
 scholars to specific sites in the text of Gratian's *Decretum* where new
 topics added between the first and second recensions are likely to be
 found by close reading.
@@ -300,7 +320,7 @@ Calumny was the most obvious topic (at least to me), and I was surprised
 that there were no other such immediately obvious conceptually related
 families of lemmas in the results, although I strongly encourage
 interested readers to examine the complete list of lemmas unique to the
-second-recension *dicta* for themselves.[^17] As previously indicated,
+second-recension *dicta* for themselves.[^16] As previously indicated,
 there is limited value in the results of machine reading by itself. The
 real value of the results of machine reading lies in the patterns that
 trained researchers see in them.
@@ -316,7 +336,7 @@ An unsystematic search through the Monumenta Germaniae Historica (MGH)
 e-text of the Friedberg edition that was created for the *Wortkonkordanz
 zum Decretum Gratiani* indicates that there are occurrences of forms of
 the words I have been focusing on---*calumnia*, *calumnior*, and
-*calumniator*---in the rubrics and canons.[^18] A thorough approach to
+*calumniator*---in the rubrics and canons.[^17] A thorough approach to
 the problem of systematically identifying new topics added to the
 *Decretum* between the first and second recensions will therefore
 require a data set that includes the rubrics and canons with their
@@ -490,7 +510,8 @@ Cambridge University Press, 2000.
     lemmatization environment as an independent study project with me
     during the Spring 2024 semester and who learned something about
     Gratian in the process. PIE can only be installed with the 2019
-    Python 3.8 release---the current release is Python 3.13.
+    Python 3.8 release---the current release as of June 2026 is Python
+    3.14.
 
 [^11]: The 728 lines of program output included three numbers, which I
     discarded. The complete list is available at
@@ -512,18 +533,16 @@ Cambridge University Press, 2000.
 [^14]: *calumpniari*, *calummpnia*, *calumpniatus*, *calumpniatorem*,
     and *calumpniae*.
 
-[^15]: Winroth, *The Making of Gratian’s Decretum*, 153-156.
-
-[^16]: Stephen Ramsay, *Reading Machines: Toward an Algorithmic
+[^15]: Stephen Ramsay, *Reading Machines: Toward an Algorithmic
     Criticism*, Topics in the Digital Humanities (Urbana: University of
     Illinois Press, 2011).
 
-[^17]: The complete list of 725 lemmas unique to the second recension
+[^16]: The complete list of 725 lemmas unique to the second recension
     *dicta* is available from my GitHub repository for the Seventeenth
     International Congress of Medieval Canon Law at
     <https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt>.
 
-[^18]: Timothy Reuter and Gabriel Silagi, eds., *Wortkonkordanz zum
+[^17]: Timothy Reuter and Gabriel Silagi, eds., *Wortkonkordanz zum
     Decretum Gratiani*, Monumenta Germaniae historica. Hilfsmittel 10
     (München: Monumenta Germaniae Historica, 1990). For example, see the
     rubrics for D.9 c.9 (R1), D.87 c.9 (R2), C.3 q.1 c.6 (R1), and C.5

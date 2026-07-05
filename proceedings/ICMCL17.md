@@ -189,31 +189,37 @@ the concept of calumny, stood out in particular. This family will
 be the exemplar of what new computational techniques are able to
 reveal about the evolution of the text and ideas of the *Decretum*.
 
+<!--
 Calumny is a promising lead because we know that between 1140 and
 1234, what we think of as the classical period in the history of
 medieval canon law, the concept of calumny took on a significance
 and a formal legal meaning that was derived from but was considerably
 more precise than its previous general use in Christian discourse.
+  -->
 
-For example, during this period, the oath of non-calumniation (*de
-calumnia vitanda*) came to be required of almost all litigants at
-the onset of legal proceedings in canonical courts. The oath had
-been a normal part of Roman civil procedure in the age of Justinian
-but disappeared from use in the West along with the rest of Justinianic
-Roman law in the Early Middle Ages. It reemerged in the West in the
-second quarter of the eleventh century. For example, the judge in a
-1029 case from the bishop's court in Ravenna asked first the
-plaintiff's notary on behalf of his client and then the defendant
-to take the oath. Both declined to do so. It is noteworthy that
-this episode took place almost half a century before the 1076
-Placitum of Marturi (Poggibonsi), usually taken as signaling the
-revival of Justinianic Roman law in the West. By the second quarter of
-the twelfth century, use of the oath was widespread enough to make
-its use an active topic of discussion during the reigns of Honorius
-II (1124-30), Innocent II (1130-1143), and Eugenius III (1145-1153).
-The contested issues were (i) who should be required to take the
-oath (some litigants, all litigants, advocates on behalf of litigants,
-or advocates as well as litigants), and (ii) the kinds of cases in
+Calumny is a promising lead because we know that it was a topic to
+which canonists gave considerable attention before and during the
+classical period in the history of medieval canon law between 1140
+and 1234. They concentrated their interest on the oath of
+non-calumniation (*de calumnia vitanda*), which came to be required
+of almost all litigants at the onset of legal proceedings in
+ecclesiastical courts. The oath had been a normal part of Roman
+civil procedure in the age of Justinian but disappeared from use
+in the West along with the rest of Justinianic Roman law in the
+Early Middle Ages. It reemerged in the West in the second quarter
+of the eleventh century. For example, the judge in a 1029 case from
+the bishop's court in Ravenna asked first the plaintiff's notary
+on behalf of his client and then the defendant to take the oath.
+Both declined to do so. It is noteworthy that this episode took
+place almost half a century before the 1076 Placitum of Marturi
+(Poggibonsi), usually taken as signaling the revival of Justinianic
+Roman law in the West. By the second quarter of the twelfth century,
+use of the oath was widespread enough to make its use an active
+topic of discussion during the reigns of Honorius II (1124-30),
+Innocent II (1130-1143), and Eugenius III (1145-1153). The contested
+issues were (i) who should be required to take the oath (some
+litigants, all litigants, advocates on behalf of litigants, or
+advocates as well as litigants), and (ii) the kinds of cases in
 which litigants or advocates or both should be required to take the
 oath (Eugenius treated cases concerning tithes, possession of
 churches, and "spiritual affairs" as exceptions to a general
@@ -223,6 +229,18 @@ the requirement and "[b]y the close of the twelfth century the
 calumny oath had become a normal element of canonical civil procedure
 and might be required in most contested cases, at least if one of
 the parties insisted upon it."[@brundage_calumny_2004,795-799]
+
+The idea of calumny is used in two distinct senses in the *Decretum*.
+The first is general and biblical, and is derived from sayings
+attributed to Jesus in which a relationship between calumny and the
+Mosaic prohibition against bearing false witness is implied though
+not directly stated. This general and biblical sense is the one
+used in many of Gratian's patristic material sources. The second
+is specific and legal, and is derived from Justinianic Roman law.
+Where the idea of calumny is invoked in the *dicta* of the first
+recension of the *Decretum*, it is exclusively in the first sense;
+where it is invoked in the *dicta* of the second recension, it is
+predominantly, though not exclusively, in the second sense.
 
 We should expect to see at least three Latin lemmas associated with
 the concept of calumny: the deponent verb *calumnior*, *calumniari*,
@@ -294,20 +312,23 @@ containing seven occurrences of five words,[^14] corresponding to
 all four of the expected lemmas related to the concept of calumny.
 It is of obvious interest that the quotations in this *dictum* are
 from Justinianic Roman law rather than from scriptural or patristic
-sources. And most interesting of all is the fact that this section
-of the *dictum* concludes with a first-person saying by the author
-of the second-recension *dicta* (or at least of this *dictum*)
-glossing the terms *calumniator* and *calumnia*.
+sources.
+
+Most interesting of all is the fact that this section of the *dictum*
+concludes with a first-person saying by the author of the
+second-recension *dicta* (or at least of this *dictum*) in effect
+glossing the term *calumniator*.
 
 > Si autem interloquendo dixerit: Titius temere accusasse uidetur,
 non calumpniatorem pronunciauit. Temeritas enim facilitatis ueniam
 continet, et inconsultus calor calumpniae uicio caret, et ob hoc
 nullam penam huic irrogari oportet.
 
-While Gratian's own intervention is relatively modest, the *dictum*
-shows progress toward greater legal sophistication in the sense
-that the discussion draws on resources from Justinianic Roman
-Law.[^15]
+Gratian's own intervention is extremely modest---he does little
+more than paraphrase an opinion attributed to Papinian in *Dig*.
+48.16.5. Nevertheless, the *dictum* shows progress toward greater
+legal sophistication in the sense that the discussion draws on
+resources from Justinianic Roman Law.
 
 ### Conclusions
 
@@ -407,7 +428,8 @@ Computer Science student at the University of San Diego, who set
 up the PIE lemmatization environment as an independent study project
 with me during the Spring 2024 semester and who learned something
 about Gratian in the process. PIE can only be installed with the
-2019 Python 3.8 release---the current release is Python 3.13.
+2019 Python 3.8 release---the current release as of June 2026 is
+Python 3.14.
 
 [^11]: The 728 lines of program output included three numbers, which
 I discarded. The complete list is available at
