@@ -45,20 +45,20 @@ or second recensions or in *de penitentia*. Results from stylometric
 analysis for authorship of the *dicta*, however, were not consistent
 with either the one-author theory championed by Kenneth Pennington
 or the two-author theory championed by Anders
-Winroth.[@winroth_making_2000, 175-192] Instead, the results
-suggested, but did not conclusively prove, that both the first- and
-the second-recension *dicta* were the work of multiple
-authors.[@evans_distant_2022]
+Winroth.[@pennington_biography_2018] [@winroth_making_2000, 175-192]
+Instead, the results suggested, but did not conclusively prove,
+that both the first- and the second-recension *dicta* were the work
+of multiple authors.[@evans_distant_2022]
 
 In contrast, the current work concerns changes in the teaching or
 doctrine of the *Decretum* between the first and second recensions
 as indicated by the use of distinctive vocabulary in the *dicta*
 of the two recensions. It employs another computational linguistic
-technique, lemmatization, using the PIE
-lemmatizer[@manjavacas-etal-2019-improving] and a large language
-model (LLM) trained on the corpus of lemmatized and tagged Latin
-text created by the Laboratoire d'Analyse Statistique des Langues
-Anciennes (LASLA) at the University of Liège.[@verkerk_lsl_2020]
+technique, lemmatization, using the PIE lemmatizer and a large
+language model (LLM) trained on the corpus of lemmatized and tagged
+Latin text created by the Laboratoire d'Analyse Statistique des
+Langues Anciennes (LASLA) at the University of
+Liège.[@manjavacas-etal-2019-improving] [@verkerk_lsl_2020]
 The two projects share a common data set. The original project
 relied on a very carefully prepared data set of the texts of the
 case statements and the first- and second-recension *dicta*.[^5]
@@ -169,7 +169,7 @@ like part-of-speech tagging or lemmatization, in a Python program.[^10]
 They are based on large language models (LLMs) trained using machine
 learning techniques on annotated corpora of texts in the target
 language. In this case, PIE uses a model trained on the LASLA corpus
-of 1.7 million words or tokens of classical Latin, each annotated
+of 2.5 million words or tokens of classical Latin, each annotated
 with lemma, part of speech, and other morphological and syntactic
 information. Once the PIE lemmatization environment had been set
 up, I wrote a Python program that used PIE first to create separate
@@ -214,7 +214,7 @@ Both declined to do so. It is noteworthy that this episode took
 place almost half a century before the 1076 Placitum of Marturi
 (Poggibonsi), usually taken as signaling the revival of Justinianic
 Roman law in the West. By the second quarter of the twelfth century,
-use of the oath was widespread enough to make its use an active
+use of the oath was widespread enough to make it an active
 topic of discussion during the reigns of Honorius II (1124-30),
 Innocent II (1130-1143), and Eugenius III (1145-1153). The contested
 issues were (i) who should be required to take the oath (some
@@ -234,13 +234,15 @@ The idea of calumny is used in two distinct senses in the *Decretum*.
 The first is general and biblical, and is derived from sayings
 attributed to Jesus in which a relationship between calumny and the
 Mosaic prohibition against bearing false witness is implied though
-not directly stated. This general and biblical sense is the one
-used in many of Gratian's patristic material sources. The second
+not directly stated. This general and biblical sense is also the
+one used in many of Gratian's patristic material sources. The second
 is specific and legal, and is derived from Justinianic Roman law.
 Where the idea of calumny is invoked in the *dicta* of the first
 recension of the *Decretum*, it is exclusively in the first sense;
 where it is invoked in the *dicta* of the second recension, it is
 predominantly, though not exclusively, in the second sense.
+Interestingly, Gratian does not discuss the oath *de calumnia
+vitanda* in either the first or the second recensions.
 
 We should expect to see at least three Latin lemmas associated with
 the concept of calumny: the deponent verb *calumnior*, *calumniari*,
@@ -307,7 +309,7 @@ calumny in the same general, non-technical, sense they had in the
 first millennium of Christian discourse.
 
 That is not the case in the second recension *dictum* C.2 q.3 d.p.c.8
-§1. Here we see a series of quotations from book 48 of the *Digest*,
+§1. Here we see a series of quotations from *Dig.* 48.16.1-5
 containing seven occurrences of five words,[^14] corresponding to
 all four of the expected lemmas related to the concept of calumny.
 It is of obvious interest that the quotations in this *dictum* are

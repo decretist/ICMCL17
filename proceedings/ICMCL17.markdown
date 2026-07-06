@@ -19,21 +19,21 @@ statements were written by a single author who was not the author of the
 Results from stylometric analysis for authorship of the *dicta*,
 however, were not consistent with either the one-author theory
 championed by Kenneth Pennington or the two-author theory championed by
-Anders Winroth.[^1] Instead, the results suggested, but did not
+Anders Winroth.[^1][^2] Instead, the results suggested, but did not
 conclusively prove, that both the first- and the second-recension
-*dicta* were the work of multiple authors.[^2]
+*dicta* were the work of multiple authors.[^3]
 
 In contrast, the current work concerns changes in the teaching or
 doctrine of the *Decretum* between the first and second recensions as
 indicated by the use of distinctive vocabulary in the *dicta* of the two
 recensions. It employs another computational linguistic technique,
-lemmatization, using the PIE lemmatizer[^3] and a large language model
-(LLM) trained on the corpus of lemmatized and tagged Latin text created
-by the Laboratoire d'Analyse Statistique des Langues Anciennes (LASLA)
-at the University of Liège.[^4] The two projects share a common data
-set. The original project relied on a very carefully prepared data set
-of the texts of the case statements and the first- and second-recension
-*dicta*.[^5] The current work uses the same data set. The overarching
+lemmatization, using the PIE lemmatizer and a large language model (LLM)
+trained on the corpus of lemmatized and tagged Latin text created by the
+Laboratoire d'Analyse Statistique des Langues Anciennes (LASLA) at the
+University of Liège.[^4][^5] The two projects share a common data set.
+The original project relied on a very carefully prepared data set of the
+texts of the case statements and the first- and second-recension
+*dicta*.[^6] The current work uses the same data set. The overarching
 goal of the two projects is the same---to use computational
 distant reading techniques to enhance close readings of the
 *Decretum*---but the two projects attempt to answer different questions
@@ -44,10 +44,10 @@ computationally identifying topics added to the *dicta* between the
 first and second recensions. Around 2012, there was tremendous
 enthusiasm in the Digital Humanities community for a technique called
 unsupervised topic modeling and in particular for a topic-modeling tool
-called the MAchine Learning for LanguagE Toolkit (MALLET).[^6] Inspired
+called the MAchine Learning for LanguagE Toolkit (MALLET).[^7] Inspired
 by Pennington's observation that most passages in the *Decretum* dealing
 with the legal status of Jews, particularly those dealing with forced
-conversion, were introduced only in the second recension,[^7] I hoped to
+conversion, were introduced only in the second recension,[^8] I hoped to
 use MALLET to identify other new topics added in the second recension.
 The approach was to topic model the first- and second-recension *dicta*
 together, then separately, which would show which topics were left when
@@ -113,7 +113,7 @@ recension.
 The results of initial experiments with the Classical Language Toolkit
 (CLTK), built on top of the Python Natural Language Toolkit (NLTK) and
 the best lemmatization tool available at the time, were not
-encouraging.[^8] The first- and second-recension *dicta* might
+encouraging.[^9] The first- and second-recension *dicta* might
 reasonably be expected to include a few hundred unique lemmas, but CLTK
 reported many thousands (over four thousand for the first-recension
 *dicta* alone), the overwhelming majority of which were false positives.
@@ -125,22 +125,22 @@ is a researcher at the University of Antwerp specializing in medieval
 Latin and Middle Dutch literature and also a leading figure in the field
 of computational text analysis. PIE is not an application or
 program---the user does not simply type a command or click a button and
-get lemmatized text as output. Instead, PIE and PIE Extended[^9] are a
+get lemmatized text as output. Instead, PIE and PIE Extended[^10] are a
 collection of libraries, packages, and toolkits, that provide an
 extremely versatile set of software building blocks that can be called
 upon to perform a wide range of natural language processing functions,
-like part-of-speech tagging or lemmatization, in a Python program.[^10]
+like part-of-speech tagging or lemmatization, in a Python program.[^11]
 They are based on large language models (LLMs) trained using machine
 learning techniques on annotated corpora of texts in the target
 language. In this case, PIE uses a model trained on the LASLA corpus of
-1.7 million words or tokens of classical Latin, each annotated with
+2.5 million words or tokens of classical Latin, each annotated with
 lemma, part of speech, and other morphological and syntactic
 information. Once the PIE lemmatization environment had been set up, I
 wrote a Python program that used PIE first to create separate lists of
 every lemma found in the first- and second-recension *dicta* and then to
 compare the two lists to identify lemmas that appear only in the
 second-recension *dicta*. The program produced a list of 725 unique
-lemmas present only in second-recension *dicta*.[^11]
+lemmas present only in second-recension *dicta*.[^12]
 
 An understanding of whether an idea or topic is present in, or absent
 from, a selection of text can almost never be arrived at based on the
@@ -177,32 +177,34 @@ Both declined to do so. It is noteworthy that this episode took place
 almost half a century before the 1076 Placitum of Marturi (Poggibonsi),
 usually taken as signaling the revival of Justinianic Roman law in the
 West. By the second quarter of the twelfth century, use of the oath was
-widespread enough to make its use an active topic of discussion during
-the reigns of Honorius II (1124-30), Innocent II (1130-1143), and
-Eugenius III (1145-1153). The contested issues were (i) who should be
-required to take the oath (some litigants, all litigants, advocates on
-behalf of litigants, or advocates as well as litigants), and (ii) the
-kinds of cases in which litigants or advocates or both should be
-required to take the oath (Eugenius treated cases concerning tithes,
-possession of churches, and "spiritual affairs" as exceptions to a
-general requirement to take the oath). The general trend over the course
-of the second half of the century was in the direction of extending the
-requirement and "\[b\]y the close of the twelfth century the calumny
-oath had become a normal element of canonical civil procedure and might
-be required in most contested cases, at least if one of the parties
-insisted upon it."[^12]
+widespread enough to make it an active topic of discussion during the
+reigns of Honorius II (1124-30), Innocent II (1130-1143), and Eugenius
+III (1145-1153). The contested issues were (i) who should be required to
+take the oath (some litigants, all litigants, advocates on behalf of
+litigants, or advocates as well as litigants), and (ii) the kinds of
+cases in which litigants or advocates or both should be required to take
+the oath (Eugenius treated cases concerning tithes, possession of
+churches, and "spiritual affairs" as exceptions to a general requirement
+to take the oath). The general trend over the course of the second half
+of the century was in the direction of extending the requirement and
+"\[b\]y the close of the twelfth century the calumny oath had become a
+normal element of canonical civil procedure and might be required in
+most contested cases, at least if one of the parties insisted upon
+it."[^13]
 
 The idea of calumny is used in two distinct senses in the *Decretum*.
 The first is general and biblical, and is derived from sayings
 attributed to Jesus in which a relationship between calumny and the
 Mosaic prohibition against bearing false witness is implied though not
-directly stated. This general and biblical sense is the one used in many
-of Gratian's patristic material sources. The second is specific and
+directly stated. This general and biblical sense is also the one used in
+many of Gratian's patristic material sources. The second is specific and
 legal, and is derived from Justinianic Roman law. Where the idea of
 calumny is invoked in the *dicta* of the first recension of the
 *Decretum*, it is exclusively in the first sense; where it is invoked in
 the *dicta* of the second recension, it is predominantly, though not
-exclusively, in the second sense.
+exclusively, in the second sense. Interestingly, Gratian does not
+discuss the oath *de calumnia vitanda* in either the first or the second
+recensions.
 
 We should expect to see at least three Latin lemmas associated with the
 concept of calumny: the deponent verb *calumnior*, *calumniari*,
@@ -215,7 +217,7 @@ the second-recension *dicta*: *calumnia*, *calumniator*, and
 *calumniatus*. It does not report the lemma *calumnior* because, as we
 shall see, the word *calumniantibus* appears in a first-recension
 *dictum*, and therefore the verb form is not included in the list of
-lemmas unique to the second-recension *dicta*.[^13]
+lemmas unique to the second-recension *dicta*.[^14]
 
 The results reported by PIE are summarized in Table 1 below. The columns
 indicate:
@@ -269,11 +271,11 @@ calumny in the same general, non-technical, sense they had in the first
 millennium of Christian discourse.
 
 That is not the case in the second recension *dictum* C.2 q.3 d.p.c.8
-§1. Here we see a series of quotations from book 48 of the *Digest*,
-containing seven occurrences of five words,[^14] corresponding to all
-four of the expected lemmas related to the concept of calumny. It is of
-obvious interest that the quotations in this *dictum* are from
-Justinianic Roman law rather than from scriptural or patristic sources.
+§1. Here we see a series of quotations from *Dig.* 48.16.1-5 containing
+seven occurrences of five words,[^15] corresponding to all four of the
+expected lemmas related to the concept of calumny. It is of obvious
+interest that the quotations in this *dictum* are from Justinianic Roman
+law rather than from scriptural or patristic sources.
 
 Most interesting of all is the fact that this section of the *dictum*
 concludes with a first-person saying by the author of the
@@ -295,7 +297,7 @@ Justinianic Roman Law.
 
 The long-term goal of this  project has has been to find a way to use
 computationally-enabled distant reading---"reading machines" in the
-words of Stephen Ramsay[^15]---to efficiently direct the attention of
+words of Stephen Ramsay[^16]---to efficiently direct the attention of
 scholars to specific sites in the text of Gratian's *Decretum* where new
 topics added between the first and second recensions are likely to be
 found by close reading.
@@ -320,7 +322,7 @@ Calumny was the most obvious topic (at least to me), and I was surprised
 that there were no other such immediately obvious conceptually related
 families of lemmas in the results, although I strongly encourage
 interested readers to examine the complete list of lemmas unique to the
-second-recension *dicta* for themselves.[^16] As previously indicated,
+second-recension *dicta* for themselves.[^17] As previously indicated,
 there is limited value in the results of machine reading by itself. The
 real value of the results of machine reading lies in the patterns that
 trained researchers see in them.
@@ -336,7 +338,7 @@ An unsystematic search through the Monumenta Germaniae Historica (MGH)
 e-text of the Friedberg edition that was created for the *Wortkonkordanz
 zum Decretum Gratiani* indicates that there are occurrences of forms of
 the words I have been focusing on---*calumnia*, *calumnior*, and
-*calumniator*---in the rubrics and canons.[^17] A thorough approach to
+*calumniator*---in the rubrics and canons.[^18] A thorough approach to
 the problem of systematically identifying new topics added to the
 *Decretum* between the first and second recensions will therefore
 require a data set that includes the rubrics and canons with their
@@ -376,7 +378,7 @@ data-entry-spacing="0">
 
 Brundage, James A. “The Calumny Oath and Ethical Ideals of Canonical
 Advocates.” In *The Profession and Practice of Medieval Canon Law*,
-793–805. Variorum Collected Studies Series ; CS 797. Aldershot: Ashgate
+793–805. Variorum Collected Studies Series CS797. Aldershot: Ashgate
 Variorum, 2004.
 
 </div>
@@ -422,6 +424,14 @@ Law* 31 (2014): 111–24.
 
 </div>
 
+<div id="ref-pennington_biography_2018" class="csl-entry">
+
+———. “The Biography of Gratian, the Father of Canon Law.” In *A Service
+Beyond All Recompense*, edited by Kurt Martens, 359–92. Catholic
+University of America Press, 2018.
+
+</div>
+
 <div id="ref-pennington_laws_2013" class="csl-entry">
 
 ———. “The Law’s Violence Against Medieval and Early Modern Jews.”
@@ -449,7 +459,7 @@ Monumenta Germaniae Historica, 1990.
 
 Verkerk, Philippe, Yves Ouvrard, Margherita Fantoli, and Dominique
 Longrée. “L.A.S.L.A. And Collatinus: A Convergence in Lexica.” *Studi e
-Saggi Linguistici* 58, no. 1 (September 2020): 95–120.
+Saggi Linguistici* 58 (September 2020): 95–120.
 
 </div>
 
@@ -462,14 +472,18 @@ Cambridge University Press, 2000.
 
 </div>
 
-[^1]: Anders Winroth, *The Making of Gratian’s Decretum* (Cambridge:
+[^1]: Kenneth Pennington, “The Biography of Gratian, the Father of Canon
+    Law,” in *A Service Beyond All Recompense*, ed. Kurt Martens
+    (Catholic University of America Press, 2018), 359–92.
+
+[^2]: Anders Winroth, *The Making of Gratian’s Decretum* (Cambridge:
     Cambridge University Press, 2000), 175–92.
 
-[^2]: Paul Evans, “Distant Reading of Gratian’s Decretum” (PhD thesis,
+[^3]: Paul Evans, “Distant Reading of Gratian’s Decretum” (PhD thesis,
     The Catholic University of America, 2022),
     <https://jstor.org/stable/community.38760479>.
 
-[^3]: Enrique Manjavacas, Ákos Kádár, and Mike Kestemont, “Improving
+[^4]: Enrique Manjavacas, Ákos Kádár, and Mike Kestemont, “Improving
     Lemmatization of Non-Standard Languages with Joint Learning,” in
     *Proceedings of the 2019 Conference of the North American Chapter of
     the Association for Computational Linguistics: Human Language
@@ -477,35 +491,34 @@ Cambridge University Press, 2000.
     Minnesota: Association for Computational Linguistics, 2019),
     1493–503.
 
-[^4]: Philippe Verkerk et al., “L.A.S.L.A. And Collatinus: A Convergence
-    in Lexica,” *Studi e Saggi Linguistici* 58, no. 1 (September 2020):
-    95–120.
+[^5]: Philippe Verkerk et al., “L.A.S.L.A. And Collatinus: A Convergence
+    in Lexica,” *Studi e Saggi Linguistici* 58 (September 2020): 95–120.
 
-[^5]: This research could usefully be expanded to include the rubrics
+[^6]: This research could usefully be expanded to include the rubrics
     and canons, and I have made preparations to do so. The work required
     to expand the corpus to include the canons themselves would require
     grant funding.
 
-[^6]: Andrew Kachites McCallum, “MALLET: A Machine Learning for Language
+[^7]: Andrew Kachites McCallum, “MALLET: A Machine Learning for Language
     Toolkit” (2002).
 
-[^7]: Kenneth Pennington, “The Law’s Violence Against Medieval and Early
+[^8]: Kenneth Pennington, “The Law’s Violence Against Medieval and Early
     Modern Jews,” *Rivista Internazionale Di Diritto Comune* 23 (2013):
     23–44; and Kenneth Pennington, “Gratian and the Jews,” *Bulletin of
     Medieval Canon Law* 31 (2014): 111–24.
 
-[^8]: Python is a widely-used general-purpose programming language.
+[^9]: Python is a widely-used general-purpose programming language.
     According to one frequently-cited industry metric, the [TIOBE
     Index](https://www.tiobe.com/tiobe-index/), Python is the most
     popular programming language worldwide as of June 2026. Python
     provides powerful features for performing operations on textual
     data.
 
-[^9]: Thibault Clérice, “Pie Extended, an Extension for Pie with
+[^10]: Thibault Clérice, “Pie Extended, an Extension for Pie with
     Pre-Processing and Post-Processing” (Zenodo, June 2020),
     <https://doi.org/10.5281/zenodo.3883589>.
 
-[^10]: I would like to acknowledge Jake Bayon, an undergraduate Computer
+[^11]: I would like to acknowledge Jake Bayon, an undergraduate Computer
     Science student at the University of San Diego, who set up the PIE
     lemmatization environment as an independent study project with me
     during the Spring 2024 semester and who learned something about
@@ -513,16 +526,16 @@ Cambridge University Press, 2000.
     Python 3.8 release---the current release as of June 2026 is Python
     3.14.
 
-[^11]: The 728 lines of program output included three numbers, which I
+[^12]: The 728 lines of program output included three numbers, which I
     discarded. The complete list is available at
     <https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt>.
 
-[^12]: James A. Brundage, “The Calumny Oath and Ethical Ideals of
+[^13]: James A. Brundage, “The Calumny Oath and Ethical Ideals of
     Canonical Advocates,” in *The Profession and Practice of Medieval
-    Canon Law*, Variorum Collected Studies Series ; CS 797 (Aldershot:
+    Canon Law*, Variorum Collected Studies Series CS797 (Aldershot:
     Ashgate Variorum, 2004), 795–99.
 
-[^13]: PIE reports the lemmas as *calumpia*, *calumniator*, and
+[^14]: PIE reports the lemmas as *calumpia*, *calumniator*, and
     *calumpniatus*. *calumpia* is almost certainly a typo in the LASLA
     Latin language model for *calumpnia*. PIE reports the lemma of
     *calumpniantibus* as *calumpnio*. The spelling is consistent with
@@ -530,19 +543,19 @@ Cambridge University Press, 2000.
     the text samples of the first- and second-recension *dicta* are
     ultimately derived.
 
-[^14]: *calumpniari*, *calummpnia*, *calumpniatus*, *calumpniatorem*,
+[^15]: *calumpniari*, *calummpnia*, *calumpniatus*, *calumpniatorem*,
     and *calumpniae*.
 
-[^15]: Stephen Ramsay, *Reading Machines: Toward an Algorithmic
+[^16]: Stephen Ramsay, *Reading Machines: Toward an Algorithmic
     Criticism*, Topics in the Digital Humanities (Urbana: University of
     Illinois Press, 2011).
 
-[^16]: The complete list of 725 lemmas unique to the second recension
+[^17]: The complete list of 725 lemmas unique to the second recension
     *dicta* is available from my GitHub repository for the Seventeenth
     International Congress of Medieval Canon Law at
     <https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt>.
 
-[^17]: Timothy Reuter and Gabriel Silagi, eds., *Wortkonkordanz zum
+[^18]: Timothy Reuter and Gabriel Silagi, eds., *Wortkonkordanz zum
     Decretum Gratiani*, Monumenta Germaniae historica. Hilfsmittel 10
     (München: Monumenta Germaniae Historica, 1990). For example, see the
     rubrics for D.9 c.9 (R1), D.87 c.9 (R2), C.3 q.1 c.6 (R1), and C.5
