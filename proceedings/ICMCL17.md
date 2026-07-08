@@ -61,7 +61,7 @@ Langues Anciennes (LASLA) at the University of
 Liège.[@manjavacas-etal-2019-improving] [@verkerk_lsl_2020]
 The two projects share a common data set. The original project
 relied on a very carefully prepared data set of the texts of the
-case statements and the first- and second-recension *dicta*.[^5]
+case statements and the first- and second-recension *dicta*.[^6]
 The current work uses the same data set. The overarching goal of
 the two projects is the same---to use computational distant reading
 techniques to enhance close readings of the *Decretum*---but the
@@ -77,7 +77,7 @@ topic-modeling tool called the MAchine Learning for LanguagE Toolkit
 (MALLET).[@McCallumMALLET] Inspired by Pennington's observation
 that most passages in the *Decretum* dealing with the legal status
 of Jews, particularly those dealing with forced conversion, were
-introduced only in the second recension,[^7] I hoped to use MALLET
+introduced only in the second recension,[^8] I hoped to use MALLET
 to identify other new topics added in the second recension. The
 approach was to topic model the first- and second-recension *dicta*
 together, then separately, in order to show which topics were left
@@ -147,7 +147,7 @@ added to the *Decretum* in the second recension.
 The results of initial experiments with the Classical Language
 Toolkit (CLTK), built on top of the Python Natural Language Toolkit
 (NLTK) and the best lemmatization tool available at the time, were
-not encouraging.[^8] The first- and second-recension *dicta* might
+not encouraging.[^9] The first- and second-recension *dicta* might
 reasonably be expected to include a few hundred unique lemmas, but
 CLTK reported many thousands (over four thousand for the first-recension
 *dicta* alone), the overwhelming majority of which were false
@@ -165,7 +165,7 @@ and PIE Extended[@thibault_clerice_2020_3883590] are a collection
 of libraries, packages, and toolkits that provide an extremely
 versatile set of software building blocks that can be called upon
 to perform a wide range of natural language processing functions,
-like part-of-speech tagging or lemmatization, in a Python program.[^10]
+like part-of-speech tagging or lemmatization, in a Python program.[^11]
 They are based on large language models (LLMs) trained using machine
 learning techniques on annotated corpora of texts in the target
 language. In this case, PIE uses a model trained on the LASLA corpus
@@ -176,7 +176,7 @@ up, I wrote a Python program that used PIE first to create separate
 lists of every lemma found in the first- and second-recension *dicta*
 and then to compare the two lists to identify lemmas that appear
 only in the second-recension *dicta*. The program produced a list
-of 725 unique lemmas present only in second-recension *dicta*.[^11]
+of 725 unique lemmas present only in second-recension *dicta*.[^12]
 
 An understanding of whether an idea or topic is present in, or
 absent from, a selection of text can almost never be arrived at
@@ -255,7 +255,7 @@ to the second-recension *dicta*: *calumnia*, *calumniator*, and
 *calumniatus*. It does not report the lemma *calumnior* because,
 as we shall see, the word *calumniantibus* appears in a first-recension
 *dictum* and, therefore, the verb form is not included in the list
-of lemmas unique to the second-recension *dicta*.[^13]
+of lemmas unique to the second-recension *dicta*.[^14]
 
 The results reported by PIE are summarized in Table 1 below. The
 columns indicate:
@@ -315,7 +315,7 @@ That is not the case in the second recension *dictum* C.2 q.3 d.p.c.8
 *calumpniae*---corresponding to all four of the expected lemmas
 related to the concept of calumny. It is of obvious interest that
 the quotations in this *dictum* are directly from Justinianic Roman
-law.[^q]
+law.[^15]
 
 Most interesting of all is that this section of the *dictum*
 concludes with a first-person saying by the author of the
@@ -379,7 +379,7 @@ one another. Winroth observed that Gratian 2 incorporated resources
 from Justinianic Roman law into the canon law of false accusations
 in C.2 q.3., and in particular that his reception of the Roman law
 understanding of infamy incurred by false accusers can be seen in
-the second half of C.2 q.3 d.p.c.8.[^w] Winroth traced the development
+the second half of C.2 q.3 d.p.c.8.[^18] Winroth traced the development
 of the idea of infamy by traditional methods; this project traced
 the development of the idea of calumny using distant reading.
 However, both point to C.2 q.3 as significant for the incorporation
@@ -397,7 +397,7 @@ An unsystematic search through the Monumenta Germaniae Historica
 (MGH) e-text of the Friedberg edition that was created for
 the *Wortkonkordanz zum Decretum Gratiani* indicates that there are
 occurrences of forms of the words I have been focusing on---*calumnia*,
-*calumnior*, and *calumniator*---in the rubrics and canons.[^18] A
+*calumnior*, and *calumniator*---in the rubrics and canons.[^19] A
 thorough approach to systematically identifying new
 topics added to the *Decretum* between the first and second recensions
 will therefore require a data set that includes the rubrics and
@@ -429,21 +429,21 @@ we want to continue to advance our understanding of Gratian's
 time, effort, and grant funding into a twenty-first-century electronic
 text, or better still an electronic edition, of Gratian's *Decretum*.
 
-[^5]: This research could usefully be expanded to include the rubrics
+[^6]: This research could usefully be expanded to include the rubrics
 and canons, and I have made preparations to do so. The work required
 to expand the corpus to include the canons themselves would require
 grant funding.
 
-[^7]: @pennington_laws_2013; and @pennington_gratian_2014.
+[^8]: @pennington_laws_2013; and @pennington_gratian_2014.
 
-[^8]: Python is a widely-used general-purpose programming language.
+[^9]: Python is a widely-used general-purpose programming language.
 According to one frequently-cited industry metric, the [TIOBE
 Index](https://www.tiobe.com/tiobe-index/), Python is the most
 popular programming language worldwide as of June 2026. Python
 provides powerful features for performing operations on textual
 data.
 
-[^10]: I would like to acknowledge Jake Bayon, an undergraduate
+[^11]: I would like to acknowledge Jake Bayon, an undergraduate
 Computer Science student at the University of San Diego, who set
 up the PIE lemmatization environment as an independent study project
 with me during the Spring 2024 semester and who learned something
@@ -451,11 +451,11 @@ about Gratian in the process. PIE can only be installed with the
 2019 Python 3.8 release---the current release as of June 2026 is
 Python 3.14.
 
-[^11]: The 728 lines of program output included three numbers, which
+[^12]: The 728 lines of program output included three numbers, which
 I discarded. The complete list is available at
 [https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt](https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt).
 
-[^13]: PIE reports the lemmas as *calumpia*, *calumniator*, and
+[^14]: PIE reports the lemmas as *calumpia*, *calumniator*, and
 *calumpniatus*. *calumpia* is almost certainly a typo in the LASLA
 Latin language model for *calumpnia*. PIE reports the lemma of
 *calumpniantibus* as *calumpnio*. The spelling is consistent with
@@ -463,20 +463,7 @@ the orthographic conventions of the Friedberg edition, from which
 the text samples of the first- and second-recension *dicta* are
 ultimately derived.
 
-[^14]: *calumpniari*, *calummpnia*, *calumpniatus*, *calumpniatorem*,
-and *calumpniae*.
-
-[^w]: @winroth_making_2000, 153-156.
-
-[^17]: The complete list of 725 lemmas unique to the second recension
-*dicta* is available from my GitHub repository for the Seventeenth
-International Congress of Medieval Canon Law at
-[https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt](https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt).
-
-[^18]: @reuter_wortkonkordanz_1990 For example, see the rubrics for
-D.9 c.9 (R1), D.87 c.9 (R2), C.3 q.1 c.6 (R1), and C.5 q.5 c.8 (R2).
-
-[^q]:
+[^15]:
 Notandum quoque est, quod, sicut in Digestis lege XLVIII. legitur,
 titulo de abolitione criminum: "Accusatorum temeritas tribus modis
 detegitur. Aut enim calumpniantur, aut preuaricantur, aut tergiuersantur.
@@ -499,3 +486,13 @@ dixerit: Titius temere accusasse uidetur, non calumpniatorem
 pronunciauit. Temeritas enim facilitatis ueniam continet, et
 inconsultus calor calumpniae uicio caret, et ob hoc nullam penam
 huic irrogari oportet. (paraphrase of *Dig*. 48.16.1.5)
+
+[^17]: The complete list of 725 lemmas unique to the second recension
+*dicta* is available from my GitHub repository for the Seventeenth
+International Congress of Medieval Canon Law at
+[https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt](https://github.com/decretist/ICMCL17/blob/main/results/lemmas.txt).
+
+[^18]: @winroth_making_2000, 153-156.
+
+[^19]: @reuter_wortkonkordanz_1990 For example, see the rubrics for
+D.9 c.9 (R1), D.87 c.9 (R2), C.3 q.1 c.6 (R1), and C.5 q.5 c.8 (R2).
