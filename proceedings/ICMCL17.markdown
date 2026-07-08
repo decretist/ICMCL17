@@ -152,10 +152,9 @@ calumny, stood out. This family will be the exemplar of what new
 computational techniques are able to reveal about the evolution of the
 text and ideas of the *Decretum*.
 
-<!--
-Calumny is a promising lead because we know that between 1140 and
-1234, what we think of as the classical period in the history of
-medieval canon law, the concept of calumny took on a significance
+<!-- Calumny is a promising lead because we know that between 1140
+and 1234, what we think of as the classical period in the history
+of medieval canon law, the concept of calumny took on a significance
 and a formal legal meaning that was derived from but was considerably
 more precise than its previous general use in Christian discourse.
   -->
@@ -322,10 +321,9 @@ families of lemmas in the results, although I strongly encourage
 interested readers to examine the complete list of lemmas unique to the
 second-recension *dicta* for themselves.[^17]
 
-<!--
-As previously indicated, there is limited value in the results of
-machine reading by itself. The real value of the results of machine
-reading lies in the patterns that researchers see in them.
+<!-- As previously indicated, there is limited value in the results
+of machine reading by itself. The real value of the results of
+machine reading lies in the patterns that researchers see in them.
 &#10;The results of machine reading have limited value apart from the
 patterns that researchers see in them.
   -->

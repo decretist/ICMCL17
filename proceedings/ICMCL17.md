@@ -58,15 +58,15 @@ technique, lemmatization, using the PIE lemmatizer and a large
 language model (LLM) trained on the corpus of lemmatized and tagged
 Latin text created by the Laboratoire d'Analyse Statistique des
 Langues Anciennes (LASLA) at the University of
-Liège.[@manjavacas-etal-2019-improving] [@verkerk_lsl_2020]
-The two projects share a common data set. The original project
-relied on a very carefully prepared data set of the texts of the
-case statements and the first- and second-recension *dicta*.[^6]
-The current work uses the same data set. The overarching goal of
-the two projects is the same---to use computational distant reading
-techniques to enhance close readings of the *Decretum*---but the
-two projects attempt to answer different questions using different
-tools and techniques.
+Liège.[@manjavacas-etal-2019-improving] [@verkerk_lsl_2020] The two
+projects share a common data set. The original project relied on a
+very carefully prepared data set of the texts of the case statements
+and the first- and second-recension *dicta*.[^6] The current work
+uses the same data set. The overarching goal of the two projects
+is the same---to use computational distant reading techniques to
+enhance close readings of the *Decretum*---but the two projects
+attempt to answer different questions using different tools and
+techniques.
 
 This is not my first attempt to make progress on the problem of
 computationally identifying topics added to the *dicta* between the
@@ -88,19 +88,18 @@ present in the first-recension *dicta*.) This approach was simple
 in concept but prohibitively difficult in practice, for two reasons:
 first, because of the difficulty in determining the number of topics
 to look for, a necessary precondition for unsupervised topic modeling,
-and, second, because there was no obvious way to
-subtract topics.
+and, second, because there was no obvious way to subtract topics.
 
-For the discussion that follows, I am defining
-"first-recension *dicta*" as the text of the *dicta*
-listed in the appendix of Winroth's *The Making of Gratian's
-Decretum*, and I am defining "second-recension *dicta*" as the words
-in the *dicta* as they appear in the Friedberg edition
-when the words in the *dicta* in Winroth's appendix
-have been taken away. D.54 d.p.c.23 is a good example, Winroth's
-appendix indicates that only the first sentence of the *dictum*
-appears in the first recension. Therefore, the first sentence of
-the *dictum* is assigned to the first recension text sample:
+For the discussion that follows, I am defining "first-recension
+*dicta*" as the text of the *dicta* listed in the appendix of
+Winroth's *The Making of Gratian's Decretum*, and I am defining
+"second-recension *dicta*" as the words in the *dicta* as they
+appear in the Friedberg edition when the words in the *dicta* in
+Winroth's appendix have been taken away. D.54 d.p.c.23 is a good
+example, Winroth's appendix indicates that only the first sentence
+of the *dictum* appears in the first recension. Therefore, the first
+sentence of the *dictum* is assigned to the first recension text
+sample:
 
 > *Ecce, quomodo serui ad clericatum ualeant assumi, uel quomodo
 non admittantur.* Liberti quoque non sunt promouendi ad clerum,
@@ -126,9 +125,9 @@ to identify distinctive vocabulary as an indicator pointing to new
 ideas added between the first and second recensions. When working
 in a highly inflected language like Latin, using words as the
 indicators pointing to corresponding ideas is not sufficiently
-precise. As an example to be examined more closely later in
-this paper, the noun *calumnia* has seven unique declined forms. A
-regular first conjugation deponent verb like *calumnior*, *calumniari*,
+precise. As an example to be examined more closely later in this
+paper, the noun *calumnia* has seven unique declined forms. A regular
+first conjugation deponent verb like *calumnior*, *calumniari*,
 *calumniatus* has 120 conjugated forms, approximately eighty of
 which are unique, not including participial forms. Therefore, if
 we want to use distinctive vocabulary as a basis for determining
@@ -157,15 +156,15 @@ through 2020.
 
 In 2021, Mike Kestemont made me aware of the PIE lemmatizer.
 Kestemont is a researcher at the University of Antwerp specializing
-in medieval Latin and Middle Dutch literature and a leading
-figure in the field of computational text analysis. PIE is not an
-application or program---the user does not simply type a command
-or click a button and get lemmatized text as output. Instead, PIE
-and PIE Extended[@thibault_clerice_2020_3883590] are a collection
-of libraries, packages, and toolkits that provide an extremely
-versatile set of software building blocks that can be called upon
-to perform a wide range of natural language processing functions,
-like part-of-speech tagging or lemmatization, in a Python program.[^11]
+in medieval Latin and Middle Dutch literature and a leading figure
+in the field of computational text analysis. PIE is not an application
+or program---the user does not simply type a command or click a
+button and get lemmatized text as output. Instead, PIE and PIE
+Extended[@thibault_clerice_2020_3883590] are a collection of
+libraries, packages, and toolkits that provide an extremely versatile
+set of software building blocks that can be called upon to perform
+a wide range of natural language processing functions, like
+part-of-speech tagging or lemmatization, in a Python program.[^11]
 They are based on large language models (LLMs) trained using machine
 learning techniques on annotated corpora of texts in the target
 language. In this case, PIE uses a model trained on the LASLA corpus
@@ -185,14 +184,13 @@ as opposed to machine, readers must look for the presence of families
 of related lemmas to indicate the presence of an idea or topic in
 a selection of text. In reviewing the list of the 725 lemmas unique
 to the second-recension *dicta*, one such family, all related to
-the concept of calumny, stood out. This family will
-be the exemplar of what new computational techniques are able to
-reveal about the evolution of the text and ideas of the *Decretum*.
+the concept of calumny, stood out. This family will be the exemplar
+of what new computational techniques are able to reveal about the
+evolution of the text and ideas of the *Decretum*.
 
-<!--
-Calumny is a promising lead because we know that between 1140 and
-1234, what we think of as the classical period in the history of
-medieval canon law, the concept of calumny took on a significance
+<!-- Calumny is a promising lead because we know that between 1140
+and 1234, what we think of as the classical period in the history
+of medieval canon law, the concept of calumny took on a significance
 and a formal legal meaning that was derived from but was considerably
 more precise than its previous general use in Christian discourse.
   -->
@@ -214,21 +212,21 @@ Both declined to do so. It is noteworthy that this episode took
 place almost half a century before the 1076 Placitum of Marturi
 (Poggibonsi), usually taken as signaling the revival of Justinianic
 Roman law in the West. By the second quarter of the twelfth century,
-use of the oath was widespread enough to make it an active
-topic of discussion during the reigns of Honorius II (1124-30),
-Innocent II (1130-1143), and Eugenius III (1145-1153). The contested
-issues were (i) who should be required to take the oath (some
-litigants, all litigants, advocates on behalf of litigants, or
-advocates as well as litigants), and (ii) the kinds of cases in
-which litigants or advocates or both should be required to take the
-oath (Eugenius treated cases concerning tithes, possession of
-churches, and "spiritual affairs" as exceptions to a general
-requirement to take the oath). The general trend over the course
-of the second half of the century was in the direction of extending
-the requirement and "[b]y the close of the twelfth century the
-calumny oath had become a normal element of canonical civil procedure
-and might be required in most contested cases, at least if one of
-the parties insisted upon it."[@brundage_calumny_2004,795-799]
+use of the oath was widespread enough to make it an active topic
+of discussion during the reigns of Honorius II (1124-30), Innocent II
+(1130-1143), and Eugenius III (1145-1153). The contested issues
+were (i) who should be required to take the oath (some litigants,
+all litigants, advocates on behalf of litigants, or advocates as
+well as litigants), and (ii) the kinds of cases in which litigants
+or advocates or both should be required to take the oath (Eugenius
+treated cases concerning tithes, possession of churches, and
+"spiritual affairs" as exceptions to a general requirement to take
+the oath). The general trend over the course of the second half of
+the century was in the direction of extending the requirement and
+"[b]y the close of the twelfth century the calumny oath had become
+a normal element of canonical civil procedure and might be required
+in most contested cases, at least if one of the parties insisted
+upon it."[@brundage_calumny_2004,795-799]
 
 The idea of calumny is used in two distinct senses in the *Decretum*.
 The first is general and biblical, and is derived from sayings
@@ -317,10 +315,10 @@ related to the concept of calumny. It is of obvious interest that
 the quotations in this *dictum* are directly from Justinianic Roman
 law.[^15]
 
-Most interesting of all is that this section of the *dictum*
-concludes with a first-person saying by the author of the
-second-recension *dicta* (or at least of this *dictum*) in effect
-glossing the term *calumniator*.
+Most interesting of all is that this section of the *dictum* concludes
+with a first-person saying by the author of the second-recension
+*dicta* (or at least of this *dictum*) in effect glossing the term
+*calumniator*.
 
 > Si autem interloquendo dixerit: Titius temere accusasse uidetur,
 non calumpniatorem pronunciauit. Temeritas enim facilitatis ueniam
@@ -335,9 +333,9 @@ resources from Justinianic Roman Law.
 
 ### Conclusions
 
-The long-term goal of this project has been to find a way to
-use computationally-enabled distant reading---"reading machines"
-in the words of Stephen Ramsay[@ramsay_reading_2011]---to efficiently
+The long-term goal of this project has been to find a way to use
+computationally-enabled distant reading---"reading machines" in the
+words of Stephen Ramsay[@ramsay_reading_2011]---to efficiently
 direct the attention of scholars to specific sites in the text of
 Gratian's *Decretum* where new topics added between the first and
 second recensions are likely to be found by close reading.
@@ -351,22 +349,21 @@ first-recension *dicta* drew attention to a family of lemmas
 (*calumnia*, *calumniator*, and *calumniatus*) that indicated the
 treatment of a canonically significant concept, calumny. On close
 reading, the sites in the text of the *dicta* identified by the
-results do show a meaningful development over time in the
-vocabulary of Gratian's *dicta* and to that extent in the teaching
-or doctrine of the *Decretum* on this topic. The detection of calumny
-as a topic that the authors of the *Decretum* developed in a
-significant way in the second recension demonstrates the usefulness
-of lemmatization as a technique for investigating this type of
-question. Calumny was the most obvious topic (at least to me), and
-I was surprised that there were no other such immediately obvious
-conceptually related families of lemmas in the results, although I
-strongly encourage interested readers to examine the complete list
-of lemmas unique to the second-recension *dicta* for themselves.[^17]
+results do show a meaningful development over time in the vocabulary
+of Gratian's *dicta* and to that extent in the teaching or doctrine
+of the *Decretum* on this topic. The detection of calumny as a topic
+that the authors of the *Decretum* developed in a significant way
+in the second recension demonstrates the usefulness of lemmatization
+as a technique for investigating this type of question. Calumny was
+the most obvious topic (at least to me), and I was surprised that
+there were no other such immediately obvious conceptually related
+families of lemmas in the results, although I strongly encourage
+interested readers to examine the complete list of lemmas unique
+to the second-recension *dicta* for themselves.[^17]
 
-<!--
-As previously indicated, there is limited value in the results of
-machine reading by itself. The real value of the results of machine
-reading lies in the patterns that researchers see in them.
+<!-- As previously indicated, there is limited value in the results
+of machine reading by itself. The real value of the results of
+machine reading lies in the patterns that researchers see in them.
 
 The results of machine reading have limited value apart from the
 patterns that researchers see in them.
@@ -398,11 +395,10 @@ An unsystematic search through the Monumenta Germaniae Historica
 the *Wortkonkordanz zum Decretum Gratiani* indicates that there are
 occurrences of forms of the words I have been focusing on---*calumnia*,
 *calumnior*, and *calumniator*---in the rubrics and canons.[^19] A
-thorough approach to systematically identifying new
-topics added to the *Decretum* between the first and second recensions
-will therefore require a data set that includes the rubrics and
-canons with their inscriptions as well as the *dicta* and case
-statements.
+thorough approach to systematically identifying new topics added
+to the *Decretum* between the first and second recensions will
+therefore require a data set that includes the rubrics and canons
+with their inscriptions as well as the *dicta* and case statements.
 
 Ideally, such a data set would be in the form of a new e-text in
 TEI-P5 XML format incorporating texts from both the old Friedberg
@@ -422,9 +418,9 @@ print edition of the *Decretum*. The MGH e-text of the Friedberg
 edition is the indispensable free resource without which none of
 my work, and I suspect the work of many others, would be possible.
 But like so many free things, someone paid a great deal of money
-to make it free. Nevertheless, the MGH e-text is a resource that because
-of its archaic format is approaching the end of it useful life. If
-we want to continue to advance our understanding of Gratian's
+to make it free. Nevertheless, the MGH e-text is a resource that
+because of its archaic format is approaching the end of it useful
+life. If we want to continue to advance our understanding of Gratian's
 *Decretum* with the help of electronic resources, we need to invest
 time, effort, and grant funding into a twenty-first-century electronic
 text, or better still an electronic edition, of Gratian's *Decretum*.
@@ -463,29 +459,29 @@ the orthographic conventions of the Friedberg edition, from which
 the text samples of the first- and second-recension *dicta* are
 ultimately derived.
 
-[^15]:
-Notandum quoque est, quod, sicut in Digestis lege XLVIII. legitur,
-titulo de abolitione criminum: "Accusatorum temeritas tribus modis
-detegitur. Aut enim calumpniantur, aut preuaricantur, aut tergiuersantur.
-(*Dig*. 48.16.1.pr.) Calumpniari est falsa crimina intendere; preuaricari
-uera crimina abscondere; tergiuersari in uniuersum ab accusatione
-desistere. (*Dig*. 48.16.1.1) Sed non utique qui non probat quod
-intendit protinus calumpniari uidetur. Nam eius rei inquisitio
-arbitrio cognoscentis committitur, qui, reo absoluto, de accusatoris
-incipit consilio querere, qua mente ductus ad accusationem processit,
-et si quidem iustum eius errorem reperit, absoluit eum: si uero in
-euidenti calumpnia eum deprehenderit, legitimam penam ei inrogat.
-(*Dig*. 48.16.1.3) Quorum alterutrum ipsis uerbis pronunciationis
-manifestatur. Nam si quidem ita pronunciauerit: 'Non probasti,'
-pepercit ei: sin autem pronunciauerit: 'Calumpniatus es,' condempnauit
-eum. Et quamuis nichil de pena subiecerit, tamen legis potestas
-aduersus eum exercebitur. Nam facti quidem questio in arbitrio est
-iudicantis: penae uero persecutio non eius uoluntati mandatur, sed
-legis auctoritati reseruatur. (*Dig*. 48.16.1.4)" Si autem interloquendo
-dixerit: Titius temere accusasse uidetur, non calumpniatorem
-pronunciauit. Temeritas enim facilitatis ueniam continet, et
-inconsultus calor calumpniae uicio caret, et ob hoc nullam penam
-huic irrogari oportet. (paraphrase of *Dig*. 48.16.1.5)
+[^15]: Notandum quoque est, quod, sicut in Digestis lege XLVIII.
+legitur, titulo de abolitione criminum: "Accusatorum temeritas
+tribus modis detegitur. Aut enim calumpniantur, aut preuaricantur,
+aut tergiuersantur. (*Dig*. 48.16.1.pr.) Calumpniari est falsa
+crimina intendere; preuaricari uera crimina abscondere; tergiuersari
+in uniuersum ab accusatione desistere. (*Dig*. 48.16.1.1) Sed non
+utique qui non probat quod intendit protinus calumpniari uidetur.
+Nam eius rei inquisitio arbitrio cognoscentis committitur, qui, reo
+absoluto, de accusatoris incipit consilio querere, qua mente ductus
+ad accusationem processit, et si quidem iustum eius errorem reperit,
+absoluit eum: si uero in euidenti calumpnia eum deprehenderit,
+legitimam penam ei inrogat. (*Dig*. 48.16.1.3) Quorum alterutrum
+ipsis uerbis pronunciationis manifestatur. Nam si quidem ita
+pronunciauerit: 'Non probasti,' pepercit ei: sin autem pronunciauerit:
+'Calumpniatus es,' condempnauit eum. Et quamuis nichil de pena
+subiecerit, tamen legis potestas aduersus eum exercebitur. Nam facti
+quidem questio in arbitrio est iudicantis: penae uero persecutio
+non eius uoluntati mandatur, sed legis auctoritati reseruatur.
+(*Dig*. 48.16.1.4)" Si autem interloquendo dixerit: Titius temere
+accusasse uidetur, non calumpniatorem pronunciauit. Temeritas enim
+facilitatis ueniam continet, et inconsultus calor calumpniae uicio
+caret, et ob hoc nullam penam huic irrogari oportet. (paraphrase
+of *Dig*. 48.16.1.5)
 
 [^17]: The complete list of 725 lemmas unique to the second recension
 *dicta* is available from my GitHub repository for the Seventeenth
