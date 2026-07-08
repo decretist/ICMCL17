@@ -270,11 +270,12 @@ calumny in the same general, non-technical, sense they had in the first
 millennium of Christian discourse.
 
 That is not the case in the second recension *dictum* C.2 q.3 d.p.c.8
-§1. Here we see a series of quotations from *Dig.* 48.16.1-5 containing
-seven occurrences of five words,[^15] corresponding to all four of the
-expected lemmas related to the concept of calumny. It is of obvious
-interest that the quotations in this *dictum* are from Justinianic Roman
-law rather than from scriptural or patristic sources.
+§1. Here we see a series of quotations and a paraphrase from *Dig.*
+48.16.1 containing seven occurrences of five words---*calumpniari*,
+*calummpnia*, *calumpniatus*, *calumpniatorem*, and
+*calumpniae*---corresponding to all four of the expected lemmas related
+to the concept of calumny. It is of obvious interest that the quotations
+in this *dictum* are directly from Justinianic Roman law.[^15]
 
 Most interesting of all is that this section of the *dictum* concludes
 with a first-person saying by the author of the second-recension *dicta*
@@ -287,7 +288,7 @@ with a first-person saying by the author of the second-recension *dicta*
 > nullam penam huic irrogari oportet.
 
 Gratian's own intervention is extremely modest---he does little more
-than paraphrase an opinion attributed to Papinian in *Dig*. 48.16.5.
+than paraphrase an opinion attributed to Papinian in *Dig*. 48.16.1.5.
 Nevertheless, the *dictum* shows progress toward greater legal
 sophistication in the sense that the discussion draws on resources from
 Justinianic Roman Law.
@@ -540,8 +541,29 @@ Cambridge University Press, 2000.
     the text samples of the first- and second-recension *dicta* are
     ultimately derived.
 
-[^15]: *calumpniari*, *calummpnia*, *calumpniatus*, *calumpniatorem*,
-    and *calumpniae*.
+[^15]: Notandum quoque est, quod, sicut in Digestis lege XLVIII.
+    legitur, titulo de abolitione criminum: "Accusatorum temeritas
+    tribus modis detegitur. Aut enim calumpniantur, aut preuaricantur,
+    aut tergiuersantur. (*Dig*. 48.16.1.pr.) Calumpniari est falsa
+    crimina intendere; preuaricari uera crimina abscondere; tergiuersari
+    in uniuersum ab accusatione desistere. (*Dig*. 48.16.1.1) Sed non
+    utique qui non probat quod intendit protinus calumpniari uidetur.
+    Nam eius rei inquisitio arbitrio cognoscentis committitur, qui, reo
+    absoluto, de accusatoris incipit consilio querere, qua mente ductus
+    ad accusationem processit, et si quidem iustum eius errorem reperit,
+    absoluit eum: si uero in euidenti calumpnia eum deprehenderit,
+    legitimam penam ei inrogat. (*Dig*. 48.16.1.3) Quorum alterutrum
+    ipsis uerbis pronunciationis manifestatur. Nam si quidem ita
+    pronunciauerit: 'Non probasti,' pepercit ei: sin autem
+    pronunciauerit: 'Calumpniatus es,' condempnauit eum. Et quamuis
+    nichil de pena subiecerit, tamen legis potestas aduersus eum
+    exercebitur. Nam facti quidem questio in arbitrio est iudicantis:
+    penae uero persecutio non eius uoluntati mandatur, sed legis
+    auctoritati reseruatur. (*Dig*. 48.16.1.4)" Si autem interloquendo
+    dixerit: Titius temere accusasse uidetur, non calumpniatorem
+    pronunciauit. Temeritas enim facilitatis ueniam continet, et
+    inconsultus calor calumpniae uicio caret, et ob hoc nullam penam
+    huic irrogari oportet. (paraphrase of *Dig*. 48.16.1.5)
 
 [^16]: Stephen Ramsay, *Reading Machines: Toward an Algorithmic
     Criticism*, Topics in the Digital Humanities (Urbana: University of
