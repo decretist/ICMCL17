@@ -357,16 +357,34 @@ or doctrine of the *Decretum* on this topic. The detection of calumny
 as a topic that the authors of the *Decretum* developed in a
 significant way in the second recension demonstrates the usefulness
 of lemmatization as a technique for investigating this type of
-question.
-
-Calumny was the most obvious topic (at least to me), and I was
-surprised that there were no other such immediately obvious
+question. Calumny was the most obvious topic (at least to me), and
+I was surprised that there were no other such immediately obvious
 conceptually related families of lemmas in the results, although I
 strongly encourage interested readers to examine the complete list
 of lemmas unique to the second-recension *dicta* for themselves.[^17]
+
+<!--
 As previously indicated, there is limited value in the results of
 machine reading by itself. The real value of the results of machine
 reading lies in the patterns that researchers see in them.
+
+The results of machine reading have limited value apart from the
+patterns that researchers see in them.
+  -->
+
+That lemmatization directed attention to C.2 q.3 d.p.c.8 is suggestive
+of ways in which conclusions arrived at by machine reading and by
+more traditional methods of textual scholarship can mutually support
+one another. Winroth observed that Gratian 2 incorporated resources
+from Justinianic Roman law into the canon law of false accusations
+in C.2 q.3., and in particular that his reception of the Roman law
+understanding of infamy incurred by false accusers can be seen in
+the second half of C.2 q.3 d.p.c.8.[^w] Winroth traced the development
+of the idea of infamy by traditional methods; this project traced
+the development of the idea of calumny using distant reading.
+However, both point to C.2 q.3 as significant for the incorporation
+of teachings from Justinianic Roman law in the second recension of
+the *Decretum*.
 
 Is it enough? No.
 
@@ -404,7 +422,7 @@ print edition of the *Decretum*. The MGH e-text of the Friedberg
 edition is the indispensable free resource without which none of
 my work, and I suspect the work of many others, would be possible.
 But like so many free things, someone paid a great deal of money
-to make it free. However, the MGH e-text is a resource that because
+to make it free. Nevertheless, the MGH e-text is a resource that because
 of its archaic format is approaching the end of it useful life. If
 we want to continue to advance our understanding of Gratian's
 *Decretum* with the help of electronic resources, we need to invest
